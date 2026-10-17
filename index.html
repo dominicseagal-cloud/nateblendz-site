@@ -488,6 +488,13 @@ footer p { max-width: 40rem; }
 .card .fine { font-size: .8rem; color: var(--dust); }
 @media (prefers-reduced-motion: reduce) { .meter span { transition: none; } }
 
+/* Tap targets: every button and link at least 44px tall */
+header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-items: center; min-height: 44px; }
+.textlink { border-bottom: 0; padding-bottom: 0; text-decoration: underline; text-underline-offset: 5px; }
+.lang button { min-width: 44px; }
+.lang button, .filter, header .book, .rem-row input, .rem-row select { min-height: 44px; }
+.faq .answer a { padding-block: 10px; }
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .item label, .chip label { transition: none; } }
 </style>
 </head>
