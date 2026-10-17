@@ -18,7 +18,7 @@ While it's a sample, search engines are blocked (`noindex, nofollow` in the page
 
 ## Adding photos
 
-Make a `photos` folder next to `index.html` and save photos with these exact names. Each photo replaces its placeholder automatically; any missing photo keeps the placeholder.
+Save photos in the `photos` folder with these exact names. Each photo replaces its placeholder automatically; any missing photo keeps the placeholder.
 
 | File name | Where it shows |
 | --- | --- |
