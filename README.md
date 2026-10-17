@@ -2,6 +2,8 @@
 
 A one-page sample website for Nateblendz, a barber in Tustin, CA. Booking happens on Booksy; this site helps visitors choose a service and sends them there. It is a private sample until Nathan approves it.
 
+While it's a sample, search engines are blocked (`noindex, nofollow` in the page, `Disallow: /` in `robots.txt`). Before go-live: flip noindex back and confirm photo permission with Nathan (GO-LIVE.md step 0).
+
 ## Files
 
 | File | What it is |

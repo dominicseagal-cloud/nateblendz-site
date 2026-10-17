@@ -2,6 +2,10 @@
 
 Do these only after Nathan approves the site and a domain is bought.
 
+0. Flip noindex back and confirm photo permission:
+   - Get Nathan's written OK to use the Booksy photos in `photos/`.
+   - In `index.html`, change `<meta name="robots" content="noindex, nofollow">` to `index, follow`, then rebuild the Spanish page.
+   - In `robots.txt`, change `Disallow: /` to `Allow: /`.
 1. Replace `YOUR-DOMAIN` with the real domain in:
    - `index.html` and `es/index.html` (the commented "Go-live" block in the head; remove the `<!--` and `-->` around it)
    - `sitemap.xml`

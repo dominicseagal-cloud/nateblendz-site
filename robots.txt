@@ -1,5 +1,6 @@
 User-agent: *
-Allow: /
+# Sample site: blocked until Nathan approves. At go-live, change to "Allow: /" (see GO-LIVE.md)
+Disallow: /
 
 # Add once a domain is chosen:
 # Sitemap: https://YOUR-DOMAIN/sitemap.xml
