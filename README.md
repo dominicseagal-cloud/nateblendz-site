@@ -24,7 +24,7 @@ Make a `photos` folder next to `index.html` and save photos with these exact nam
 | --- | --- |
 | `low-fade.jpg`, `mid-fade.jpg`, `high-fade.jpg`, `taper.jpg`, `line-up.jpg` | Cut gallery (the fade guide uses drawings) |
 | `gallery-taper.jpg`, `gallery-fade.jpg`, `gallery-design.jpg`, `gallery-beard.jpg` | Cut gallery (portrait, 4:5 crop works best) |
-| `before-1.jpg` + `after-1.jpg`, `before-2.jpg` + `after-2.jpg` | Before-and-after slots in the cut gallery (both files of a pair are needed) |
+| `before-1.jpg` + `after-1.jpg`, `before-2.jpg` + `after-2.jpg` | Before-and-after slots in the cut gallery (both files of a pair are needed; the card and its filter stay hidden until then) |
 
 Only use photos Nathan has approved for the site.
 

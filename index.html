@@ -543,7 +543,7 @@ footer p { max-width: 40rem; }
         <h2 data-es="Cortes de la <em>silla.</em>">Fresh from <em>the chair.</em></h2>
         <p data-es="Cortes reales de Nateblendz en Tustin. Filtra por estilo para encontrar el tuyo.">Real cuts by Nateblendz in Tustin. Filter by style to find yours.</p>
       </div>
-      <div class="filters" role="group" aria-label="Filter by style"><button type="button" class="filter" data-filter="all" aria-pressed="true" data-es="Todos">All</button><button type="button" class="filter" data-filter="fade" aria-pressed="false" data-es="Fades">Fades</button><button type="button" class="filter" data-filter="taper" aria-pressed="false" data-es="Tapers">Tapers</button><button type="button" class="filter" data-filter="beard" aria-pressed="false" data-es="Barba">Beard</button><button type="button" class="filter" data-filter="design" aria-pressed="false" data-es="Dise&ntilde;os">Designs</button><button type="button" class="filter" data-filter="ba" aria-pressed="false" data-es="Antes y despu&eacute;s">Before &amp; after</button></div>
+      <div class="filters" role="group" aria-label="Filter by style"><button type="button" class="filter" data-filter="all" aria-pressed="true" data-es="Todos">All</button><button type="button" class="filter" data-filter="fade" aria-pressed="false" data-es="Fades">Fades</button><button type="button" class="filter" data-filter="taper" aria-pressed="false" data-es="Tapers">Tapers</button><button type="button" class="filter" data-filter="beard" aria-pressed="false" data-es="Barba">Beard</button><button type="button" class="filter" data-filter="design" aria-pressed="false" data-es="Dise&ntilde;os">Designs</button><button type="button" class="filter" data-filter="ba" aria-pressed="false" hidden data-es="Antes y despu&eacute;s">Before &amp; after</button></div>
       <div class="cut-grid" id="cut-grid">
         <figure class="cut-card" data-tags="fade">
           <img src="photos/mid-fade.jpg" alt="Fade haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
@@ -626,7 +626,7 @@ footer p { max-width: 40rem; }
             <p class="who" data-es="Para agregarle un detalle a tu corte.">For adding a detail to your cut.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card ba" data-tags="ba">
+        <figure class="cut-card ba" data-tags="ba" hidden>
           <div class="ba-slot" aria-hidden="true"><span data-es="Antes">Before</span><span data-es="Despu&eacute;s">After</span></div>
           <figcaption>
             <p class="cut-tags" data-es="Antes y despu&eacute;s">Before &amp; after</p>
@@ -635,7 +635,7 @@ footer p { max-width: 40rem; }
             <p class="who" data-es="Archivos: photos/before-1.jpg y photos/after-1.jpg">Files: photos/before-1.jpg and photos/after-1.jpg</p>
           </figcaption>
         </figure>
-        <figure class="cut-card ba" data-tags="ba">
+        <figure class="cut-card ba" data-tags="ba" hidden>
           <div class="ba-slot" aria-hidden="true"><span data-es="Antes">Before</span><span data-es="Despu&eacute;s">After</span></div>
           <figcaption>
             <p class="cut-tags" data-es="Antes y despu&eacute;s">Before &amp; after</p>
@@ -977,17 +977,17 @@ footer p { max-width: 40rem; }
             <p class="label" data-es="Rese&ntilde;as de Google">Google reviews</p>
             <a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Nateblendz+13132+Newport+Ave+Suite+230+Tustin+CA+92780" target="_blank" rel="noopener" data-es="Leer rese&ntilde;as en Google">Read reviews on Google</a>
           </div>
-          <div class="review-slot">
+          <div class="review-slot" hidden>
             <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
             <p class="quote" data-es="Rese&ntilde;a de Google de un cliente real, agregada con el permiso de Nathan.">A real client&rsquo;s Google review goes here, added with Nathan&rsquo;s OK.</p>
             <p class="who" data-es="Nombre del cliente &middot; Google">Client name &middot; Google</p>
           </div>
-          <div class="review-slot">
+          <div class="review-slot" hidden>
             <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
             <p class="quote" data-es="Rese&ntilde;a de Google de un cliente real, agregada con el permiso de Nathan.">A real client&rsquo;s Google review goes here, added with Nathan&rsquo;s OK.</p>
             <p class="who" data-es="Nombre del cliente &middot; Google">Client name &middot; Google</p>
           </div>
-          <div class="review-slot">
+          <div class="review-slot" hidden>
             <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
             <p class="quote" data-es="Rese&ntilde;a de Google de un cliente real, agregada con el permiso de Nathan.">A real client&rsquo;s Google review goes here, added with Nathan&rsquo;s OK.</p>
             <p class="who" data-es="Nombre del cliente &middot; Google">Client name &middot; Google</p>
@@ -1208,7 +1208,8 @@ footer p { max-width: 40rem; }
         var f = btn.getAttribute('data-filter');
         filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
         document.querySelectorAll('.cut-card').forEach(function (card) {
-          card.hidden = f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1;
+          var empty = card.classList.contains('ba') && !card.querySelector('.has-pair');
+          card.hidden = empty || (f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1);
         });
       });
     });
@@ -1216,7 +1217,7 @@ footer p { max-width: 40rem; }
     document.querySelectorAll('.ba-slot').forEach(function (slot, i) {
       var spans = slot.querySelectorAll('span'), base = (document.documentElement.lang === 'es' ? '../' : '') + 'photos/';
       var b = new Image(), a = new Image(), loaded = 0;
-      function done() { if (++loaded === 2) { spans[0].style.backgroundImage = 'url(' + b.src + ')'; spans[1].style.backgroundImage = 'url(' + a.src + ')'; slot.classList.add('has-pair'); } }
+      function done() { if (++loaded === 2) { spans[0].style.backgroundImage = 'url(' + b.src + ')'; spans[1].style.backgroundImage = 'url(' + a.src + ')'; slot.classList.add('has-pair'); slot.closest('.cut-card').hidden = false; document.querySelector('.filter[data-filter="ba"]').hidden = false; } }
       b.onload = done; a.onload = done;
       b.src = base + 'before-' + (i + 1) + '.jpg'; a.src = base + 'after-' + (i + 1) + '.jpg';
     });

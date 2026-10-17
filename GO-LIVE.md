@@ -16,4 +16,4 @@ Do these only after Nathan approves the site and a domain is bought.
 5. Add the website link to the Google Business Profile, Booksy, and Instagram bio.
 6. Add approved photos to `photos/` using the names in README.md, and remove any placeholder you don't fill.
 7. After any change to `index.html`, run `python3 tools/build_es.py` to update the Spanish page.
-8. Swap the two Google Maps links in the "Find us on Google" section for Nathan's real Google Business Profile link (search the code for PLACEHOLDER), and replace the three review slots with reviews Nathan approves.
+8. Swap the two Google Maps links in the "Find us on Google" section for Nathan's real Google Business Profile link (search the code for PLACEHOLDER), and replace the three review slots with reviews Nathan approves (they're hidden for now: remove `hidden` from each `review-slot` you fill).

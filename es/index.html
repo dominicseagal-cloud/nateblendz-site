@@ -541,7 +541,7 @@ footer p { max-width: 40rem; }
 <h2 data-en="Fresh from &lt;em&gt;the chair.&lt;/em&gt;" data-es="Cortes de la &lt;em&gt;silla.&lt;/em&gt;">Cortes de la <em>silla.</em></h2>
 <p data-en="Real cuts by Nateblendz in Tustin. Filter by style to find yours." data-es="Cortes reales de Nateblendz en Tustin. Filtra por estilo para encontrar el tuyo.">Cortes reales de Nateblendz en Tustin. Filtra por estilo para encontrar el tuyo.</p>
 </div>
-<div aria-label="Filter by style" class="filters" role="group"><button aria-pressed="true" class="filter" data-en="All" data-es="Todos" data-filter="all" type="button">Todos</button><button aria-pressed="false" class="filter" data-en="Fades" data-es="Fades" data-filter="fade" type="button">Fades</button><button aria-pressed="false" class="filter" data-en="Tapers" data-es="Tapers" data-filter="taper" type="button">Tapers</button><button aria-pressed="false" class="filter" data-en="Beard" data-es="Barba" data-filter="beard" type="button">Barba</button><button aria-pressed="false" class="filter" data-en="Designs" data-es="Diseños" data-filter="design" type="button">Diseños</button><button aria-pressed="false" class="filter" data-en="Before &amp;amp; after" data-es="Antes y después" data-filter="ba" type="button">Antes y después</button></div>
+<div aria-label="Filter by style" class="filters" role="group"><button aria-pressed="true" class="filter" data-en="All" data-es="Todos" data-filter="all" type="button">Todos</button><button aria-pressed="false" class="filter" data-en="Fades" data-es="Fades" data-filter="fade" type="button">Fades</button><button aria-pressed="false" class="filter" data-en="Tapers" data-es="Tapers" data-filter="taper" type="button">Tapers</button><button aria-pressed="false" class="filter" data-en="Beard" data-es="Barba" data-filter="beard" type="button">Barba</button><button aria-pressed="false" class="filter" data-en="Designs" data-es="Diseños" data-filter="design" type="button">Diseños</button><button aria-pressed="false" class="filter" data-en="Before &amp;amp; after" data-es="Antes y después" data-filter="ba" hidden="" type="button">Antes y después</button></div>
 <div class="cut-grid" id="cut-grid">
 <figure class="cut-card" data-tags="fade">
 <img alt="Fade haircut by Nateblendz, a barber in Tustin, CA" height="1000" loading="lazy" src="../photos/mid-fade.jpg" width="800"/>
@@ -624,7 +624,7 @@ footer p { max-width: 40rem; }
 <p class="who" data-en="For adding a detail to your cut." data-es="Para agregarle un detalle a tu corte.">Para agregarle un detalle a tu corte.</p>
 </figcaption>
 </figure>
-<figure class="cut-card ba" data-tags="ba">
+<figure class="cut-card ba" data-tags="ba" hidden="">
 <div aria-hidden="true" class="ba-slot"><span data-en="Before" data-es="Antes">Antes</span><span data-en="After" data-es="Después">Después</span></div>
 <figcaption>
 <p class="cut-tags" data-en="Before &amp;amp; after" data-es="Antes y después">Antes y después</p>
@@ -633,7 +633,7 @@ footer p { max-width: 40rem; }
 <p class="who" data-en="Files: photos/before-1.jpg and photos/after-1.jpg" data-es="Archivos: photos/before-1.jpg y photos/after-1.jpg">Archivos: photos/before-1.jpg y photos/after-1.jpg</p>
 </figcaption>
 </figure>
-<figure class="cut-card ba" data-tags="ba">
+<figure class="cut-card ba" data-tags="ba" hidden="">
 <div aria-hidden="true" class="ba-slot"><span data-en="Before" data-es="Antes">Antes</span><span data-en="After" data-es="Después">Después</span></div>
 <figcaption>
 <p class="cut-tags" data-en="Before &amp;amp; after" data-es="Antes y después">Antes y después</p>
@@ -964,17 +964,17 @@ footer p { max-width: 40rem; }
 <p class="label" data-en="Google reviews" data-es="Reseñas de Google">Reseñas de Google</p>
 <a class="textlink" data-en="Read reviews on Google" data-es="Leer reseñas en Google" href="https://www.google.com/maps/search/?api=1&amp;query=Nateblendz+13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Leer reseñas en Google</a>
 </div>
-<div class="review-slot">
+<div class="review-slot" hidden="">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
 </div>
-<div class="review-slot">
+<div class="review-slot" hidden="">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
 </div>
-<div class="review-slot">
+<div class="review-slot" hidden="">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
@@ -1191,7 +1191,8 @@ footer p { max-width: 40rem; }
         var f = btn.getAttribute('data-filter');
         filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
         document.querySelectorAll('.cut-card').forEach(function (card) {
-          card.hidden = f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1;
+          var empty = card.classList.contains('ba') && !card.querySelector('.has-pair');
+          card.hidden = empty || (f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1);
         });
       });
     });
@@ -1199,7 +1200,7 @@ footer p { max-width: 40rem; }
     document.querySelectorAll('.ba-slot').forEach(function (slot, i) {
       var spans = slot.querySelectorAll('span'), base = (document.documentElement.lang === 'es' ? '../' : '') + 'photos/';
       var b = new Image(), a = new Image(), loaded = 0;
-      function done() { if (++loaded === 2) { spans[0].style.backgroundImage = 'url(' + b.src + ')'; spans[1].style.backgroundImage = 'url(' + a.src + ')'; slot.classList.add('has-pair'); } }
+      function done() { if (++loaded === 2) { spans[0].style.backgroundImage = 'url(' + b.src + ')'; spans[1].style.backgroundImage = 'url(' + a.src + ')'; slot.classList.add('has-pair'); slot.closest('.cut-card').hidden = false; document.querySelector('.filter[data-filter="ba"]').hidden = false; } }
       b.onload = done; a.onload = done;
       b.src = base + 'before-' + (i + 1) + '.jpg'; a.src = base + 'after-' + (i + 1) + '.jpg';
     });
