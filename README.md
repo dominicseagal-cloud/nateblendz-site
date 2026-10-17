@@ -10,7 +10,7 @@ While it's a sample, search engines are blocked (`noindex, nofollow` in the page
 | --- | --- |
 | `index.html` | The English page. All styles and scripts are inside it. |
 | `es/index.html` | The Spanish page. Generated from `index.html`, so don't edit it by hand. |
-| `tools/build_es.py` | Rebuilds the Spanish page. Run `python3 tools/build_es.py` after any change to `index.html`. |
+| `tools/build_es.py` | Rebuilds the Spanish page. Run `py tools/build_es.py` from this folder after any change to `index.html`. Needs beautifulsoup4 (one-time install: `py -m pip install beautifulsoup4`). |
 | `favicon.svg` | The "NB" browser-tab icon. |
 | `og-image.png` | The 1200x630 picture shown when the link is shared in texts or social posts. |
 | `robots.txt`, `sitemap.xml`, `llms.txt` | Files for search engines and AI tools. |

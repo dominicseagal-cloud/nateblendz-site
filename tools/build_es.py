@@ -2,7 +2,7 @@
 
 Every element with a data-es attribute gets its Spanish text baked in,
 and the English text is kept in data-en so the EN/ES toggle still works.
-Run from the site folder:  python3 tools/build_es.py   (needs beautifulsoup4)
+Run from the site folder:  py tools/build_es.py   (needs beautifulsoup4)
 """
 import json, os
 from bs4 import BeautifulSoup
