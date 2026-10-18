@@ -7,6 +7,10 @@
 <title>Nateblendz | Barbero en Tustin, CA: fades, tapers y barba</title>
 <meta content="cover" name="claude:viewport-fit-sides"/>
 <meta content="Nateblendz es un barbero en Tustin, CA, en Newport Ave. Fades bajos, medios y altos, tapers, diseños y perfilado de barba a navaja. Reserva en línea en Booksy." name="description"/>
+<!-- Go-live: analytics. Add ONE of these (see GO-LIVE.md), then the Booksy, Maps and Instagram clicks below are tracked automatically.
+<script defer data-domain="YOUR-DOMAIN" src="https://plausible.io/js/script.js"></script>
+  or the GA4 tag from analytics.google.com
+-->
 <!-- Go-live: replace YOUR-DOMAIN and uncomment (see GO-LIVE.md)
 <link rel="canonical" href="https://YOUR-DOMAIN/es/">
 <link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/">
@@ -15,7 +19,7 @@
 <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
 <meta property="og:url" content="https://YOUR-DOMAIN/es/">
 -->
-<meta content="noindex, nofollow" name="robots"/><!-- Sample site: keep noindex until Nathan approves (see GO-LIVE.md) -->
+<meta content="noindex, nofollow" name="robots"/>
 <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
 <meta content="website" property="og:type"/>
 <meta content="Nateblendz | Barbero en Tustin, CA" property="og:title"/>
@@ -24,11 +28,6 @@
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="US-CA" name="geo.region"/>
 <meta content="Tustin" name="geo.placename"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<script>document.documentElement.classList.add('js');</script>
-<!-- areaServed below is a guess, not from Booksy: confirm with Nathan -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -53,11 +52,12 @@
  ],
  "employee": {
   "@type": "Person",
-  "name": "Nathan",
+  "name": "Nathan Calvillo",
   "jobTitle": "Barber"
  },
  "sameAs": [
-  "https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin"
+  "https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin",
+  "https://www.instagram.com/naateblendz/"
  ],
  "knowsAbout": [
   "Low fade",
@@ -78,7 +78,9 @@
      "@type": "Service",
      "name": "Haircut",
      "description": "Taper or fade haircut."
-    }
+    },
+    "price": "50",
+    "priceCurrency": "USD"
    },
    {
     "@type": "Offer",
@@ -86,7 +88,9 @@
      "@type": "Service",
      "name": "Haircut & Design",
      "description": "Haircut with a shaved design."
-    }
+    },
+    "price": "55",
+    "priceCurrency": "USD"
    },
    {
     "@type": "Offer",
@@ -94,7 +98,9 @@
      "@type": "Service",
      "name": "Haircut & Eyebrows",
      "description": "Haircut with an eyebrow cleanup."
-    }
+    },
+    "price": "55",
+    "priceCurrency": "USD"
    },
    {
     "@type": "Offer",
@@ -102,7 +108,9 @@
      "@type": "Service",
      "name": "Haircut & Beard",
      "description": "Haircut with beard shaping by straight razor."
-    }
+    },
+    "price": "60",
+    "priceCurrency": "USD"
    }
   ]
  },
@@ -113,7 +121,42 @@
    "urlTemplate": "https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin"
   },
   "name": "Book on Booksy"
- }
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 33.746863,
+  "longitude": -117.811371
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "19:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Saturday",
+   "opens": "09:00",
+   "closes": "17:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "opens": "00:00",
+   "closes": "00:00",
+   "validFrom": "2026-11-05",
+   "validThrough": "2026-11-08"
+  }
+ ],
+ "priceRange": "$50–$60",
+ "paymentAccepted": "Cash, Zelle",
+ "currenciesAccepted": "USD"
 }
 </script>
 <script type="application/ld+json">
@@ -152,47 +195,66 @@
     "@type": "Answer",
     "text": "Sí. El perfil de Booksy incluye Haircut & Beard, con perfilado de barba a navaja, y Haircut & Design para diseños rasurados. También hay una opción Haircut & Eyebrows."
    }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cuál es el horario?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "De lunes a viernes de 9:00 AM a 7:00 PM, y los sábados de 9:00 AM a 5:00 PM. Los domingos está cerrado. Los horarios libres aparecen en Booksy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cuánto cuesta un corte?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Un corte cuesta $50. Corte y diseño o corte y cejas cuestan $55, y corte y barba $60. Cada servicio dura como una hora. Los precios actuales siempre están en Booksy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Cómo se paga?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En efectivo o Zelle, en la barbería. No se pide depósito para reservar en Booksy."
+   }
   }
  ],
  "inLanguage": "es"
 }
 </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500&amp;family=Yellowtail&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500&amp;family=Yellowtail&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500&amp;family=Yellowtail&amp;display=swap" rel="stylesheet"/></noscript>
 <style>
-/* Layout: an upscale neighbourhood barbershop after dark. Centered monogram hero, a printed-menu service list with dotted leaders, hairline brass rules, generous space between chapters. */
+/* Layout: a classic gentleman's barbershop. Charcoal and cream, aged brass hairlines, a Garamond display face, a centered monogram hero and a printed-menu service list with dotted leaders. */
 :root {
-  --ink: #0f0e0d;          /* page ground, near-black with warmth */
-  --panel: #171513;        /* alternate chapter ground */
-  --rule: #2e2a25;         /* hairlines and borders */
-  --bone: #e8e1d3;         /* main text */
-  --dust: #9a9184;         /* secondary text */
-  --brass: #b89a63;        /* labels, rules, ornaments */
-  --clay: #d9577f;         /* rosa mexicano: Spanish voice and the selected state */
-  --marigold: #e0913a;     /* cempasuchil: Day of the Dead marigold, headline accents */
-  --turq: #4aa3a0;         /* papel picado turquoise */
+  --ink: #111213;          /* page ground: deep charcoal */
+  --panel: #18191b;        /* alternate chapter ground */
+  --rule: #2c2b29;         /* hairlines and borders */
+  --bone: #ede6d8;         /* cream: main text */
+  --dust: #a49d91;         /* secondary text */
+  --brass: #b9a170;        /* aged brass: labels, rules, buttons */
+  --clay: #c99486;         /* faded oxblood, text-safe: Spanish voice and the selected state */
+  --oxblood: #6e2621;      /* deep oxblood for fills and rules */
+  --marigold: #d6c098;     /* champagne: headline italics and highlights */
+  --turq: #a7b59a;         /* muted sage: open-now badge */
   --skin: #3a332c;         /* faded skin tone in the fade diagrams */
-  --serif: "DM Serif Display", Didot, "Bodoni 72", Georgia, serif;
+  --serif: "Cormorant Garamond", Garamond, "Times New Roman", serif;
+  --tag: "Yellowtail", "Brush Script MT", cursive; /* brush-calligraphy tag for the Nateblendz handle */
   --sans: "Jost", "Futura", "Century Gothic", "Segoe UI", sans-serif;
-  /* Type scale: small labels, fine print, small body */
-  --fs-label: .72rem;
-  --fs-fine: .8rem;
-  --fs-small: .86rem;
-  --fs-body-s: .95rem;
-  /* Uppercase controls (buttons, nav, toggles) share one size and spacing */
-  --fs-control: .76rem;
-  --ls-control: .2em;
-  --head-h: 5.5rem;        /* sticky header height, for anchor offsets and sticky panels */
   color-scheme: dark;
 }
-@media (max-width: 1060px) { :root { --head-h: 7.5rem; } }
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { overflow-x: clip; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   margin: 0; background: var(--ink); color: var(--bone);
   font-family: var(--sans); font-weight: 300; font-size: 1.0625rem; line-height: 1.65;
 }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--ink); }
 img { max-width: 100%; }
 a { color: inherit; }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 4px; }
@@ -201,63 +263,58 @@ a { color: inherit; }
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.05; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; margin: 0; line-height: 1.05; text-wrap: balance; letter-spacing: .005em; }
 p { margin: 0; }
 em { font-style: italic; }
-.label { font-family: var(--sans); font-weight: 500; font-size: var(--fs-label); letter-spacing: .32em; text-transform: uppercase; color: var(--brass); }
-.ornament { display: flex; align-items: center; gap: 1rem; color: var(--brass); font-size: var(--fs-fine); }
+.label { font-family: var(--sans); font-weight: 500; font-size: .74rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass); }
+.ornament { display: flex; align-items: center; gap: 1rem; color: var(--brass); font-size: .8rem; }
 .ornament::before, .ornament::after { content: ""; height: 1px; flex: 1; background: var(--rule); }
-.ornament.short::before, .ornament.short::after { flex: 0 0 3.5rem; background: var(--marigold); opacity: .55; }
+.ornament.short::before, .ornament.short::after { flex: 0 0 3.5rem; background: var(--brass); opacity: .6; }
 .es { font-family: var(--serif); font-style: italic; color: var(--clay); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .7em;
-  font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase;
+  font-family: var(--sans); font-weight: 500; font-size: .8rem; letter-spacing: .24em; text-transform: uppercase;
   text-decoration: none; padding: 1.05em 1.9em; border: 1px solid var(--brass); background: transparent; color: var(--bone);
-  cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease;
+  cursor: pointer; transition: background .2s ease, color .2s ease;
 }
 .btn:hover { background: var(--brass); color: var(--ink); }
 .btn.solid { background: var(--brass); color: var(--ink); }
 .btn.solid:hover { background: var(--bone); border-color: var(--bone); }
 
-.sample-bar { border-bottom: 1px solid var(--rule); color: var(--dust); font-size: var(--fs-fine); text-align: center; letter-spacing: .04em; }
+.sample-bar { border-bottom: 1px solid var(--rule); color: var(--dust); font-size: .78rem; text-align: center; letter-spacing: .04em; }
 .sample-bar .wrap { padding-block: .5rem; }
 
-header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--ink) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); transition: background .25s ease, border-color .25s ease; }
-header.top[data-scrolled] { background: var(--ink); border-bottom-color: color-mix(in srgb, var(--brass) 60%, transparent); }
+header.top { position: sticky; top: 0; z-index: 20; padding-top: env(safe-area-inset-top, 0px); background: var(--ink); border-bottom: 1px solid var(--rule); }
 header.top .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding-block: .9rem; }
 header nav { display: flex; gap: 1.3rem; flex-wrap: nowrap; }
-header nav a { text-decoration: none; font-size: var(--fs-control); font-weight: 500; letter-spacing: var(--ls-control); white-space: nowrap; text-transform: uppercase; color: var(--dust); }
+header nav a { text-decoration: none; font-size: .68rem; font-weight: 500; letter-spacing: .18em; white-space: nowrap; text-transform: uppercase; color: var(--dust); }
 header nav a:hover { color: var(--bone); }
-.wordmark { font-family: var(--serif); font-size: 1.5rem; text-decoration: none; letter-spacing: .02em; }
+.wordmark { font-family: var(--tag); font-weight: 400; font-size: 2.1rem; line-height: 1.1; text-decoration: none; letter-spacing: 0; color: var(--bone); transform: rotate(-4deg); display: inline-block; }
 .head-right { justify-self: end; display: flex; align-items: center; gap: .9rem; }
 header .book { padding: .8em 1.3em; }
 .lang { display: inline-flex; border: 1px solid var(--rule); }
-.lang button { background: transparent; border: 0; color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); padding: .55em .7em; cursor: pointer; }
-/* One pressed style for both toggle groups (EN/ES and gallery filters) */
-.lang button[aria-pressed="true"], .filter[aria-pressed="true"] { background: var(--bone); border-color: var(--bone); color: var(--ink); }
-@media (max-width: 1060px) {
-  header.top .wrap { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0; padding-block: .5rem 0; }
-  header .wordmark { grid-column: 1; grid-row: 1; justify-self: start; }
-  header .head-right { grid-column: 2; grid-row: 1; }
-  /* Slim, swipeable nav row under the header */
-  header nav { grid-column: 1 / -1; grid-row: 2; gap: 1.4rem; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--rule); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
-  header nav::-webkit-scrollbar { display: none; }
+.lang button { background: transparent; border: 0; color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: .7rem; letter-spacing: .18em; padding: .55em .7em; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--bone); color: var(--ink); }
+header .menu-btn { display: none; background: transparent; border: 1px solid var(--rule); color: var(--bone); font-family: var(--sans); font-weight: 500; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; padding: .55em .8em; cursor: pointer; }
+@media (max-width: 1240px) {
+  header.top .wrap { grid-template-columns: 1fr auto; position: relative; }
+  header .menu-btn { display: inline-block; }
+  header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--ink); border-bottom: 1px solid var(--rule); padding: .4rem 16px 1rem; }
+  header.top.open nav { display: flex; }
+  header nav a { padding: .95rem 0; border-bottom: 1px solid var(--rule); font-size: .78rem; }
+  header nav a:last-child { border-bottom: 0; }
 }
-@media (max-width: 420px) {
-  header .head-right { gap: .5rem; }
-  header .wordmark { font-size: 1.3rem; }
-  header .book { padding: .6em .8em; letter-spacing: .12em; }
-  .lang button { padding-inline: .45em; }
-}
+.skip { position: absolute; left: .75rem; top: -4rem; z-index: 50; background: var(--bone); color: var(--ink); padding: .7rem 1rem; font-weight: 500; text-decoration: none; }
+.skip:focus { top: .75rem; }
+@media (max-width: 420px) { header .book { display: none; } }
 
 /* Hero */
 .hero .wrap { padding-block: clamp(4rem, 10vw, 7.5rem); display: grid; justify-items: center; text-align: center; gap: 1.6rem; }
-.monogram { width: 140px; height: 140px; border: 0; border-radius: 50%; display: grid; place-items: center; position: relative; }
-.monogram::after { content: ""; position: absolute; inset: 22px; border: 1px solid var(--brass); border-radius: 50%; }
-.monogram .petals { position: absolute; inset: 0; width: 100%; height: 100%; }
-.monogram span { position: relative; z-index: 1; font-family: var(--serif); font-size: 2.3rem; color: var(--brass); letter-spacing: .02em; }
-.hero h1 { font-size: clamp(3rem, 9vw, 6.6rem); max-width: 14ch; }
+.monogram { width: 104px; height: 104px; border: 1px solid var(--brass); border-radius: 50%; display: grid; place-items: center; position: relative; }
+.monogram::after { content: ""; position: absolute; inset: 5px; border: 1px solid var(--rule); border-radius: 50%; }
+.monogram span { font-family: var(--serif); font-size: 2.3rem; color: var(--brass); letter-spacing: .02em; }
+.hero h1 { font-size: clamp(3.2rem, 9.5vw, 7rem); max-width: 14ch; }
 .hero h1 em { color: var(--marigold); }
 .hero h1 .kicker { display: block; line-height: 1.6; margin-bottom: 1.4rem; }
 .hero .es { font-size: clamp(1.3rem, 3vw, 1.7rem); }
@@ -266,14 +323,14 @@ header .book { padding: .8em 1.3em; }
 .hero .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: .4rem; }
 .hero .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2.4rem; margin: 1rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--rule); width: min(100%, 40rem); }
 .hero .facts div { display: grid; gap: .1rem; }
-.hero .facts dt { font-size: var(--fs-label); letter-spacing: .28em; text-transform: uppercase; color: var(--brass); font-weight: 500; }
-.hero .facts dd { margin: 0; font-size: var(--fs-body-s); }
+.hero .facts dt { font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); font-weight: 500; }
+.hero .facts dd { margin: 0; font-size: .95rem; }
 
 /* Chapters */
 .chapter .wrap { padding-block: clamp(4.5rem, 10vw, 7rem); }
 .chapter.alt { background: var(--panel); border-block: 1px solid var(--rule); }
 .chapter-head { display: grid; justify-items: center; text-align: center; gap: 1rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
-.chapter-head h2 { font-size: clamp(2.4rem, 6vw, 4rem); }
+.chapter-head h2 { font-size: clamp(2.6rem, 6.4vw, 4.4rem); }
 .chapter-head h2 em, .closer h2 em { color: var(--marigold); }
 .chapter-head p { color: var(--dust); max-width: 36rem; }
 
@@ -281,7 +338,7 @@ header .book { padding: .8em 1.3em; }
 .flow { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 @media (max-width: 860px) { .flow { grid-template-columns: minmax(0, 1fr); } }
 .menu { border: 0; margin: 0; padding: 0; display: grid; min-width: 0; }
-.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.sr { position: absolute; left: -9999px; }
 .item { position: relative; border-top: 1px solid var(--rule); }
 .item:last-of-type { border-bottom: 1px solid var(--rule); }
 .item input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; width: 100%; height: 100%; }
@@ -289,31 +346,31 @@ header .book { padding: .8em 1.3em; }
 .item:hover label { background: color-mix(in srgb, var(--bone) 3%, transparent); }
 .item input:focus-visible + label { outline: 2px solid var(--brass); outline-offset: -2px; }
 .dot { grid-row: span 2; width: 1rem; height: 1rem; margin-top: .55rem; border: 1px solid var(--dust); border-radius: 50%; position: relative; }
-.item input:checked + label .dot { border-color: var(--clay); }
-.item input:checked + label .dot::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--clay); }
+.item input:checked + label .dot { border-color: var(--brass); }
+.item input:checked + label .dot::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--brass); }
 .line { display: flex; align-items: baseline; gap: .8rem; }
 .line h3 { font-size: clamp(1.45rem, 3vw, 1.8rem); white-space: nowrap; }
 .line .lead { flex: 1; border-bottom: 1px dotted var(--dust); opacity: .5; transform: translateY(-.35rem); min-width: 1rem; }
-.line .where { font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
-.line .gloss { display: block; margin-top: .2rem; font-family: var(--serif); font-style: italic; font-size: var(--fs-body-s); color: var(--clay); white-space: normal; }
-.item .desc { color: var(--dust); font-size: var(--fs-body-s); }
+.line .where { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
+.item .desc { color: var(--dust); font-size: .98rem; }
 .item input:checked + label h3 { color: var(--clay); }
-.menu-note { margin-top: 1.4rem; font-size: var(--fs-small); color: var(--dust); }
+.menu-note { margin-top: 1.4rem; font-size: .86rem; color: var(--dust); }
+.menu-note a { color: var(--brass); }
 @media (max-width: 480px) { .line .lead { display: none; } .line { flex-wrap: wrap; gap: .2rem .8rem; } .line h3 { white-space: normal; } }
 
 .ticket {
-  position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h));
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem);
   border: 1px solid var(--brass); padding: 2rem 1.75rem; display: grid; gap: 1.3rem; text-align: center;
   background: var(--ink); outline: 1px solid var(--rule); outline-offset: -8px;
 }
 @media (max-width: 860px) { .ticket { position: static; } }
 .ticket .picked { font-family: var(--serif); font-size: 2.1rem; line-height: 1.1; }
-.ticket ol { list-style: none; margin: 0; padding: 1.3rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: .9rem; text-align: left; counter-reset: s; }
-.ticket li { counter-increment: s; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .6rem; font-size: var(--fs-body-s); color: var(--dust); }
+.ticket ol { list-style: none; margin: 0; padding: 1.3rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: .9rem; text-align: left; counter-reset: s 0; }
+.ticket li { counter-increment: s; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .6rem; font-size: .95rem; color: var(--dust); }
 .ticket li b { color: var(--bone); font-weight: 500; }
 .ticket li::before { content: counter(s); font-family: var(--serif); font-size: 1.3rem; line-height: 1.2; color: var(--brass); }
 .ticket li:last-child::before { content: "\2713"; font-family: var(--sans); font-size: 1rem; }
-.ticket .fine { font-size: var(--fs-fine); color: var(--dust); }
+.ticket .fine { font-size: .8rem; color: var(--dust); }
 
 /* Style finder */
 .finder { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -326,28 +383,28 @@ header .book { padding: .8em 1.3em; }
 .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
 .chip { position: relative; }
 .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
-.chip label { display: block; padding: .65rem 1.1rem; border: 1px solid var(--rule); font-size: var(--fs-body-s); cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+.chip label { display: block; padding: .65rem 1.1rem; border: 1px solid var(--rule); font-size: .95rem; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
 .chip label:hover { border-color: var(--dust); }
-.chip input:checked + label { border-color: var(--clay); background: color-mix(in srgb, var(--clay) 14%, transparent); color: var(--bone); }
+.chip input:checked + label { border-color: var(--brass); background: color-mix(in srgb, var(--oxblood) 35%, transparent); color: var(--bone); }
 .chip input:focus-visible + label { outline: 2px solid var(--brass); outline-offset: 2px; }
-.result { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; padding: 2rem 1.75rem; display: grid; gap: 1rem; background: var(--ink); text-align: center; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
+.result { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; padding: 2rem 1.75rem; display: grid; gap: 1rem; background: var(--ink); text-align: center; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem); }
 @media (max-width: 860px) { .result { position: static; } }
 .result .rec { font-family: var(--serif); font-size: 2rem; line-height: 1.1; color: var(--clay); }
 .result .say { border-top: 1px solid var(--rule); padding-top: 1rem; display: grid; gap: .3rem; }
 .result .say p:last-child { font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.4; }
-.result .why { color: var(--dust); font-size: var(--fs-body-s); }
+.result .why { color: var(--dust); font-size: .93rem; }
 .result .actions { display: grid; gap: .6rem; }
 
 /* Fade guide */
 .fades { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 960px) { .fades { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .fades { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.fade { border: 1px solid var(--rule); background: var(--ink); padding: 1.25rem 1.1rem 1.4rem; display: grid; gap: .6rem; align-content: start; }
-.fade svg { width: 100%; max-width: 150px; height: auto; justify-self: center; display: block; }
+.fade { border: 1px solid var(--rule); background: var(--ink); padding: .8rem .8rem 1.3rem; display: grid; gap: .6rem; align-content: start; }
+.fade img { width: 100%; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; border: 1px solid var(--rule); }
 .fade h3 { font-size: 1.35rem; }
-.fade p { color: var(--dust); font-size: var(--fs-body-s); line-height: 1.5; }
-.fade .ask { color: var(--brass); font-size: var(--fs-label); letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
-.guide-note { text-align: center; color: var(--dust); font-size: var(--fs-small); margin-top: 1.6rem; }
+.fade p { color: var(--dust); font-size: .9rem; line-height: 1.5; }
+.fade .ask { color: var(--brass); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
+.guide-note { text-align: center; color: var(--dust); font-size: .86rem; margin-top: 1.6rem; }
 
 /* Aftercare */
 .care { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -356,14 +413,14 @@ header .book { padding: .8em 1.3em; }
 .tips li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 1rem; padding: 1.3rem 0; border-bottom: 1px solid var(--rule); }
 .tips .ic { font-family: var(--serif); color: var(--brass); font-size: 1.4rem; line-height: 1.2; }
 .tips h3 { font-size: 1.3rem; margin-bottom: .25rem; }
-.tips p { color: var(--dust); font-size: var(--fs-body-s); }
+.tips p { color: var(--dust); font-size: .96rem; }
 .rebook { border: 1px solid var(--rule); padding: 1.75rem; display: grid; gap: 1rem; background: var(--ink); }
 .rebook h3 { font-size: 1.6rem; }
-.rebook table { width: 100%; border-collapse: collapse; font-size: var(--fs-body-s); }
+.rebook table { width: 100%; border-collapse: collapse; font-size: .96rem; }
 .rebook td { padding: .8rem 0; border-top: 1px solid var(--rule); vertical-align: baseline; }
 .rebook td:last-child { text-align: right; font-family: var(--serif); font-size: 1.15rem; color: var(--bone); white-space: nowrap; padding-left: 1rem; }
 .rebook td:first-child { color: var(--dust); }
-.rebook .fine { font-size: var(--fs-fine); color: var(--dust); }
+.rebook .fine { font-size: .8rem; color: var(--dust); }
 
 /* Visit */
 .visit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
@@ -371,22 +428,44 @@ header .book { padding: .8em 1.3em; }
 .visit > div { padding: 2rem 1.75rem 2.25rem; display: grid; gap: .8rem; align-content: start; border-bottom: 1px solid var(--rule); }
 .visit > div + div { border-left: 1px solid var(--rule); }
 @media (max-width: 860px) { .visit > div + div { border-left: 0; } .visit > div { padding-inline: 0; } }
+.hours-block { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); margin-top: 2.5rem; }
+@media (max-width: 860px) { .hours-block { grid-template-columns: minmax(0, 1fr); } }
+.hours-block > div { display: grid; gap: .8rem; align-content: start; }
+.hours-block h3 { font-size: 1.6rem; }
+.hours-block p { color: var(--dust); }
+.hours-block .big { color: var(--bone); }
+.hours-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.open-badge { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; padding: .3rem .6rem; border: 1px solid var(--rule); color: var(--dust); }
+.open-badge.is-open { border-color: var(--turq); color: var(--turq); }
+.open-badge.is-open::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--turq); margin-right: .55em; vertical-align: .1em; }
+.hours { width: 100%; border-collapse: collapse; border-top: 1px solid var(--rule); }
+.hours th, .hours td { padding: .75rem 0; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 400; }
+.hours td { text-align: right; font-variant-numeric: tabular-nums; color: var(--bone); white-space: nowrap; padding-left: 1rem; }
+.hours th { color: var(--dust); }
+.hours tr.today th, .hours tr.today td { color: var(--marigold); }
+.closure { color: var(--clay) !important; font-family: var(--serif); font-style: italic; font-size: 1.1rem; }
+.hours-block .fine { font-size: .8rem; }
+.map { margin-top: 2rem; border: 1px solid var(--rule); background: var(--ink); position: relative; aspect-ratio: 16 / 7; min-height: 260px; }
+.map .map-fallback { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: .5rem; color: var(--dust); font-size: .9rem; padding: 1rem; }
+.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.6) contrast(1.05); }
+@media (max-width: 600px) { .map { aspect-ratio: 4 / 3; } }
 .visit h3 { font-size: 1.6rem; }
 .visit .big { font-size: 1.1rem; color: var(--bone); line-height: 1.5; font-weight: 400; }
 .visit p { color: var(--dust); }
-.textlink { color: var(--brass); font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase; font-weight: 500; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; justify-self: start; }
+.textlink { color: var(--brass); font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; font-weight: 500; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; justify-self: start; }
 .textlink:hover { color: var(--bone); }
-.note { font-size: var(--fs-small); border-left: 1px solid var(--clay); padding-left: .9rem; }
+.note { font-size: .86rem; border-left: 1px solid var(--oxblood); padding-left: .9rem; }
 
 /* Gallery */
 .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.frame { position: relative; overflow: hidden; aspect-ratio: 4 / 5; max-width: 100%; border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: -10px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; background: var(--ink); }
+.frame { aspect-ratio: 4 / 5; max-width: 100%; border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: -10px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; background: var(--ink); }
 .frame span { font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 3vw, 1.9rem); }
-.frame small { font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
+.frame small { font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
 
 
 /* Photos: drop files into photos/ with the names in README.md and they replace the placeholders */
+.frame { position: relative; overflow: hidden; }
 .frame.has-photo img, .fade.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .frame.has-photo img { position: absolute; inset: 0; }
 .frame.has-photo span, .frame.has-photo small { position: relative; z-index: 1; text-shadow: 0 1px 8px rgba(0,0,0,.8); }
@@ -397,45 +476,59 @@ header .book { padding: .8em 1.3em; }
 
 
 /* Dia de los Muertos accents */
-.mari { width: 26px; height: 26px; }
-.picado { display: flex; gap: 6px; overflow: hidden; height: 50px; border-top: 1px solid color-mix(in srgb, var(--bone) 35%, transparent); padding-inline: 6px; }
-.picado svg { flex: 0 0 52px; height: 46px; margin-top: -1px; opacity: .9; }
-.picado svg:nth-child(odd) { transform: rotate(-2deg); transform-origin: top center; }
-.picado svg:nth-child(even) { transform: rotate(2deg); transform-origin: top center; }
-.p-marigold { color: var(--marigold); } .p-rosa { color: var(--clay); } .p-turq { color: var(--turq); } .p-brass { color: var(--brass); }
-.calavera { width: 110px; height: auto; }
+.diamond { width: 7px; height: 7px; border: 1px solid var(--brass); transform: rotate(45deg); }
+.closer .wrap { padding-block-start: clamp(3rem, 7vw, 5rem); }
 
 
 /* Cut gallery */
 .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-bottom: 2rem; }
-.filter { background: transparent; border: 1px solid var(--rule); color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase; padding: .7em 1.1em; cursor: pointer; }
+.filter { background: transparent; border: 1px solid var(--rule); color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; padding: .7em 1.1em; cursor: pointer; }
 .filter:hover { color: var(--bone); border-color: var(--dust); }
+.filter[aria-pressed="true"] { background: var(--bone); border-color: var(--bone); color: var(--ink); }
 .cut-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 @media (max-width: 900px) { .cut-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.cut-card { margin: 0; background: var(--ink); border: 1px solid var(--rule); display: grid; grid-template-rows: auto 1fr; overflow: hidden; }
-.cut-card img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; height: auto; }
-.cut-card figcaption { position: relative; background: var(--ink); padding: 1.1rem 1.15rem 1.3rem; display: grid; gap: .35rem; align-content: start; }
-.cut-tags { font-size: var(--fs-label); letter-spacing: .22em; text-transform: uppercase; color: var(--marigold); font-weight: 500; }
-.cut-card h3 { font-size: 1.45rem; }
-.cut-card p { color: var(--dust); font-size: var(--fs-body-s); line-height: 1.5; }
-.cut-card .who { color: var(--bone); font-style: italic; font-family: var(--serif); font-size: 1rem; }
-/* Phones: two columns so the gallery stays browsable */
-@media (max-width: 520px) {
-  .cut-grid { gap: .75rem; }
-  .cut-card figcaption { padding: .8rem .75rem 1rem; gap: .25rem; }
-  .cut-tags { letter-spacing: .14em; }
-  .cut-card h3 { font-size: 1.15rem; }
-  .cut-card p { font-size: var(--fs-small); }
-  .cut-card .who { font-size: var(--fs-small); }
+@media (max-width: 600px) {
+  .cut-grid { gap: .7rem; }
+  .cut-card figcaption { padding: .7rem .75rem .85rem; gap: .2rem; }
+  .cut-card h3 { font-size: 1.05rem; }
+  .cut-card figcaption p:not(.cut-tags):not(.who) { display: none; }
+  .cut-card .who { font-size: .85rem; line-height: 1.35; }
+  .cut-tags { font-size: .6rem; letter-spacing: .16em; }
+  .cut-grid.collapsed .cut-card:nth-child(n+7) { display: none; }
+  .cut-grid.collapsed + .more-cuts { display: block; }
 }
-.ba-slot { aspect-ratio: 4 / 5; max-width: 100%; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--rule); background: repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--bone) 4%, transparent) 12px 13px), var(--panel); }
-.ba-slot span { display: grid; place-items: end center; padding-bottom: 1rem; font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
-.ba-slot span + span { border-left: 1px dashed var(--rule); }
-.ba-slot.has-pair span { background-size: cover; background-position: center; color: var(--bone); text-shadow: 0 1px 6px rgba(0,0,0,.8); }
-.gallery-note { text-align: center; color: var(--dust); font-size: var(--fs-small); margin-top: 1.6rem; }
+.cut-card { margin: 0; background: var(--ink); border: 1px solid var(--rule); display: grid; grid-template-rows: auto 1fr; }
+.cut-card img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; height: auto; }
+.cut-card figcaption { padding: 1.1rem 1.15rem 1.3rem; display: grid; gap: .35rem; align-content: start; overflow-wrap: anywhere; }
+.watch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; max-width: 760px; margin: 0 auto; }
+@media (max-width: 600px) { .watch { grid-template-columns: minmax(0, 1fr); max-width: 360px; } }
+.reel { position: relative; aspect-ratio: 4 / 5; border: 1px solid var(--rule); background: var(--panel); overflow: hidden; }
+.reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; }
+.reel-fallback { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; gap: .7rem; padding: 1.5rem; color: var(--dust); }
+.reel-title { font-family: var(--serif); font-size: 1.6rem; color: var(--bone); }
+.montage { border-color: var(--brass); }
+.montage-frames img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: montage 24s infinite; }
+.montage-frames img:nth-child(1) { animation-delay: 0s; }
+.montage-frames img:nth-child(2) { animation-delay: 4s; }
+.montage-frames img:nth-child(3) { animation-delay: 8s; }
+.montage-frames img:nth-child(4) { animation-delay: 12s; }
+.montage-frames img:nth-child(5) { animation-delay: 16s; }
+.montage-frames img:nth-child(6) { animation-delay: 20s; }
+@keyframes montage { 0% { opacity: 0; transform: scale(1.12); } 4% { opacity: 1; } 17% { opacity: 1; } 22% { opacity: 0; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+.montage-cap { position: absolute; inset: auto 0 0 0; padding: 2.5rem 1.25rem 1.25rem; background: linear-gradient(transparent, rgba(10,10,11,.92)); display: grid; gap: .3rem; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .montage-frames img { animation: none; } .montage-frames img:first-child { opacity: 1; } }
+.reel-slot { border-style: dashed; background: repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--bone) 4%, transparent) 12px 13px), var(--panel); }
+.reel-slot video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gallery-note a { color: var(--brass); }
+.more-cuts { display: none; margin: 1.2rem auto 0; }
+.cut-tags { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); font-weight: 500; }
+.cut-card h3 { font-size: 1.45rem; }
+.cut-card p { color: var(--dust); font-size: .93rem; line-height: 1.5; }
+.cut-card .who { color: var(--bone); font-style: italic; font-family: var(--serif); font-size: 1rem; }
+.gallery-note { text-align: center; color: var(--dust); font-size: .84rem; margin-top: 1.6rem; }
 
 /* Rebooking nudge */
-.nudge { border-block: 1px solid var(--marigold); background: linear-gradient(90deg, color-mix(in srgb, var(--marigold) 9%, var(--ink)), var(--ink) 70%); }
+.nudge { border-block: 1px solid var(--oxblood); background: linear-gradient(90deg, color-mix(in srgb, var(--oxblood) 22%, var(--ink)), var(--ink) 75%); }
 .nudge .wrap { padding-block: clamp(2.5rem, 6vw, 3.5rem); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
 @media (max-width: 860px) { .nudge .wrap { grid-template-columns: minmax(0, 1fr); } }
 .nudge-copy { display: grid; gap: 1rem; justify-items: start; }
@@ -443,12 +536,12 @@ header .book { padding: .8em 1.3em; }
 .nudge h2 em { color: var(--marigold); }
 .reminder { border: 1px solid var(--rule); background: var(--ink); padding: 1.4rem; display: grid; gap: .85rem; }
 .rem-row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); align-items: center; gap: .75rem; }
-.rem-row label { font-size: var(--fs-small); color: var(--dust); }
-.rem-row input, .rem-row select { font: inherit; font-size: var(--fs-body-s); color: var(--bone); background: var(--panel); border: 1px solid var(--rule); padding: .5rem .6rem; min-width: 0; width: 100%; }
+.rem-row label { font-size: .9rem; color: var(--dust); }
+.rem-row input, .rem-row select { font: inherit; font-size: .95rem; color: var(--bone); background: var(--panel); border: 1px solid var(--rule); padding: .5rem .6rem; min-width: 0; width: 100%; }
 .due { font-family: var(--serif); font-size: 1.25rem; line-height: 1.3; }
 .due b { color: var(--marigold); font-weight: 400; }
 .rem-links { display: flex; flex-wrap: wrap; gap: .9rem 1.4rem; }
-.reminder .fine { font-size: var(--fs-fine); color: var(--dust); }
+.reminder .fine { font-size: .8rem; color: var(--dust); }
 
 /* Google Business Profile */
 .gbp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -457,11 +550,14 @@ header .book { padding: .8em 1.3em; }
 .gbp-copy p { color: var(--dust); max-width: 34rem; }
 .reviews { display: grid; gap: 1rem; }
 .reviews-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.rating { color: var(--dust); font-size: .92rem; }
+.rating .rating-num { font-family: var(--serif); font-size: 1.6rem; color: var(--marigold); margin-right: .2rem; }
+.rating a { color: var(--brass); }
 .review-slot { border: 1px dashed var(--rule); padding: 1.1rem 1.25rem; display: grid; gap: .35rem; }
-.review-slot .stars { color: var(--rule); letter-spacing: .2em; font-size: var(--fs-small); }
+.review-slot .stars { color: var(--rule); letter-spacing: .2em; font-size: .9rem; }
 .review-slot .quote { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--dust); }
-.review-slot .who { font-size: var(--fs-fine); letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
-.reviews .fine { font-size: var(--fs-fine); color: var(--dust); }
+.review-slot .who { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
+.reviews .fine { font-size: .8rem; color: var(--dust); }
 
 /* FAQ */
 .faq { max-width: 46rem; margin: 0 auto; border-top: 1px solid var(--rule); }
@@ -479,98 +575,120 @@ header .book { padding: .8em 1.3em; }
 .closer .es { font-size: 1.5rem; }
 
 footer { border-top: 1px solid var(--rule); }
-footer .wrap { padding-block: 2.5rem 3rem; display: grid; justify-items: center; text-align: center; gap: .8rem; color: var(--dust); font-size: var(--fs-small); }
-footer .wordmark { font-size: 1.3rem; color: var(--bone); }
+footer .wrap { padding-block: 2.5rem 3rem; display: grid; justify-items: center; text-align: center; gap: .8rem; color: var(--dust); font-size: .84rem; }
+footer .wordmark { font-size: 2.2rem; color: var(--brass); }
 footer p { max-width: 40rem; }
-footer .privacy { font-size: var(--fs-fine); border-top: 1px solid var(--rule); padding-top: .9rem; }
+footer .privacy { font-size: .78rem; }
+footer .addr { color: var(--bone); line-height: 1.6; }
+footer .addr a { color: var(--brass); }
 .langlinks a { color: var(--brass); }
 
 
 /* Rewards */
 .rewards { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 @media (max-width: 860px) { .rewards { grid-template-columns: minmax(0, 1fr); } }
-.earn, .spend { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-bottom: 2.2rem; }
-.earn > div, .spend > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
-.earn h3, .spend h3 { font-size: 1.25rem; }
-.earn p, .spend p { color: var(--dust); font-size: var(--fs-body-s); }
-.pts { font-family: var(--serif); color: var(--brass); font-size: 1.35rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lists { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; }
+.earn, .spend { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.earn > div, .spend > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .6rem; align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--rule); }
+.earn h3, .spend h3 { font-size: 1rem; font-family: var(--sans); font-weight: 400; }
+.pts { font-family: var(--serif); color: var(--brass); font-size: 1.1rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .sub { margin-bottom: .9rem; }
-.card { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; background: var(--panel); padding: 2rem 1.75rem; display: grid; gap: 1.3rem; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
+.card { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; background: var(--panel); padding: 1.5rem 1.5rem; display: grid; gap: .9rem; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem); }
 @media (max-width: 860px) { .card { position: static; } }
 .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-.card-top .wordmark { font-size: 1.4rem; }
-.demo-tag { font-size: var(--fs-label); letter-spacing: .22em; text-transform: uppercase; color: var(--brass); border: 1px solid color-mix(in srgb, var(--brass) 50%, transparent); padding: .2rem .5rem; }
+.card-top .wordmark { font-size: 1.7rem; color: var(--brass); }
+.demo-tag { font-size: .66rem; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); border: 1px solid color-mix(in srgb, var(--brass) 50%, transparent); padding: .2rem .5rem; }
 .balance { display: grid; gap: .1rem; }
-.balance .num { font-family: var(--serif); font-size: 3.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
-.stamps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; }
-.stamp { aspect-ratio: 1; max-width: 100%; border: 1px dashed var(--rule); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: var(--fs-body-s); color: var(--dust); }
+.balance .num { font-family: var(--serif); font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.stamps { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: .35rem; }
+.stamp { aspect-ratio: 1; max-width: 100%; border: 1px dashed var(--rule); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: .55rem; color: var(--dust); }
 .stamp.on { border: 1px solid var(--brass); background: color-mix(in srgb, var(--brass) 16%, transparent); color: var(--brass); }
 .stamp.on::before { content: "NB"; }
-.meter { height: 4px; background: var(--rule); position: relative; overflow: hidden; }
-.meter span { position: absolute; inset: 0; background: var(--brass); transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform .3s ease; }
-.next { color: var(--dust); font-size: var(--fs-body-s); }
+.meter { height: 4px; background: var(--rule); position: relative; }
+.meter span { position: absolute; inset: 0 auto 0 0; background: var(--brass); transition: width .3s ease; }
+.next { color: var(--dust); font-size: .93rem; }
 .next b { color: var(--bone); font-weight: 500; }
 .card-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
 .card-actions .btn { flex: 1 1 10rem; padding-inline: 1rem; }
-.unlocked { font-family: var(--serif); font-style: italic; color: var(--clay); font-size: 1.15rem; min-height: 1.6em; }
-.card .fine { font-size: var(--fs-fine); color: var(--dust); }
+.unlocked { font-family: var(--serif); font-style: italic; color: var(--clay); font-size: 1.05rem; }
+.unlocked:empty { display: none; }
+.card .reset { background: none; border: 0; padding: 0; color: var(--dust); font: inherit; font-size: .8rem; text-decoration: underline; cursor: pointer; justify-self: start; }
+.card .fine { font-size: .8rem; color: var(--dust); }
 @media (prefers-reduced-motion: reduce) { .meter span { transition: none; } }
 
-/* Tap targets: every button and link at least 44px tall */
-header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-items: center; min-height: 44px; }
-.textlink { border-bottom: 0; padding-bottom: 0; text-decoration: underline; text-underline-offset: 5px; }
-.lang button { min-width: 44px; }
-.lang button, .filter, header .book, .rem-row input, .rem-row select { min-height: 44px; }
-.faq .answer a { padding-block: 10px; }
-
-/* Focus ring and press state on every control */
-.btn:focus-visible, .filter:focus-visible, .lang button:focus-visible, header nav a:focus-visible, .textlink:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
-
-/* Motion: everything below only runs when the visitor hasn't asked for reduced motion */
+/* Motion: scroll reveals, hero entrance, hover lifts. Only runs when the visitor hasn't asked for reduced motion. */
+section[id] { scroll-margin-top: 84px; }
+header.top .wrap { transition: padding .35s ease; }
+header.top { transition: box-shadow .35s ease; }
+header.top.scrolled { box-shadow: 0 10px 28px -18px rgba(0, 0, 0, .95); }
+header.top.scrolled .wrap { padding-block: .55rem; }
+.cut-card { overflow: hidden; }
 @media (prefers-reduced-motion: no-preference) {
-  /* Scroll reveal (scrollfx.js sets data-in). html.js means content is never hidden without JS. */
-  html.js [data-reveal] {
-    opacity: 0; transform: translateY(18px);
-    transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1), translate .2s ease, border-color .2s ease;
-    transition-delay: calc(var(--d, 0) * 90ms), calc(var(--d, 0) * 90ms), 0s, 0s;
+  .js-motion .reveal { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0ms); }
+  .js-motion .reveal.in { opacity: 1; transform: none; }
+  .js-motion .ornament.short::before, .js-motion .ornament.short::after { transform: scaleX(0); transition: transform 1.1s cubic-bezier(.2, .7, .2, 1) .25s; }
+  .js-motion .ornament.short::before { transform-origin: right; }
+  .js-motion .ornament.short::after { transform-origin: left; }
+  .js-motion .chapter-head.in .ornament.short::before, .js-motion .chapter-head.in .ornament.short::after { transform: scaleX(1); }
+  .js-motion .hero .wrap > * { animation: rise 1s cubic-bezier(.2, .7, .2, 1) both; }
+  .js-motion .hero .wrap > :nth-child(2) { animation-delay: .12s; }
+  .js-motion .hero .wrap > :nth-child(3) { animation-delay: .24s; }
+  .js-motion .hero .wrap > :nth-child(4) { animation-delay: .36s; }
+  .js-motion .hero .wrap > :nth-child(5) { animation-delay: .48s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .cut-card, .fade, .review-slot, .reel, .reminder { transition: transform .4s cubic-bezier(.2, .7, .2, 1), border-color .4s ease, box-shadow .4s ease; }
+  .cut-card img { transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .btn { transition: background .2s ease, color .2s ease, border-color .2s ease, transform .25s ease; }
+  @media (hover: hover) {
+    .cut-card:hover, .fade:hover, .review-slot:hover, .reel:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--brass) 55%, var(--rule)); box-shadow: 0 18px 34px -22px rgba(0, 0, 0, .95); }
+    .cut-card:hover img { transform: scale(1.045); }
+    .btn:hover { transform: translateY(-2px); }
   }
-  html.js [data-reveal][data-in] { opacity: 1; transform: none; }
-  /* Stagger rows of cards (--d steps of 90ms) */
-  .cut-grid > :nth-child(3n+2), .fades > :nth-child(2), .menu .item:nth-of-type(2) { --d: 1; }
-  .cut-grid > :nth-child(3n), .fades > :nth-child(3), .menu .item:nth-of-type(3) { --d: 2; }
-  .fades > :nth-child(4), .menu .item:nth-of-type(4) { --d: 3; }
-  .fades > :nth-child(5) { --d: 4; }
-
-  /* Cards lift on hover/focus; photos zoom inside the card frame */
-  .cut-card, .fade, .review-slot { transition: translate .2s ease, border-color .2s ease; }
-  .cut-card:hover, .cut-card:focus-within, .fade:hover, .fade:focus-within, .review-slot:hover { translate: 0 -2px; border-color: var(--brass); }
-  .cut-card img { transition: scale .2s ease; }
-  .cut-card:hover img, .cut-card:focus-within img { scale: 1.03; }
-
-  /* Tactile press */
-  .btn, .filter, .lang button, .chip label { transition: background .2s ease, color .2s ease, border-color .2s ease, scale .12s ease; }
-  .btn:active, .filter:active, .lang button:active, .chip label:active { scale: .98; }
+  .cut-grid.filtering .cut-card:not([hidden]) { animation: rise .5s cubic-bezier(.2, .7, .2, 1) both; }
+  header.top.open nav { animation: drop .28s cubic-bezier(.2, .7, .2, 1); }
+  @keyframes drop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  .faq details[open] .answer { animation: rise .45s cubic-bezier(.2, .7, .2, 1); }
+  .faq summary::after { transition: transform .3s ease; }
+  .faq details[open] summary::after { transform: rotate(180deg); }
+  /* Matching the agency page: bars fill in, the open badge pulses, rows and the final check settle in, the montage only plays once seen */
+  .js-motion .card .meter span { transform-origin: left; transition: width .3s ease, transform 1.1s cubic-bezier(.2, .7, .2, 1) .45s; }
+  .js-motion .card:not(.in) .meter span { transform: scaleX(0); }
+  .js-motion .card .stamp { transition: opacity .4s ease, transform .5s cubic-bezier(.3, 1.6, .5, 1); }
+  .js-motion .card:not(.in) .stamp { opacity: 0; transform: scale(.6); }
+  .js-motion .card.in .stamp:nth-child(2) { transition-delay: .06s; } .js-motion .card.in .stamp:nth-child(3) { transition-delay: .12s; } .js-motion .card.in .stamp:nth-child(4) { transition-delay: .18s; } .js-motion .card.in .stamp:nth-child(5) { transition-delay: .24s; }
+  .js-motion .card.in .stamp:nth-child(n+6) { transition-delay: .3s; }
+  .js-motion .hours tr { transition: opacity .5s ease, transform .5s cubic-bezier(.2, .7, .2, 1); }
+  .js-motion .hours tr:nth-child(2) { transition-delay: .12s; } .js-motion .hours tr:nth-child(3) { transition-delay: .24s; }
+  .js-motion .hours-block > div:not(.in) .hours tr { opacity: 0; transform: translateY(10px); }
+  .js-motion .ticket li:last-child::before { display: inline-block; transition: opacity .3s ease 1s, transform .6s cubic-bezier(.3, 1.6, .5, 1) 1s; }
+  .js-motion .ticket:not(.in) li:last-child::before { opacity: 0; transform: scale(.3) rotate(-20deg); }
+  .js-motion .montage-frames img { animation-play-state: paused; }
+  .js-motion .reel.in .montage-frames img { animation-play-state: running; }
+  .open-badge.is-open::before { animation: pulse-dot 2s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(167, 181, 154, .55); } 50% { box-shadow: 0 0 0 5px rgba(167, 181, 154, 0); } }
 }
-@media (prefers-reduced-motion: reduce) {
-  .btn, .item label, .chip label, header.top { transition: none; }
-  .cut-card:hover, .cut-card:focus-within, .fade:hover, .fade:focus-within, .review-slot:hover { border-color: var(--brass); }
-}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .item label, .chip label { transition: none; } }
 </style>
 </head>
 <body>
-<svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0"><symbol id="marigold" viewbox="0 0 40 40"><g fill="var(--marigold)"><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(0 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(30 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(60 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(90 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(120 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(150 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(180 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(210 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(240 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(270 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(300 20 20)"></ellipse><ellipse cx="20" cy="7" rx="3.2" ry="6" transform="rotate(330 20 20)"></ellipse></g><g fill="#c76f1f"><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(22.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(67.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(112.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(157.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(202.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(247.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(292.5 20 20)"></ellipse><ellipse cx="20" cy="12.5" rx="2.6" ry="4.5" transform="rotate(337.5 20 20)"></ellipse></g><circle cx="20" cy="20" fill="var(--clay)" r="3.4"></circle></symbol><symbol id="flag" viewbox="0 0 60 62"><path d="M0 0H60V56L54 62L48 56L42 62L36 56L30 62L24 56L18 62L12 56L6 62L0 56ZM10 6l3 3l-3 3l-3 -3ZM20 6l3 3l-3 3l-3 -3ZM30 6l3 3l-3 3l-3 -3ZM40 6l3 3l-3 3l-3 -3ZM50 6l3 3l-3 3l-3 -3ZM30 23a5 5 0 1 0 0.01 0ZM30.0 13.6a3.4 3.4 0 1 0 0.01 0ZM39.5 19.1a3.4 3.4 0 1 0 0.01 0ZM39.5 30.1a3.4 3.4 0 1 0 0.01 0ZM30.0 35.6a3.4 3.4 0 1 0 0.01 0ZM20.5 30.1a3.4 3.4 0 1 0 0.01 0ZM20.5 19.1a3.4 3.4 0 1 0 0.01 0ZM12 40l2.5 4l-2.5 4l-2.5 -4ZM48 40l2.5 4l-2.5 4l-2.5 -4ZM18 48h24v2h-24Z" fill="currentColor" fill-rule="evenodd"></path></symbol></svg>
-<div aria-label="Aviso de muestra" class="sample-bar" role="region"><div class="wrap" data-en="Sample concept page. Not the official Nateblendz site, and not affiliated with Nateblendz or Booksy." data-es="Página de muestra. No es el sitio oficial de Nateblendz y no está afiliada con Nateblendz ni con Booksy.">Página de muestra. No es el sitio oficial de Nateblendz y no está afiliada con Nateblendz ni con Booksy.</div></div>
+<a class="skip" data-en="Skip to content" data-es="Saltar al contenido" href="#top">Saltar al contenido</a>
+<svg aria-hidden="true" focusable="false" height="0" style="position:absolute" width="0"></svg>
+<div aria-label="Sample notice" class="sample-bar" role="region"><div class="wrap" data-en="Sample concept page. Not the official Nateblendz site, and not affiliated with Nateblendz or Booksy." data-es="Página de muestra. No es el sitio oficial de Nateblendz y no está afiliada con Nateblendz ni con Booksy.">Página de muestra. No es el sitio oficial de Nateblendz y no está afiliada con Nateblendz ni con Booksy.</div></div>
 <header class="top">
 <div class="wrap">
-<nav aria-label="Principal">
+<nav aria-label="Main" id="site-nav">
 <a data-en="Gallery" data-es="Galería" href="#gallery">Galería</a>
 <a data-en="Services" data-es="Servicios" href="#services">Servicios</a>
 <a data-en="Style finder" data-es="Tu estilo" href="#finder">Tu estilo</a>
 <a data-en="Rewards" data-es="Puntos" href="#rewards">Puntos</a>
+<a data-en="Visit" data-es="Visita" href="#visit">Visita</a>
+<a data-en="FAQ" data-es="Preguntas" href="#faq">Preguntas</a>
 </nav>
 <a class="wordmark" href="#top">Nateblendz</a>
 <div class="head-right">
-<div aria-label="Idioma" class="lang" role="group">
+<button aria-controls="site-nav" aria-expanded="false" class="menu-btn" data-en="Menu" data-es="Menú" id="menu-btn" type="button">Menú</button>
+<div aria-label="Language" class="lang" role="group">
 <button aria-pressed="false" id="lang-en" type="button">EN</button>
 <button aria-pressed="true" id="lang-es" type="button">ES</button>
 </div>
@@ -578,13 +696,11 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </div>
 </div>
 </header>
-<main id="top">
-<div aria-hidden="true" class="picado"><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg></div>
+<main id="top" tabindex="-1">
 <section class="hero">
 <div class="wrap">
-<div aria-hidden="true" class="monogram"><svg class="petals" viewbox="0 0 140 140"><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(0 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(15 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(30 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(45 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(60 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(75 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(90 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(105 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(120 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(135 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(150 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(165 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(180 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(195 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(210 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(225 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(240 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(255 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(270 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(285 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(300 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(315 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--marigold)" rx="3.4" ry="7" transform="rotate(330 70 70)"></ellipse><ellipse cx="70" cy="9" fill="var(--clay)" rx="3.4" ry="7" transform="rotate(345 70 70)"></ellipse></svg><span>NB</span></div>
+<div aria-hidden="true" class="monogram"><span>NB</span></div>
 <h1 data-en='&lt;span class="label kicker"&gt;Barber in Tustin, California&lt;/span&gt; Fresh fades. &lt;em&gt;Clean lines.&lt;/em&gt;' data-es='&lt;span class="label kicker"&gt;Barbero en Tustin, California&lt;/span&gt; Fades frescos. &lt;em&gt;Líneas limpias.&lt;/em&gt;'><span class="label kicker">Barbero en Tustin, California</span> Fades frescos. <em>Líneas limpias.</em></h1>
-<p class="es">¿Listo pa’ tu corte?</p>
 <p class="lede" data-en="Tapers, fades, designs, and beard work from &lt;strong&gt;Nathan at Nateblendz&lt;/strong&gt;. Find your style here, then reserve your chair on Booksy." data-es="Tapers, fades, diseños y barba con &lt;strong&gt;Nathan de Nateblendz&lt;/strong&gt;. Encuentra tu estilo aquí y reserva tu silla en Booksy.">Tapers, fades, diseños y barba con <strong>Nathan de Nateblendz</strong>. Encuentra tu estilo aquí y reserva tu silla en Booksy.</p>
 <div class="ctas">
 <a class="btn solid" data-en="Find your style" data-es="Encuentra tu estilo" href="#finder">Encuentra tu estilo</a>
@@ -599,165 +715,148 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </section>
 <section class="chapter alt" id="gallery">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="The work" data-es="El trabajo">El trabajo</p>
 <h2 data-en="Fresh from &lt;em&gt;the chair.&lt;/em&gt;" data-es="Cortes de la &lt;em&gt;silla.&lt;/em&gt;">Cortes de la <em>silla.</em></h2>
 <p data-en="Real cuts by Nateblendz in Tustin. Filter by style to find yours." data-es="Cortes reales de Nateblendz en Tustin. Filtra por estilo para encontrar el tuyo.">Cortes reales de Nateblendz en Tustin. Filtra por estilo para encontrar el tuyo.</p>
 </div>
-<div aria-label="Filtrar por estilo" class="filters" role="group"><button aria-pressed="true" class="filter" data-en="All" data-es="Todos" data-filter="all" type="button">Todos</button><button aria-pressed="false" class="filter" data-en="Fades" data-es="Fades" data-filter="fade" type="button">Fades</button><button aria-pressed="false" class="filter" data-en="Tapers" data-es="Tapers" data-filter="taper" type="button">Tapers</button><button aria-pressed="false" class="filter" data-en="Beard" data-es="Barba" data-filter="beard" type="button">Barba</button><button aria-pressed="false" class="filter" data-en="Designs" data-es="Diseños" data-filter="design" type="button">Diseños</button><button aria-pressed="false" class="filter" data-en="Before &amp;amp; after" data-es="Antes y después" data-filter="ba" hidden="" type="button">Antes y después</button></div>
-<div class="cut-grid" id="cut-grid">
-<figure class="cut-card" data-reveal="" data-tags="fade">
-<img alt="Corte fade de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/mid-fade.jpg" width="800"/>
+<div aria-label="Filter by style" class="filters" role="group"><button aria-pressed="true" class="filter" data-en="All" data-es="Todos" data-filter="all" type="button">Todos</button><button aria-pressed="false" class="filter" data-en="Fades" data-es="Fades" data-filter="fade" type="button">Fades</button><button aria-pressed="false" class="filter" data-en="Tapers" data-es="Tapers" data-filter="taper" type="button">Tapers</button><button aria-pressed="false" class="filter" data-en="Beard" data-es="Barba" data-filter="beard" type="button">Barba</button><button aria-pressed="false" class="filter" data-en="Designs" data-es="Diseños" data-filter="design" type="button">Diseños</button></div>
+<div class="cut-grid collapsed" id="cut-grid">
+<figure class="cut-card" data-tags="fade">
+<img alt="Mid skin fade by Nateblendz, a barber in Tustin, CA" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/mid-fade.jpg" srcset="../photos/mid-fade-480.webp 480w, ../photos/mid-fade.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Fade" data-es="Fade">Fade</p>
-<h3 data-en="Fade" data-es="Fade">Fade</h3>
-<p data-en="Short, blended sides with length kept on top." data-es="Lados cortos y degradados, con largo arriba.">Lados cortos y degradados, con largo arriba.</p>
-<p class="who" data-en="For a fresh, classic look." data-es="Para un look fresco y clásico.">Para un look fresco y clásico.</p>
+<h3 data-en="Mid skin fade" data-es="Fade medio a piel">Fade medio a piel</h3>
+<p data-en="Fades to skin at the temple with a sharp edge-up." data-es="Degradado a piel a la altura de la sien, con perfilado marcado.">Degradado a piel a la altura de la sien, con perfilado marcado.</p>
+<p class="who" data-en="For a fresh, classic cut that holds its shape." data-es="Para un corte clásico y fresco que mantiene la forma.">Para un corte clásico y fresco que mantiene la forma.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="fade">
-<img alt="Corte fade de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/high-fade.jpg" width="800"/>
+<figure class="cut-card" data-tags="fade">
+<img alt="High fade by Nateblendz, a barber in Tustin, CA" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/high-fade.jpg" srcset="../photos/high-fade-480.webp 480w, ../photos/high-fade.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Fade" data-es="Fade">Fade</p>
-<h3 data-en="Fade" data-es="Fade">Fade</h3>
-<p data-en="A clean blend from the sides up into the top." data-es="Un degradado limpio de los lados hacia arriba.">Un degradado limpio de los lados hacia arriba.</p>
-<p class="who" data-en="For a sharp, clean look." data-es="Para un look limpio y marcado.">Para un look limpio y marcado.</p>
+<h3 data-en="High fade" data-es="Fade alto">Fade alto</h3>
+<p data-en="Bare skin high up the sides for maximum contrast." data-es="Piel bien arriba en los lados para el máximo contraste.">Piel bien arriba en los lados para el máximo contraste.</p>
+<p class="who" data-en="For a bold look that stands out." data-es="Para un look marcado que destaca.">Para un look marcado que destaca.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="fade">
-<img alt="Corte fade de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/low-fade.jpg" width="800"/>
+<figure class="cut-card" data-tags="fade">
+<img alt="Low fade with curls by Nateblendz, a barber in Tustin, CA" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/low-fade.jpg" srcset="../photos/low-fade-480.webp 480w, ../photos/low-fade.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Fade" data-es="Fade">Fade</p>
-<h3 data-en="Fade" data-es="Fade">Fade</h3>
-<p data-en="Blended sides that let the top keep its texture." data-es="Lados degradados que dejan la textura de arriba.">Lados degradados que dejan la textura de arriba.</p>
-<p class="who" data-en="For keeping some length up top." data-es="Para quien quiere dejar largo arriba.">Para quien quiere dejar largo arriba.</p>
+<h3 data-en="Low fade with curls" data-es="Fade bajo con rizos">Fade bajo con rizos</h3>
+<p data-en="The fade starts just above the ear and the curls stay full." data-es="El fade empieza justo arriba de la oreja y los rizos quedan llenos.">El fade empieza justo arriba de la oreja y los rizos quedan llenos.</p>
+<p class="who" data-en="For curly hair and a subtle fade." data-es="Para cabello rizado y un fade discreto.">Para cabello rizado y un fade discreto.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="fade beard">
-<img alt="Fade y barba de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/line-up.jpg" width="800"/>
+<figure class="cut-card" data-tags="fade beard">
+<img alt="Curly top fade + beard by Nateblendz, a barber in Tustin, CA" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/line-up.jpg" srcset="../photos/line-up-480.webp 480w, ../photos/line-up.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Fade · Beard" data-es="Fade · Barba">Fade · Barba</p>
-<h3 data-en="Fade + beard" data-es="Fade + barba">Fade + barba</h3>
-<p data-en="A fade blended into a shaped beard." data-es="Un fade unido a una barba perfilada.">Un fade unido a una barba perfilada.</p>
-<p class="who" data-en="For the cut and beard in one visit." data-es="Para arreglar corte y barba en una visita.">Para arreglar corte y barba en una visita.</p>
+<h3 data-en="Curly top fade + beard" data-es="Fade con rizos + barba">Fade con rizos + barba</h3>
+<p data-en="A mid fade under curls, blended into a lined-up beard." data-es="Fade medio bajo los rizos, unido a una barba perfilada.">Fade medio bajo los rizos, unido a una barba perfilada.</p>
+<p class="who" data-en="For curls and a full beard." data-es="Para rizos y barba completa.">Para rizos y barba completa.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="taper beard">
-<img alt="Taper y barba de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/gallery-fade.jpg" width="800"/>
+<figure class="cut-card" data-tags="taper beard">
+<img alt="Taper into the beard by Nateblendz, a barber in Tustin, CA" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/gallery-fade.jpg" srcset="../photos/gallery-fade-480.webp 480w, ../photos/gallery-fade.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Taper · Beard" data-es="Taper · Barba">Taper · Barba</p>
-<h3 data-en="Taper + beard" data-es="Taper + barba">Taper + barba</h3>
-<p data-en="Tapered sides that flow into the beard." data-es="Lados rebajados que se unen a la barba.">Lados rebajados que se unen a la barba.</p>
-<p class="who" data-en="For keeping the beard with clean sides." data-es="Para quien quiere barba con los lados limpios.">Para quien quiere barba con los lados limpios.</p>
+<h3 data-en="Taper into the beard" data-es="Taper unido a la barba">Taper unido a la barba</h3>
+<p data-en="Sideburns taper down and flow into a full beard." data-es="Las patillas se rebajan y se unen a la barba.">Las patillas se rebajan y se unen a la barba.</p>
+<p class="who" data-en="For anyone growing a beard who wants clean sides." data-es="Para quien deja crecer la barba y quiere los lados limpios.">Para quien deja crecer la barba y quiere los lados limpios.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="taper beard">
-<img alt="Taper y barba de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/gallery-beard.jpg" width="800"/>
+<figure class="cut-card" data-tags="taper beard">
+<img alt="Soft taper + beard shape by Nateblendz, a barber in Tustin, CA" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/gallery-beard.jpg" srcset="../photos/gallery-beard-480.webp 480w, ../photos/gallery-beard.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Taper · Beard" data-es="Taper · Barba">Taper · Barba</p>
-<h3 data-en="Taper + beard" data-es="Taper + barba">Taper + barba</h3>
-<p data-en="A taper with the beard cleaned up." data-es="Un taper con la barba arreglada.">Un taper con la barba arreglada.</p>
+<h3 data-en="Soft taper + beard shape" data-es="Taper suave + barba">Taper suave + barba</h3>
+<p data-en="A gentle taper with a shaped beard and length kept up top." data-es="Un taper suave con barba perfilada y largo arriba.">Un taper suave con barba perfilada y largo arriba.</p>
 <p class="who" data-en="For a clean look without going short." data-es="Para verse limpio sin cortarse mucho.">Para verse limpio sin cortarse mucho.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="taper">
-<img alt="Corte taper de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/gallery-taper.jpg" width="800"/>
+<figure class="cut-card" data-tags="taper">
+<img alt="Long-top taper by Nateblendz, a barber in Tustin, CA" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/gallery-taper.jpg" srcset="../photos/gallery-taper-480.webp 480w, ../photos/gallery-taper.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Taper" data-es="Taper">Taper</p>
-<h3>Taper</h3>
-<p data-en="Tapered sides and neckline, with length on top." data-es="Lados y nuca rebajados, con largo arriba.">Lados y nuca rebajados, con largo arriba.</p>
+<h3 data-en="Long-top taper" data-es="Taper con largo arriba">Taper con largo arriba</h3>
+<p data-en="Textured length on top with tapered sides and neckline." data-es="Largo con textura arriba, lados y nuca rebajados.">Largo con textura arriba, lados y nuca rebajados.</p>
 <p class="who" data-en="For a grown-out style that stays neat." data-es="Para un estilo largo que se mantiene ordenado.">Para un estilo largo que se mantiene ordenado.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="taper">
-<img alt="Corte taper de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/taper.jpg" width="800"/>
+<figure class="cut-card" data-tags="taper">
+<img alt="Low taper, fuller top by Nateblendz, a barber in Tustin, CA" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/taper.jpg" srcset="../photos/taper-480.webp 480w, ../photos/taper.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Taper" data-es="Taper">Taper</p>
-<h3>Taper</h3>
+<h3 data-en="Low taper, fuller top" data-es="Taper bajo, arriba lleno">Taper bajo, arriba lleno</h3>
 <p data-en="Clean sideburns and neckline with the top left full." data-es="Patillas y nuca limpias, con el pelo de arriba lleno.">Patillas y nuca limpias, con el pelo de arriba lleno.</p>
 <p class="who" data-en="For a soft, low-maintenance look." data-es="Para un look suave y fácil de mantener.">Para un look suave y fácil de mantener.</p>
 </figcaption>
 </figure>
-<figure class="cut-card" data-reveal="" data-tags="design taper">
-<img alt="Diseño y taper de Nateblendz, barbero en Tustin, CA" height="1000" loading="lazy" src="../photos/gallery-design.jpg" width="800"/>
+<figure class="cut-card" data-tags="design taper">
+<img alt="Hard part + taper, long hair by Nateblendz, a barber in Tustin, CA" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 50vw, 340px" src="../photos/gallery-design.jpg" srcset="../photos/gallery-design-480.webp 480w, ../photos/gallery-design.webp 800w" width="800"/>
 <figcaption>
 <p class="cut-tags" data-en="Design · Taper" data-es="Diseño · Taper">Diseño · Taper</p>
-<h3 data-en="Design + taper" data-es="Diseño + taper">Diseño + taper</h3>
-<p data-en="A shaved line or design with tapered sides." data-es="Una línea o diseño rasurado con los lados rebajados.">Una línea o diseño rasurado con los lados rebajados.</p>
-<p class="who" data-en="For adding a detail to your cut." data-es="Para agregarle un detalle a tu corte.">Para agregarle un detalle a tu corte.</p>
-</figcaption>
-</figure>
-<figure class="cut-card ba" data-tags="ba" hidden="">
-<div aria-hidden="true" class="ba-slot"><span data-en="Before" data-es="Antes">Antes</span><span data-en="After" data-es="Después">Después</span></div>
-<figcaption>
-<p class="cut-tags" data-en="Before &amp;amp; after" data-es="Antes y después">Antes y después</p>
-<h3 data-en="Transformation 1" data-es="Transformación 1">Transformación 1</h3>
-<p data-en="A slot for a before-and-after pair once Nathan shares one." data-es="Espacio para una foto de antes y después, cuando Nathan la comparta.">Espacio para una foto de antes y después, cuando Nathan la comparta.</p>
-<p class="who" data-en="Files: photos/before-1.jpg and photos/after-1.jpg" data-es="Archivos: photos/before-1.jpg y photos/after-1.jpg">Archivos: photos/before-1.jpg y photos/after-1.jpg</p>
-</figcaption>
-</figure>
-<figure class="cut-card ba" data-tags="ba" hidden="">
-<div aria-hidden="true" class="ba-slot"><span data-en="Before" data-es="Antes">Antes</span><span data-en="After" data-es="Después">Después</span></div>
-<figcaption>
-<p class="cut-tags" data-en="Before &amp;amp; after" data-es="Antes y después">Antes y después</p>
-<h3 data-en="Transformation 2" data-es="Transformación 2">Transformación 2</h3>
-<p data-en="A slot for a before-and-after pair once Nathan shares one." data-es="Espacio para una foto de antes y después, cuando Nathan la comparta.">Espacio para una foto de antes y después, cuando Nathan la comparta.</p>
-<p class="who" data-en="Files: photos/before-2.jpg and photos/after-2.jpg" data-es="Archivos: photos/before-2.jpg y photos/after-2.jpg">Archivos: photos/before-2.jpg y photos/after-2.jpg</p>
+<h3 data-en="Hard part + taper, long hair" data-es="Raya marcada + taper, pelo largo">Raya marcada + taper, pelo largo</h3>
+<p data-en="A shaved part line and low taper, with length kept for a bun." data-es="Raya rasurada y taper bajo, con largo para un chongo.">Raya rasurada y taper bajo, con largo para un chongo.</p>
+<p class="who" data-en="For long hair that still wants clean sides." data-es="Para pelo largo que quiere los lados limpios.">Para pelo largo que quiere los lados limpios.</p>
 </figcaption>
 </figure>
 </div>
-<p class="gallery-note" data-en="Photos from the Nateblendz Booksy portfolio. Photos © Nathan Calvillo; shown in this private preview only; they need Nathan’s permission before launch. Booksy only labels them “Haircut”, so the style labels are a best guess from the photos: confirm with Nathan." data-es="Fotos del portafolio de Nateblendz en Booksy. Fotos © Nathan Calvillo; se usan solo en esta vista previa privada y necesitan el permiso de Nathan antes de publicar. Booksy solo las llama “Haircut”, así que los estilos son una suposición por la foto: confirmar con Nathan.">Fotos del portafolio de Nateblendz en Booksy. Fotos © Nathan Calvillo; se usan solo en esta vista previa privada y necesitan el permiso de Nathan antes de publicar. Booksy solo las llama “Haircut”, así que los estilos son una suposición por la foto: confirmar con Nathan.</p>
+<button aria-controls="cut-grid" class="btn more-cuts" data-en="See all cuts" data-es="Ver todos los cortes" id="more-cuts" type="button">Ver todos los cortes</button>
+<p class="gallery-note" data-en="Photos from the Nateblendz Booksy portfolio. Photos © Nathan Calvillo; shown in this private preview only; they need Nathan’s permission before launch." data-es="Fotos del portafolio de Nateblendz en Booksy. Fotos © Nathan Calvillo; se usan solo en esta vista previa privada y necesitan el permiso de Nathan antes de publicar.">Fotos del portafolio de Nateblendz en Booksy. Fotos © Nathan Calvillo; se usan solo en esta vista previa privada y necesitan el permiso de Nathan antes de publicar.</p>
 </div>
 </section>
 <section class="chapter" id="services">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="The menu" data-es="El menú">El menú</p>
 <h2 data-en="Every line, &lt;em&gt;on purpose.&lt;/em&gt;" data-es="Cada línea, &lt;em&gt;con intención.&lt;/em&gt;">Cada línea, <em>con intención.</em></h2>
-<p data-en="Haircuts, fades, tapers, designs and beard work in Tustin. Pick what you’re coming in for, then book that same service on Booksy. Booksy shows current prices and open times." data-es="Cortes, fades, tapers, diseños y barba en Tustin. Elige tu servicio y reserva ese mismo servicio en Booksy. Booksy muestra los precios y horarios actuales.">Cortes, fades, tapers, diseños y barba en Tustin. Elige tu servicio y reserva ese mismo servicio en Booksy. Booksy muestra los precios y horarios actuales.</p>
+<p data-en="Haircuts, fades, tapers, designs and beard work in Tustin. Every service takes about an hour, from $50 to $60. Pick what you’re coming in for, then book that same service on Booksy." data-es="Cortes, fades, tapers, diseños y barba en Tustin. Cada servicio dura como una hora, de $50 a $60. Elige tu servicio y reserva ese mismo servicio en Booksy.">Cortes, fades, tapers, diseños y barba en Tustin. Cada servicio dura como una hora, de $50 a $60. Elige tu servicio y reserva ese mismo servicio en Booksy.</p>
 </div>
 <div class="flow">
 <div>
 <fieldset class="menu">
 <legend class="sr" data-en="Choose a service" data-es="Elige un servicio">Elige un servicio</legend>
-<div class="item" data-reveal="">
+<div class="item">
 <input checked="" id="cut-haircut" name="cut" type="radio"/>
 <label for="cut-haircut">
 <span aria-hidden="true" class="dot"></span>
-<span class="line"><h3 data-en="Haircut" data-es='Haircut &lt;small class="gloss" lang="es"&gt;Corte&lt;/small&gt;'>Haircut <small class="gloss" lang="es">Corte</small></h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="On Booksy" data-es="En Booksy">En Booksy</span></span>
+<span class="line"><h3>Haircut</h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="From $50 · 1 hr" data-es="Desde $50 · 1 h">Desde $50 · 1 h</span></span>
 <span class="desc" data-en="A taper or fade, shaped to your head and your style." data-es="Un taper o fade, a la medida de tu cabeza y tu estilo.">Un taper o fade, a la medida de tu cabeza y tu estilo.</span>
 </label>
 </div>
-<div class="item" data-reveal="">
+<div class="item">
 <input id="cut-design" name="cut" type="radio"/>
 <label for="cut-design">
 <span aria-hidden="true" class="dot"></span>
-<span class="line"><h3 data-en="Haircut &amp;amp; Design" data-es='Haircut &amp;amp; Design &lt;small class="gloss" lang="es"&gt;Corte y diseño&lt;/small&gt;'>Haircut &amp; Design <small class="gloss" lang="es">Corte y diseño</small></h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="On Booksy" data-es="En Booksy">En Booksy</span></span>
+<span class="line"><h3>Haircut &amp; Design</h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="From $55 · 1 hr" data-es="Desde $55 · 1 h">Desde $55 · 1 h</span></span>
 <span class="desc" data-en="Your haircut with a shaved design. Bring a photo of the look you want." data-es="Tu corte con un diseño rasurado. Trae una foto del look que quieres.">Tu corte con un diseño rasurado. Trae una foto del look que quieres.</span>
 </label>
 </div>
-<div class="item" data-reveal="">
+<div class="item">
 <input id="cut-brows" name="cut" type="radio"/>
 <label for="cut-brows">
 <span aria-hidden="true" class="dot"></span>
-<span class="line"><h3 data-en="Haircut &amp;amp; Eyebrows" data-es='Haircut &amp;amp; Eyebrows &lt;small class="gloss" lang="es"&gt;Corte y cejas&lt;/small&gt;'>Haircut &amp; Eyebrows <small class="gloss" lang="es">Corte y cejas</small></h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="On Booksy" data-es="En Booksy">En Booksy</span></span>
+<span class="line"><h3>Haircut &amp; Eyebrows</h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="From $55 · 1 hr" data-es="Desde $55 · 1 h">Desde $55 · 1 h</span></span>
 <span class="desc" data-en="Your haircut with an eyebrow cleanup." data-es="Tu corte con arreglo de cejas.">Tu corte con arreglo de cejas.</span>
 </label>
 </div>
-<div class="item" data-reveal="">
+<div class="item">
 <input id="cut-beard" name="cut" type="radio"/>
 <label for="cut-beard">
 <span aria-hidden="true" class="dot"></span>
-<span class="line"><h3 data-en="Haircut &amp;amp; Beard" data-es='Haircut &amp;amp; Beard &lt;small class="gloss" lang="es"&gt;Corte y barba&lt;/small&gt;'>Haircut &amp; Beard <small class="gloss" lang="es">Corte y barba</small></h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="On Booksy" data-es="En Booksy">En Booksy</span></span>
+<span class="line"><h3>Haircut &amp; Beard</h3><span aria-hidden="true" class="lead"></span><span class="where" data-en="From $60 · 1 hr" data-es="Desde $60 · 1 h">Desde $60 · 1 h</span></span>
 <span class="desc" data-en="Your haircut with beard shaping by straight razor." data-es="Tu corte con perfilado de barba a navaja.">Tu corte con perfilado de barba a navaja.</span>
 </label>
 </div>
 </fieldset>
-<p class="menu-note" data-en="Service names and descriptions come from the public Booksy listing as of October 15, 2026." data-es="Los nombres y descripciones vienen del perfil público de Booksy al 15 de octubre de 2026.">Los nombres y descripciones vienen del perfil público de Booksy al 15 de octubre de 2026.</p>
+<p class="menu-note" data-en='Booksy list prices as of October 18, 2026. Pay with cash or Zelle; no deposit needed. &lt;a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank"&gt;Current prices on Booksy&lt;/a&gt;' data-es='Precios de lista en Booksy al 18 de octubre de 2026. Paga en efectivo o Zelle; no se pide depósito. &lt;a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" target="_blank" rel="noopener"&gt;Precios actuales en Booksy&lt;/a&gt;'>Precios de lista en Booksy al 18 de octubre de 2026. Paga en efectivo o Zelle; no se pide depósito. <a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank">Precios actuales en Booksy</a></p>
 </div>
-<div aria-live="polite" class="ticket" data-reveal="" style="--d:1">
+<div aria-live="polite" class="ticket">
 <p class="label" data-en="Your selection" data-es="Tu selección">Tu selección</p>
 <p class="picked" id="picked">Haircut</p>
 <ol>
@@ -766,15 +865,15 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <li><span data-en="&lt;b&gt;That’s it.&lt;/b&gt; Booksy sends your confirmation and handles any changes." data-es="&lt;b&gt;Listo.&lt;/b&gt; Booksy te manda la confirmación y maneja cualquier cambio."><b>Listo.</b> Booksy te manda la confirmación y maneja cualquier cambio.</span></li>
 </ol>
 <a class="btn solid" data-en="Reserve on Booksy" data-es="Reservar en Booksy" href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank">Reservar en Booksy</a>
-<p class="fine" data-en="Opens Booksy in a new tab. This page doesn’t take bookings or payments." data-es="Abre Booksy en otra pestaña. Esta página no toma citas ni pagos.">Abre Booksy en otra pestaña. Esta página no toma citas ni pagos.</p>
+<p class="fine" data-en="Opens Booksy in a new tab. This page doesn’t take bookings or payments. You pay at the shop, with cash or Zelle." data-es="Abre Booksy en otra pestaña. Esta página no toma citas ni pagos. Se paga en la barbería, en efectivo o Zelle.">Abre Booksy en otra pestaña. Esta página no toma citas ni pagos. Se paga en la barbería, en efectivo o Zelle.</p>
 </div>
 </div>
 </div>
 </section>
 <section class="chapter alt" id="finder">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Style finder" data-es="Encuentra tu estilo">Encuentra tu estilo</p>
 <h2 data-en="Three questions. &lt;em&gt;Your cut.&lt;/em&gt;" data-es="Tres preguntas. &lt;em&gt;Tu corte.&lt;/em&gt;">Tres preguntas. <em>Tu corte.</em></h2>
 <p data-en="Answer these and we’ll tell you which service to book and how to ask for it." data-es="Contesta y te decimos qué servicio reservar y cómo pedírselo a tu barbero.">Contesta y te decimos qué servicio reservar y cómo pedírselo a tu barbero.</p>
@@ -808,7 +907,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </div>
 </fieldset>
 </div>
-<div aria-live="polite" class="result" data-reveal="" style="--d:1">
+<div aria-live="polite" class="result">
 <p class="label" data-en="We recommend" data-es="Te recomendamos">Te recomendamos</p>
 <p class="rec" id="rec">Haircut</p>
 <p class="why" id="why"></p>
@@ -826,60 +925,51 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </section>
 <section class="chapter" id="fades">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Fade guide" data-es="Guía de fades">Guía de fades</p>
-<h2 data-en="Know the &lt;em&gt;language.&lt;/em&gt;" data-es="Habla el &lt;em&gt;idioma.&lt;/em&gt;">Habla el <em>idioma.</em></h2>
-<p data-en="The most requested cuts and where each one starts. The brass line marks how high the fade goes." data-es="Los cortes más pedidos y dónde empieza cada uno. La línea dorada marca la altura del fade.">Los cortes más pedidos y dónde empieza cada uno. La línea dorada marca la altura del fade.</p>
+<h2 data-en="What to &lt;em&gt;ask for.&lt;/em&gt;" data-es="Qué &lt;em&gt;pedir.&lt;/em&gt;">Qué <em>pedir.</em></h2>
+<p data-en="The most requested cuts, on real clients from Nate’s chair. Look at where the short hair on the sides starts: that height is what makes a fade low, mid or high." data-es="Los cortes más pedidos, en clientes reales de Nate. Mira dónde empieza el pelo corto en los lados: esa altura es lo que separa un fade bajo, medio o alto.">Los cortes más pedidos, en clientes reales de Nate. Mira dónde empieza el pelo corto en los lados: esa altura es lo que separa un fade bajo, medio o alto.</p>
 </div>
 <div class="fades">
-<article class="fade" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 130"><use href="#head"></use><rect clip-path="url(#skull)" fill="url(#hair)" height="78" width="120" x="0" y="0"></rect><line stroke="var(--brass)" stroke-dasharray="3 3" stroke-width="1.5" x1="22" x2="98" y1="78" y2="78"></line><use href="#ear"></use></svg>
+<article class="fade">
+<img alt="Low fade: the sides go short just above the ear and blend up into curly hair on top" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, (max-width: 960px) 30vw, 200px" src="../photos/low-fade.jpg" srcset="../photos/low-fade-480.webp 480w, ../photos/low-fade.webp 800w" width="800"/>
 <h3 data-en="Low fade" data-es="Fade bajo">Fade bajo</h3>
-<p data-en="Starts just above the ear. Clean but quiet, easy for work." data-es="Empieza justo arriba de la oreja. Limpio pero discreto, bueno para el trabajo.">Empieza justo arriba de la oreja. Limpio pero discreto, bueno para el trabajo.</p>
+<p data-en="The short part starts just above the ear. Notice the temple still has hair." data-es="El fade empieza justo arriba de la oreja. Fíjate que la sien sigue con pelo.">El fade empieza justo arriba de la oreja. Fíjate que la sien sigue con pelo.</p>
 <p class="ask" data-en="Ask for: “low fade”" data-es="Pide: “fade bajo”">Pide: “fade bajo”</p>
 </article>
-<article class="fade" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 130"><use href="#head"></use><rect clip-path="url(#skull)" fill="url(#hair)" height="62" width="120" x="0" y="0"></rect><line stroke="var(--brass)" stroke-dasharray="3 3" stroke-width="1.5" x1="16" x2="104" y1="62" y2="62"></line><use href="#ear"></use></svg>
+<article class="fade">
+<img alt="Mid fade: the sides are short up to the temple with a sharp edge-up" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, (max-width: 960px) 30vw, 200px" src="../photos/mid-fade.jpg" srcset="../photos/mid-fade-480.webp 480w, ../photos/mid-fade.webp 800w" width="800"/>
 <h3 data-en="Mid fade" data-es="Fade medio">Fade medio</h3>
-<p data-en="Rises to about the temple. The most popular middle ground." data-es="Sube hasta la sien. El punto medio más popular.">Sube hasta la sien. El punto medio más popular.</p>
+<p data-en="The short part rises to the temple, halfway up the side. The most popular middle ground." data-es="Lo corto sube hasta la sien, a media cabeza. El punto medio más popular.">Lo corto sube hasta la sien, a media cabeza. El punto medio más popular.</p>
 <p class="ask" data-en="Ask for: “mid fade”" data-es="Pide: “fade medio”">Pide: “fade medio”</p>
 </article>
-<article class="fade" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 130"><use href="#head"></use><rect clip-path="url(#skull)" fill="url(#hair)" height="44" width="120" x="0" y="0"></rect><line stroke="var(--brass)" stroke-dasharray="3 3" stroke-width="1.5" x1="18" x2="102" y1="44" y2="44"></line><use href="#ear"></use></svg>
+<article class="fade">
+<img alt="High fade: bare skin high up the sides, almost to where the top begins" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, (max-width: 960px) 30vw, 200px" src="../photos/high-fade.jpg" srcset="../photos/high-fade-480.webp 480w, ../photos/high-fade.webp 800w" width="800"/>
 <h3 data-en="High fade" data-es="Fade alto">Fade alto</h3>
-<p data-en="Goes up near the top of the head. Strong contrast, bold look." data-es="Llega casi a la parte de arriba. Contraste fuerte y look marcado.">Llega casi a la parte de arriba. Contraste fuerte y look marcado.</p>
+<p data-en="Bare skin almost to the top of the sides. Strong contrast with the hair on top." data-es="Piel casi hasta arriba de los lados. Mucho contraste con el pelo de arriba.">Piel casi hasta arriba de los lados. Mucho contraste con el pelo de arriba.</p>
 <p class="ask" data-en="Ask for: “high fade”" data-es="Pide: “fade alto”">Pide: “fade alto”</p>
 </article>
-<article class="fade" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 130"><use href="#head"></use><rect clip-path="url(#skull)" fill="url(#hair)" height="96" width="120" x="0" y="0"></rect><line stroke="var(--brass)" stroke-dasharray="3 3" stroke-width="1.5" x1="70" x2="96" y1="96" y2="96"></line><line stroke="var(--brass)" stroke-dasharray="3 3" stroke-width="1.5" x1="26" x2="40" y1="78" y2="78"></line><use href="#ear"></use></svg>
+<article class="fade">
+<img alt="Taper: short only at the sideburn and neckline, with the sides left fuller" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, (max-width: 960px) 30vw, 200px" src="../photos/taper.jpg" srcset="../photos/taper-480.webp 480w, ../photos/taper.webp 800w" width="800"/>
 <h3>Taper</h3>
-<p data-en="Only shortens at the sideburns and the neckline. The rest stays fuller." data-es="Solo se rebaja en las patillas y la nuca. El resto se queda más largo.">Solo se rebaja en las patillas y la nuca. El resto se queda más largo.</p>
+<p data-en="Only the sideburn and neckline go short. The sides stay fuller, for a softer look." data-es="Solo la patilla y la nuca van cortas. Los lados se quedan más llenos, para un look más suave.">Solo la patilla y la nuca van cortas. Los lados se quedan más llenos, para un look más suave.</p>
 <p class="ask" data-en="Ask for: “taper”" data-es="Pide: “taper”">Pide: “taper”</p>
 </article>
-<article class="fade" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 130"><use href="#head"></use><rect clip-path="url(#skull)" fill="url(#hairfull)" height="96" width="120" x="0" y="0"></rect><path d="M28 50 L28 34 Q60 6 92 34" fill="none" stroke="var(--brass)" stroke-width="1.8"></path><use href="#ear"></use></svg>
+<article class="fade">
+<img alt="Line-up: crisp straight edges at the forehead, temple and beard" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 50vw, (max-width: 960px) 30vw, 200px" src="../photos/line-up.jpg" srcset="../photos/line-up-480.webp 480w, ../photos/line-up.webp 800w" width="800"/>
 <h3 data-en="Line-up" data-es="Perfilado">Perfilado</h3>
-<p data-en="Sharpens the hairline at the forehead, temples, and beard edges." data-es="Marca la línea de la frente, las sienes y la barba con navaja o máquina.">Marca la línea de la frente, las sienes y la barba con navaja o máquina.</p>
+<p data-en="Crisp, straight edges at the forehead, temple and beard. Can be added to any cut." data-es="Bordes rectos y limpios en la frente, la sien y la barba. Se puede agregar a cualquier corte.">Bordes rectos y limpios en la frente, la sien y la barba. Se puede agregar a cualquier corte.</p>
 <p class="ask" data-en="Ask for: “line-up” or “edge-up”" data-es="Pide: “line-up” o “edge-up”">Pide: “line-up” o “edge-up”</p>
 </article>
 </div>
 <p class="guide-note" data-en="A general barbering guide. Your barber can tell you what suits your hair best." data-es="Guía general de barbería. Tu barbero te dirá qué va mejor con tu tipo de cabello.">Guía general de barbería. Tu barbero te dirá qué va mejor con tu tipo de cabello.</p>
-<svg aria-hidden="true" height="0" style="position:absolute" width="0">
-<defs>
-<clippath id="skull"><ellipse cx="60" cy="68" rx="42" ry="52"></ellipse></clippath>
-<lineargradient id="hair" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="var(--skin)"></stop><stop offset=".35" stop-color="#5a4f43"></stop><stop offset="1" stop-color="var(--bone)"></stop></lineargradient>
-<lineargradient id="hairfull" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="#5a4f43"></stop><stop offset="1" stop-color="var(--bone)"></stop></lineargradient>
-<g id="head"><ellipse cx="60" cy="68" fill="var(--skin)" rx="42" ry="52" stroke="var(--rule)"></ellipse></g>
-<g id="ear"><ellipse cx="86" cy="76" fill="var(--skin)" rx="7" ry="11" stroke="var(--dust)" stroke-width="1"></ellipse></g>
-</defs>
-</svg>
 </div>
 </section>
 <section class="chapter alt" id="care">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Aftercare" data-es="Cuidado">Cuidado</p>
 <h2 data-en="Keep it &lt;em&gt;fresh.&lt;/em&gt;" data-es="Manténlo &lt;em&gt;fresco.&lt;/em&gt;">Manténlo <em>fresco.</em></h2>
 <p data-en="What you do between visits matters as much as the cut." data-es="Lo que haces entre visitas cuenta igual que el corte.">Lo que haces entre visitas cuenta igual que el corte.</p>
@@ -910,15 +1000,51 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </div>
 </div>
 </section>
+<section class="chapter" id="watch">
+<div class="wrap">
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
+<p class="label" data-en="In the chair" data-es="En la silla">En la silla</p>
+<h2 data-en="Watch Nate &lt;em&gt;work.&lt;/em&gt;" data-es="Mira a Nate &lt;em&gt;trabajar.&lt;/em&gt;">Mira a Nate <em>trabajar.</em></h2>
+<p data-en="Real cuts from his Instagram, @naateblendz." data-es="Cortes reales de su Instagram, @naateblendz.">Cortes reales de su Instagram, @naateblendz.</p>
+</div>
+<div class="watch">
+<div class="reel">
+<div class="reel-fallback">
+<p class="label" data-en="Instagram reel" data-es="Reel de Instagram">Reel de Instagram</p>
+<p class="reel-title" data-en="“Texture Specialist”" data-es="“Especialista en textura”">“Especialista en textura”</p>
+<p data-en="October 9, 2026 · Tustin, CA" data-es="9 de octubre de 2026 · Tustin, CA">9 de octubre de 2026 · Tustin, CA</p>
+<a class="btn" data-en="Watch on Instagram" data-es="Ver en Instagram" href="https://www.instagram.com/reel/DeR_38AJgHm/" rel="noopener" target="_blank">Ver en Instagram</a>
+</div>
+<!-- Go-live: swap this card for Instagram's official embed code for the reel (Share > Embed on instagram.com) -->
+</div>
+<!-- Photo montage stands in until Nathan's video clips arrive; swap for a <video> highlight reel then -->
+<div class="reel montage" id="highlight-slot">
+<div aria-hidden="true" class="montage-frames">
+<img alt="" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/gallery-fade.jpg" srcset="../photos/gallery-fade-480.webp 480w, ../photos/gallery-fade.webp 800w" width="800"/>
+<img alt="" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/high-fade.jpg" srcset="../photos/high-fade-480.webp 480w, ../photos/high-fade.webp 800w" width="800"/>
+<img alt="" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/gallery-beard.jpg" srcset="../photos/gallery-beard-480.webp 480w, ../photos/gallery-beard.webp 800w" width="800"/>
+<img alt="" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/taper.jpg" srcset="../photos/taper-480.webp 480w, ../photos/taper.webp 800w" width="800"/>
+<img alt="" decoding="async" height="1000" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/gallery-design.jpg" srcset="../photos/gallery-design-480.webp 480w, ../photos/gallery-design.webp 800w" width="800"/>
+<img alt="" decoding="async" height="800" loading="lazy" sizes="(max-width: 600px) 90vw, 370px" src="../photos/line-up.jpg" srcset="../photos/line-up-480.webp 480w, ../photos/line-up.webp 800w" width="800"/>
+</div>
+<div class="montage-cap">
+<p class="label" data-en="From Nate’s chair" data-es="De la silla de Nate">De la silla de Nate</p>
+<p class="reel-title" data-en="Real cuts, Tustin" data-es="Cortes reales, Tustin">Cortes reales, Tustin</p>
+</div>
+</div>
+</div>
+<p class="gallery-note"><a data-en="More on Instagram: @naateblendz" data-es="Más en Instagram: @naateblendz" href="https://www.instagram.com/naateblendz/" rel="noopener" target="_blank">Más en Instagram: @naateblendz</a></p>
+</div>
+</section>
 <section aria-labelledby="nudge-title" class="nudge" id="book-again">
 <div class="wrap">
-<div class="nudge-copy" data-reveal="">
+<div class="nudge-copy">
 <p class="label" data-en="Been in before?" data-es="¿Ya viniste antes?">¿Ya viniste antes?</p>
 <h2 data-en="Lock in your next cut &lt;em&gt;before the week fills up.&lt;/em&gt;" data-es="Aparta tu próximo corte &lt;em&gt;antes de que se llene la semana.&lt;/em&gt;" id="nudge-title">Aparta tu próximo corte <em>antes de que se llene la semana.</em></h2>
 <a class="btn solid" data-en="Book again on Booksy" data-es="Reserva otra vez en Booksy" href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank">Reserva otra vez en Booksy</a>
-<p class="note" data-en="“Before the week fills up”: confirm with Nathan." data-es="“Antes de que se llene la semana”: confirmar con Nathan.">“Antes de que se llene la semana”: confirmar con Nathan.</p>
 </div>
-<div class="reminder" data-reveal="" style="--d:1">
+<div class="reminder">
 <p class="label" data-en="Reminder" data-es="Recordatorio">Recordatorio</p>
 <div class="rem-row">
 <label data-en="Your last cut" data-es="Tu último corte" for="last-visit">Tu último corte</label>
@@ -944,31 +1070,33 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </section>
 <section class="chapter" id="rewards">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
-<p class="label" data-en="Rewards idea (example)" data-es="Idea de puntos (ejemplo)">Idea de puntos (ejemplo)</p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
+<p class="label" data-en="Blendz Rewards" data-es="Blendz Rewards">Blendz Rewards</p>
 <h2 data-en="Every cut &lt;em&gt;counts.&lt;/em&gt;" data-es="Cada corte &lt;em&gt;suma.&lt;/em&gt;">Cada corte <em>suma.</em></h2>
 <p data-en="Earn points every visit and trade them for extras. The points and rewards below are examples; Nathan sets the real ones." data-es="Gana puntos con cada visita y canjéalos por extras. Los puntos y premios de abajo son un ejemplo; Nathan decide los reales.">Gana puntos con cada visita y canjéalos por extras. Los puntos y premios de abajo son un ejemplo; Nathan decide los reales.</p>
 </div>
 <div class="rewards">
 <div>
-<p class="label sub" data-en="How to earn" data-es="Cómo ganar">Cómo ganar</p>
+<div class="lists"><div><p class="label sub" data-en="How to earn" data-es="Cómo ganar">Cómo ganar</p>
 <div class="earn">
-<div><div><h3 data-en="Every visit" data-es="Cada visita">Cada visita</h3><p data-en="Any service booked on Booksy." data-es="Cualquier servicio reservado en Booksy.">Cualquier servicio reservado en Booksy.</p></div><span class="pts">+10</span></div>
-<div><div><h3 data-en="Bring a friend" data-es="Trae a un amigo">Trae a un amigo</h3><p data-en="When a friend you refer comes in for their first cut." data-es="Cuando tu amigo hace su primera visita.">Cuando tu amigo hace su primera visita.</p></div><span class="pts">+20</span></div>
-<div><div><h3 data-en="Birthday month" data-es="Mes de cumpleaños">Mes de cumpleaños</h3><p data-en="A bonus when you visit during your birthday month." data-es="Un bono si vienes en tu mes.">Un bono si vienes en tu mes.</p></div><span class="pts">+10</span></div>
+<div><h3 data-en="Every visit" data-es="Cada visita">Cada visita</h3><span class="pts">+10</span></div>
+<div><h3 data-en="Bring a friend" data-es="Trae a un amigo">Trae a un amigo</h3><span class="pts">+20</span></div>
+<div><h3 data-en="Birthday month" data-es="Mes de cumpleaños">Mes de cumpleaños</h3><span class="pts">+10</span></div>
+<div><h3 data-en="Leave a review" data-es="Deja una reseña">Deja una reseña</h3><span class="pts">+5</span></div>
 </div>
-<p class="label sub" data-en="How to redeem" data-es="Cómo canjear">Cómo canjear</p>
+</div><div><p class="label sub" data-en="How to redeem" data-es="Cómo canjear">Cómo canjear</p>
 <div class="spend">
-<div><div><h3 data-en="Free eyebrow cleanup" data-es="Arreglo de cejas gratis">Arreglo de cejas gratis</h3><p data-en="Added to any haircut." data-es="Agrégalo a cualquier corte.">Agrégalo a cualquier corte.</p></div><span class="pts">50</span></div>
-<div><div><h3 data-en="Free beard line-up" data-es="Perfilado de barba gratis">Perfilado de barba gratis</h3><p data-en="Added to any haircut." data-es="Agrégalo a cualquier corte.">Agrégalo a cualquier corte.</p></div><span class="pts">80</span></div>
-<div><div><h3 data-en="Free haircut" data-es="Corte gratis">Corte gratis</h3><p data-en="The big one." data-es="El premio mayor.">El premio mayor.</p></div><span class="pts">100</span></div>
+<div><h3 data-en="Free eyebrow cleanup" data-es="Arreglo de cejas gratis">Arreglo de cejas gratis</h3><span class="pts">50</span></div>
+<div><h3 data-en="Free beard line-up" data-es="Perfilado de barba gratis">Perfilado de barba gratis</h3><span class="pts">80</span></div>
+<div><h3 data-en="Free haircut" data-es="Corte gratis">Corte gratis</h3><span class="pts">100</span></div>
 </div>
+</div></div>
 </div>
-<div aria-live="polite" class="card" data-reveal="" style="--d:1">
+<div aria-live="polite" class="card">
 <div class="card-top"><span class="wordmark">Nateblendz</span><span class="demo-tag" data-en="Demo card" data-es="Demo">Demo</span></div>
 <div class="balance"><p class="label" data-en="Your points" data-es="Tus puntos">Tus puntos</p><p class="num" id="pts">30</p></div>
-<div aria-label="Sellos de visitas" class="stamps" id="stamps" role="img"></div>
+<div aria-label="Visit stamps" class="stamps" id="stamps" role="img"></div>
 <div aria-hidden="true" class="meter"><span id="meter"></span></div>
 <p class="next" id="next"></p>
 <p class="unlocked" id="unlocked"></p>
@@ -976,7 +1104,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <button class="btn solid" data-en="Add a visit (+10)" data-es="Sumar visita (+10)" id="add-visit" type="button">Sumar visita (+10)</button>
 <button class="btn" data-en="Add a referral (+20)" data-es="Sumar referido (+20)" id="add-ref" type="button">Sumar referido (+20)</button>
 </div>
-<button class="btn" data-en="Reset demo" data-es="Reiniciar demo" id="reset-card" type="button">Reiniciar demo</button>
+<button class="reset" data-en="Reset demo" data-es="Reiniciar demo" id="reset-card" type="button">Reiniciar demo</button>
 <p class="fine" data-en="This card is a demo that lives in your browser. A real program would track points automatically with each appointment." data-es="Esta tarjeta es solo una demostración y vive en tu navegador. Un programa real llevaría los puntos automáticamente con cada cita.">Esta tarjeta es solo una demostración y vive en tu navegador. Un programa real llevaría los puntos automáticamente con cada cita.</p>
 </div>
 </div>
@@ -984,8 +1112,8 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </section>
 <section class="chapter alt" id="visit">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Your first visit" data-es="Tu primera visita">Tu primera visita</p>
 <h2 data-en="Finding &lt;em&gt;the chair.&lt;/em&gt;" data-es="Cómo llegar &lt;em&gt;a la silla.&lt;/em&gt;">Cómo llegar <em>a la silla.</em></h2>
 </div>
@@ -994,7 +1122,6 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <h3 data-en="The shop" data-es="La barbería">La barbería</h3>
 <p class="big" data-en="13132 Newport Ave&lt;br/&gt;Floor 2, Suite 230&lt;br/&gt;Tustin, CA 92780" data-es="13132 Newport Ave&lt;br&gt;Piso 2, Suite 230&lt;br&gt;Tustin, CA 92780">13132 Newport Ave<br/>Piso 2, Suite 230<br/>Tustin, CA 92780</p>
 <a class="textlink" data-en="Open in Maps" data-es="Abrir en Maps" href="https://www.google.com/maps/search/?api=1&amp;query=13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Abrir en Maps</a>
-<p class="note" data-en="This is the address on the Tustin Booksy listing. An older listing shows Santa Ana, so please confirm on Booksy before you go." data-es="Esta es la dirección del perfil de Booksy en Tustin. Un perfil anterior muestra Santa Ana, así que confírmala en Booksy antes de ir.">Esta es la dirección del perfil de Booksy en Tustin. Un perfil anterior muestra Santa Ana, así que confírmala en Booksy antes de ir.</p>
 </div>
 <div>
 <h3 data-en="Head upstairs" data-es="Sube al segundo piso">Sube al segundo piso</h3>
@@ -1007,18 +1134,41 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <p data-en="A reference picture is the quickest way to agree on the details, especially for designs." data-es="Una foto de referencia es la forma más rápida de ponerse de acuerdo, sobre todo para diseños.">Una foto de referencia es la forma más rápida de ponerse de acuerdo, sobre todo para diseños.</p>
 </div>
 </div>
+<div class="hours-block">
+<div>
+<div class="hours-top"><h3 data-en="Hours" data-es="Horario">Horario</h3><span class="open-badge" hidden="" id="open-badge"></span></div>
+<table class="hours" id="hours">
+<caption class="sr" data-en="Weekly hours" data-es="Horario semanal">Horario semanal</caption>
+<tr data-days="1 2 3 4 5"><th data-en="Monday to Friday" data-es="Lunes a viernes" scope="row">Lunes a viernes</th><td>9:00 AM – 7:00 PM</td></tr>
+<tr data-days="6"><th data-en="Saturday" data-es="Sábado" scope="row">Sábado</th><td>9:00 AM – 5:00 PM</td></tr>
+<tr data-days="0"><th data-en="Sunday" data-es="Domingo" scope="row">Domingo</th><td data-en="Closed" data-es="Cerrado">Cerrado</td></tr>
+</table>
+<p class="closure" data-en="Closed November 5 to 8, 2026." data-es="Cerrado del 5 al 8 de noviembre de 2026." id="closure">Cerrado del 5 al 8 de noviembre de 2026.</p>
+<p class="fine" data-en="Hours from the Booksy listing as of October 18, 2026. Booksy shows the open slots." data-es="Horario del perfil de Booksy al 18 de octubre de 2026. Booksy muestra los horarios libres.">Horario del perfil de Booksy al 18 de octubre de 2026. Booksy muestra los horarios libres.</p>
+</div>
+<div>
+<h3 data-en="Payment" data-es="Pago">Pago</h3>
+<p class="big" data-en="Cash or Zelle." data-es="Efectivo o Zelle.">Efectivo o Zelle.</p>
+<p data-en="You pay at the shop. Booksy doesn’t ask for a deposit on any service." data-es="Pagas en la barbería. Booksy no pide depósito para ningún servicio.">Pagas en la barbería. Booksy no pide depósito para ningún servicio.</p>
+<p data-en="Need an earlier or later time? The listing mentions cuts outside regular hours for an extra charge; ask Nate." data-es="¿Necesitas un horario más temprano o más tarde? El perfil menciona cortes fuera de horario con un cargo extra; pregúntale a Nate.">¿Necesitas un horario más temprano o más tarde? El perfil menciona cortes fuera de horario con un cargo extra; pregúntale a Nate.</p>
+</div>
+</div>
+<div class="map">
+<div class="map-fallback"><p data-en="Map of 13132 Newport Ave, Tustin" data-es="Mapa de 13132 Newport Ave, Tustin">Mapa de 13132 Newport Ave, Tustin</p><a class="textlink" data-en="Open in Google Maps" data-es="Abrir en Google Maps" href="https://www.google.com/maps/search/?api=1&amp;query=13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Abrir en Google Maps</a></div>
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=13132+Newport+Ave+Suite+230+Tustin+CA+92780&amp;output=embed" title="Map showing Nateblendz at 13132 Newport Ave, Tustin, CA"></iframe>
+</div>
 </div>
 </section>
 <section class="chapter" id="google">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Find us on Google" data-es="Encuéntranos en Google">Encuéntranos en Google</p>
 <h2 data-en="Your Tustin barber, &lt;em&gt;on the map.&lt;/em&gt;" data-es="Tu barbero en Tustin, &lt;em&gt;en el mapa.&lt;/em&gt;">Tu barbero en Tustin, <em>en el mapa.</em></h2>
 </div>
 <div class="gbp">
 <div class="gbp-copy">
-<p data-en="Looking for a barber in Tustin or a barbershop near you? Nateblendz is upstairs at 13132 Newport Ave, Suite 230, in Tustin, CA. Nathan does low, mid and high fades, tapers, haircut designs and straight-razor beard work for clients from Tustin, North Tustin, Santa Ana and Irvine (areas: confirm with Nathan)." data-es="¿Buscas un barbero en Tustin o una barbería cerca de ti? Nateblendz está en el segundo piso de 13132 Newport Ave, Suite 230, en Tustin, CA. Nathan hace fades bajos, medios y altos, tapers, diseños y perfilado de barba a navaja para clientes de Tustin, North Tustin, Santa Ana e Irvine (zonas: confirmar con Nathan).">¿Buscas un barbero en Tustin o una barbería cerca de ti? Nateblendz está en el segundo piso de 13132 Newport Ave, Suite 230, en Tustin, CA. Nathan hace fades bajos, medios y altos, tapers, diseños y perfilado de barba a navaja para clientes de Tustin, North Tustin, Santa Ana e Irvine (zonas: confirmar con Nathan).</p>
+<p data-en="Looking for a barber in Tustin or a barbershop near you? Nateblendz is upstairs at 13132 Newport Ave, Suite 230, in Tustin, CA. Nathan does low, mid and high fades, tapers, haircut designs and straight-razor beard work for clients from Tustin, North Tustin, Santa Ana and Irvine." data-es="¿Buscas un barbero en Tustin o una barbería cerca de ti? Nateblendz está en el segundo piso de 13132 Newport Ave, Suite 230, en Tustin, CA. Nathan hace fades bajos, medios y altos, tapers, diseños y perfilado de barba a navaja para clientes de Tustin, North Tustin, Santa Ana e Irvine.">¿Buscas un barbero en Tustin o una barbería cerca de ti? Nateblendz está en el segundo piso de 13132 Newport Ave, Suite 230, en Tustin, CA. Nathan hace fades bajos, medios y altos, tapers, diseños y perfilado de barba a navaja para clientes de Tustin, North Tustin, Santa Ana e Irvine.</p>
 <p data-en="Search “Nateblendz” on Google Maps for directions, photos and reviews, then book your chair on Booksy." data-es="Busca “Nateblendz” en Google Maps para ver indicaciones, fotos y reseñas, y reserva tu cita en Booksy.">Busca “Nateblendz” en Google Maps para ver indicaciones, fotos y reseñas, y reserva tu cita en Booksy.</p>
 <!-- PLACEHOLDER: replace both Google links with Nathan's real Google Business Profile link once it exists -->
 <a class="btn solid gbp-btn" data-en="Find us on Google Maps" data-es="Ver en Google Maps" href="https://www.google.com/maps/search/?api=1&amp;query=Nateblendz+13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Ver en Google Maps</a>
@@ -1028,17 +1178,18 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <p class="label" data-en="Google reviews" data-es="Reseñas de Google">Reseñas de Google</p>
 <a class="textlink" data-en="Read reviews on Google" data-es="Leer reseñas en Google" href="https://www.google.com/maps/search/?api=1&amp;query=Nateblendz+13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Leer reseñas en Google</a>
 </div>
-<div class="review-slot" hidden="">
+<p class="rating" data-en='&lt;span class="rating-num"&gt;5.0&lt;/span&gt; on Booksy from 70 reviews (October 2026). &lt;a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank"&gt;See them on Booksy&lt;/a&gt;' data-es='&lt;span class="rating-num"&gt;5.0&lt;/span&gt; en Booksy, con 70 reseñas (octubre de 2026). &lt;a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" target="_blank" rel="noopener"&gt;Ver en Booksy&lt;/a&gt;'><span class="rating-num">5.0</span> en Booksy, con 70 reseñas (octubre de 2026). <a href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank">Ver en Booksy</a></p>
+<div class="review-slot">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
 </div>
-<div class="review-slot" hidden="">
+<div class="review-slot">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
 </div>
-<div class="review-slot" hidden="">
+<div class="review-slot">
 <p aria-hidden="true" class="stars">★★★★★</p>
 <p class="quote" data-en="A real client’s Google review goes here, added with Nathan’s OK." data-es="Reseña de Google de un cliente real, agregada con el permiso de Nathan.">Reseña de Google de un cliente real, agregada con el permiso de Nathan.</p>
 <p class="who" data-en="Client name · Google" data-es="Nombre del cliente · Google">Nombre del cliente · Google</p>
@@ -1050,8 +1201,8 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 </section>
 <section class="chapter alt" id="faq">
 <div class="wrap">
-<div class="chapter-head" data-reveal="">
-<p class="ornament short"><svg aria-hidden="true" class="mari"><use href="#marigold"></use></svg></p>
+<div class="chapter-head">
+<p class="ornament short"><span aria-hidden="true" class="diamond"></span></p>
 <p class="label" data-en="Tustin barber FAQ" data-es="Barbero en Tustin">Barbero en Tustin</p>
 <h2 data-en="Questions, &lt;em&gt;answered.&lt;/em&gt;" data-es="Preguntas &lt;em&gt;frecuentes.&lt;/em&gt;">Preguntas <em>frecuentes.</em></h2>
 </div>
@@ -1073,6 +1224,18 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <div class="answer"><p data-en="Yes. The Booksy listing includes Haircut &amp;amp; Beard, with beard shaping by straight razor, and Haircut &amp;amp; Design for shaved designs. There is also a Haircut &amp;amp; Eyebrows option." data-es="Sí. El perfil de Booksy incluye Haircut &amp; Beard, con perfilado de barba a navaja, y Haircut &amp; Design para diseños rasurados. También hay una opción Haircut &amp; Eyebrows.">Sí. El perfil de Booksy incluye Haircut &amp; Beard, con perfilado de barba a navaja, y Haircut &amp; Design para diseños rasurados. También hay una opción Haircut &amp; Eyebrows.</p></div>
 </details>
 <details>
+<summary data-en="What are the hours?" data-es="¿Cuál es el horario?">¿Cuál es el horario?</summary>
+<div class="answer"><p data-en="Monday to Friday 9:00 AM to 7:00 PM, and Saturday 9:00 AM to 5:00 PM. Closed Sundays. Open slots show live on Booksy." data-es="De lunes a viernes de 9:00 AM a 7:00 PM, y los sábados de 9:00 AM a 5:00 PM. Los domingos está cerrado. Los horarios libres aparecen en Booksy.">De lunes a viernes de 9:00 AM a 7:00 PM, y los sábados de 9:00 AM a 5:00 PM. Los domingos está cerrado. Los horarios libres aparecen en Booksy.</p></div>
+</details>
+<details>
+<summary data-en="How much is a cut?" data-es="¿Cuánto cuesta un corte?">¿Cuánto cuesta un corte?</summary>
+<div class="answer"><p data-en="A haircut is $50. Haircut &amp;amp; Design or Haircut &amp;amp; Eyebrows is $55, and Haircut &amp;amp; Beard is $60. Each service takes about an hour. Current prices are always on Booksy." data-es="Un corte cuesta $50. Corte y diseño o corte y cejas cuestan $55, y corte y barba $60. Cada servicio dura como una hora. Los precios actuales siempre están en Booksy.">Un corte cuesta $50. Corte y diseño o corte y cejas cuestan $55, y corte y barba $60. Cada servicio dura como una hora. Los precios actuales siempre están en Booksy.</p></div>
+</details>
+<details>
+<summary data-en="How do I pay?" data-es="¿Cómo se paga?">¿Cómo se paga?</summary>
+<div class="answer"><p data-en="Cash or Zelle, at the shop. No deposit is needed to book on Booksy." data-es="En efectivo o Zelle, en la barbería. No se pide depósito para reservar en Booksy.">En efectivo o Zelle, en la barbería. No se pide depósito para reservar en Booksy.</p></div>
+</details>
+<details>
 <summary data-en="Can I get a cut before or after regular hours?" data-es="¿Puedo cortarme antes o después del horario normal?">¿Puedo cortarme antes o después del horario normal?</summary>
 <div class="answer">
 <p data-en="The Booksy listing mentions before and after hours cuts for an extra charge. The exact cost and how to arrange one aren’t posted publicly yet." data-es="El perfil de Booksy menciona cortes antes y después de horario con un cargo extra. El costo exacto y cómo agendarlo todavía no son públicos.">El perfil de Booksy menciona cortes antes y después de horario con un cargo extra. El costo exacto y cómo agendarlo todavía no son públicos.</p>
@@ -1083,30 +1246,11 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <summary data-en="How do I know my appointment is set?" data-es="¿Cómo sé que mi cita quedó?">¿Cómo sé que mi cita quedó?</summary>
 <div class="answer"><p data-en="Booksy handles the booking and confirmation. This page helps you choose a service and sends you there." data-es="Booksy maneja la reserva y la confirmación. Esta página te ayuda a elegir y te manda allá.">Booksy maneja la reserva y la confirmación. Esta página te ayuda a elegir y te manda allá.</p></div>
 </details>
-<details>
-<summary data-en="What are the hours?" data-es="¿Cuál es el horario?">¿Cuál es el horario?</summary>
-<div class="answer"><p data-en="Open times appear live on Booksy when you choose a service. Weekly hours aren’t posted anywhere else yet." data-es="Los horarios disponibles aparecen en Booksy cuando eliges un servicio. El horario semanal no está publicado en otro lado todavía.">Los horarios disponibles aparecen en Booksy cuando eliges un servicio. El horario semanal no está publicado en otro lado todavía.</p></div>
-</details>
-<details>
-<summary data-en="How much is a cut?" data-es="¿Cuánto cuesta un corte?">¿Cuánto cuesta un corte?</summary>
-<div class="answer"><p data-en="Current prices are listed on Booksy beside each service, so you always see the real number." data-es="Los precios actuales están en Booksy junto a cada servicio, así siempre ves el precio real.">Los precios actuales están en Booksy junto a cada servicio, así siempre ves el precio real.</p></div>
-</details>
 </div>
 </div>
 </section>
 <section class="chapter closer">
-<div aria-hidden="true" class="picado"><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg><svg class="p-turq"><use href="#flag"></use></svg><svg class="p-brass"><use href="#flag"></use></svg><svg class="p-marigold"><use href="#flag"></use></svg><svg class="p-rosa"><use href="#flag"></use></svg></div>
-<div class="wrap" data-reveal="">
-<svg aria-hidden="true" class="calavera" viewbox="0 0 120 140">
-<path d="M60 8C28 8 12 32 12 60c0 20 10 32 20 38l2 18c0 6 6 10 12 10h28c6 0 12-4 12-10l2-18c10-6 20-18 20-38C108 32 92 8 60 8Z" fill="none" stroke="var(--bone)" stroke-width="1.6"></path>
-<g fill="none" stroke="var(--marigold)" stroke-width="1.4"><circle cx="52.0" cy="66.0" r="4.2"></circle><circle cx="48.5" cy="74.5" r="4.2"></circle><circle cx="40.0" cy="78.0" r="4.2"></circle><circle cx="31.5" cy="74.5" r="4.2"></circle><circle cx="28.0" cy="66.0" r="4.2"></circle><circle cx="31.5" cy="57.5" r="4.2"></circle><circle cx="40.0" cy="54.0" r="4.2"></circle><circle cx="48.5" cy="57.5" r="4.2"></circle><circle cx="92.0" cy="66.0" r="4.2"></circle><circle cx="88.5" cy="74.5" r="4.2"></circle><circle cx="80.0" cy="78.0" r="4.2"></circle><circle cx="71.5" cy="74.5" r="4.2"></circle><circle cx="68.0" cy="66.0" r="4.2"></circle><circle cx="71.5" cy="57.5" r="4.2"></circle><circle cx="80.0" cy="54.0" r="4.2"></circle><circle cx="88.5" cy="57.5" r="4.2"></circle></g>
-<circle cx="40" cy="66" fill="var(--clay)" r="6"></circle><circle cx="80" cy="66" fill="var(--clay)" r="6"></circle>
-<path d="M60 85c-4-5-10-1-5 5l5 6l5-6c5-6-1-10-5-5Z" fill="none" stroke="var(--brass)" stroke-width="1.4"></path>
-<g stroke="var(--bone)" stroke-width="1.2"><path d="M40 108h40"></path><path d="M46 102v12M53 102v12M60 102v12M67 102v12M74 102v12"></path></g>
-<g transform="translate(60 34)"><ellipse cx="0" cy="-6" fill="var(--marigold)" rx="2.6" ry="5" transform="rotate(0)"></ellipse><ellipse cx="0" cy="-6" fill="var(--marigold)" rx="2.6" ry="5" transform="rotate(72)"></ellipse><ellipse cx="0" cy="-6" fill="var(--marigold)" rx="2.6" ry="5" transform="rotate(144)"></ellipse><ellipse cx="0" cy="-6" fill="var(--marigold)" rx="2.6" ry="5" transform="rotate(216)"></ellipse><ellipse cx="0" cy="-6" fill="var(--marigold)" rx="2.6" ry="5" transform="rotate(288)"></ellipse><circle fill="var(--clay)" r="2.6"></circle></g>
-<g fill="var(--turq)"><circle cx="34" cy="46" r="1.8"></circle><circle cx="41" cy="40" r="1.8"></circle><circle cx="79" cy="40" r="1.8"></circle><circle cx="86" cy="46" r="1.8"></circle></g>
-<g fill="none" stroke="var(--clay)" stroke-width="1.3"><path d="M24 84c4-4 10-2 9 3"></path><path d="M96 84c-4-4-10-2-9 3"></path></g>
-</svg>
+<div class="wrap">
 <p class="es">Nos vemos pronto.</p>
 <h2 data-en="Your chair &lt;em&gt;is waiting.&lt;/em&gt;" data-es="Tu silla &lt;em&gt;te espera.&lt;/em&gt;">Tu silla <em>te espera.</em></h2>
 <a class="btn solid" data-en="Book an appointment" data-es="Hacer una cita" href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" rel="noopener" target="_blank">Hacer una cita</a>
@@ -1116,11 +1260,11 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 <footer>
 <div class="wrap">
 <span class="wordmark">Nateblendz</span>
-<p class="langlinks"><a href="../index.html" hreflang="en" lang="en">English</a> · <a href="index.html" hreflang="es" lang="es">Español</a></p>
+<p class="addr" data-en='13132 Newport Ave, Floor 2, Suite 230&lt;br/&gt;Tustin, CA 92780 · &lt;a href="https://www.google.com/maps/search/?api=1&amp;amp;query=13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank"&gt;Directions&lt;/a&gt;' data-es='13132 Newport Ave, Piso 2, Suite 230&lt;br&gt;Tustin, CA 92780 · &lt;a href="https://www.google.com/maps/search/?api=1&amp;amp;query=13132+Newport+Ave+Suite+230+Tustin+CA+92780" target="_blank" rel="noopener"&gt;Cómo llegar&lt;/a&gt;'>13132 Newport Ave, Piso 2, Suite 230<br/>Tustin, CA 92780 · <a href="https://www.google.com/maps/search/?api=1&amp;query=13132+Newport+Ave+Suite+230+Tustin+CA+92780" rel="noopener" target="_blank">Cómo llegar</a></p>
+<p class="privacy" data-en="Privacy: this site doesn’t ask for or store your personal info. The points card and the reminder stay on your phone. Booking and payment are handled by Booksy." data-es="Privacidad: este sitio no pide ni guarda tus datos personales. La tarjeta de puntos y el recordatorio se quedan en tu teléfono. Las citas y pagos los maneja Booksy.">Privacidad: este sitio no pide ni guarda tus datos personales. La tarjeta de puntos y el recordatorio se quedan en tu teléfono. Las citas y pagos los maneja Booksy.</p>
+<p class="langlinks"><a href="https://www.instagram.com/naateblendz/" rel="noopener" target="_blank">Instagram @naateblendz</a> · <a href='/' hreflang='en' lang='en'>English</a> · <a href='/es/' hreflang='es' lang='es'>Español</a></p>
 <p data-en="Sample concept built as a learning project. It isn’t the official Nateblendz website and isn’t endorsed by Nateblendz or Booksy." data-es="Concepto de muestra hecho como proyecto de aprendizaje. No es el sitio oficial de Nateblendz y no está respaldado por Nateblendz ni por Booksy.">Concepto de muestra hecho como proyecto de aprendizaje. No es el sitio oficial de Nateblendz y no está respaldado por Nateblendz ni por Booksy.</p>
-<p data-en="Business details come from the public Booksy listing, reviewed October 15, 2026. Booking, prices, hours, and confirmation all happen on Booksy." data-es="Los datos vienen del perfil público de Booksy, revisado el 15 de octubre de 2026. Las citas, precios, horarios y confirmaciones se manejan en Booksy.">Los datos vienen del perfil público de Booksy, revisado el 15 de octubre de 2026. Las citas, precios, horarios y confirmaciones se manejan en Booksy.</p>
-<!-- Privacy note: wording needs Nathan's OK before launch -->
-<p class="privacy" data-en="&lt;b&gt;Privacy:&lt;/b&gt; this page has no forms and collects no personal info. Your service pick, the sample rewards card and your language choice stay in this browser only (localStorage). Fonts load from Google Fonts. Booking happens on Booksy, under Booksy’s privacy policy. The Google Maps and Google Calendar links open those sites, under their own policies." data-es="&lt;b&gt;Privacidad:&lt;/b&gt; esta página no tiene formularios y no recoge datos personales. Tu servicio elegido, la tarjeta de puntos de muestra y tu idioma se guardan solo en este navegador (localStorage). Las fuentes se cargan desde Google Fonts. Las citas se hacen en Booksy, bajo la política de privacidad de Booksy. Los enlaces a Google Maps y Google Calendar abren esos sitios, bajo sus propias políticas."><b>Privacidad:</b> esta página no tiene formularios y no recoge datos personales. Tu servicio elegido, la tarjeta de puntos de muestra y tu idioma se guardan solo en este navegador (localStorage). Las fuentes se cargan desde Google Fonts. Las citas se hacen en Booksy, bajo la política de privacidad de Booksy. Los enlaces a Google Maps y Google Calendar abren esos sitios, bajo sus propias políticas.</p>
+<p data-en="Business details come from the public Booksy listing and Nate’s Instagram, reviewed October 18, 2026. Booking and confirmation happen on Booksy." data-es="Los datos vienen del perfil público de Booksy y del Instagram de Nate, revisados el 18 de octubre de 2026. Las citas y confirmaciones se manejan en Booksy.">Los datos vienen del perfil público de Booksy y del Instagram de Nate, revisados el 18 de octubre de 2026. Las citas y confirmaciones se manejan en Booksy.</p>
 </div>
 </footer>
 <script>
@@ -1224,10 +1368,10 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
       var prev = nextIdx <= 0 ? 0 : tiers[nextIdx - 1];
       if (nextIdx === -1) {
         document.getElementById('next').textContent = r.maxed;
-        document.getElementById('meter').style.setProperty('--p', '1');
+        document.getElementById('meter').style.width = '100%';
       } else {
         document.getElementById('next').innerHTML = r.next(tiers[nextIdx] - points, r.tiers[nextIdx]);
-        document.getElementById('meter').style.setProperty('--p', ((points - prev) / (tiers[nextIdx] - prev)).toFixed(3));
+        document.getElementById('meter').style.width = Math.round((points - prev) / (tiers[nextIdx] - prev) * 100) + '%';
       }
       if (justEarned !== undefined) {
         var crossed = tiers.filter(function (t) { return justEarned < t && points >= t; });
@@ -1255,20 +1399,16 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var f = btn.getAttribute('data-filter');
+        if (f !== 'all') document.getElementById('cut-grid').classList.remove('collapsed');
         filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
         document.querySelectorAll('.cut-card').forEach(function (card) {
-          var empty = card.classList.contains('ba') && !card.querySelector('.has-pair');
-          card.hidden = empty || (f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1);
+          card.hidden = f !== 'all' && card.getAttribute('data-tags').split(' ').indexOf(f) === -1;
         });
       });
     });
-    /* Before/after slots fill in when photos/before-N.jpg and photos/after-N.jpg exist */
-    document.querySelectorAll('.ba-slot').forEach(function (slot, i) {
-      var spans = slot.querySelectorAll('span'), base = (document.documentElement.lang === 'es' ? '../' : '') + 'photos/';
-      var b = new Image(), a = new Image(), loaded = 0;
-      function done() { if (++loaded === 2) { spans[0].style.backgroundImage = 'url(' + b.src + ')'; spans[1].style.backgroundImage = 'url(' + a.src + ')'; slot.classList.add('has-pair'); slot.closest('.cut-card').hidden = false; document.querySelector('.filter[data-filter="ba"]').hidden = false; } }
-      b.onload = done; a.onload = done;
-      b.src = base + 'before-' + (i + 1) + '.jpg'; a.src = base + 'after-' + (i + 1) + '.jpg';
+    document.getElementById('more-cuts').addEventListener('click', function () {
+      var grid = document.getElementById('cut-grid'); grid.classList.remove('collapsed');
+      var seventh = grid.querySelectorAll('.cut-card')[6]; if (seventh) { seventh.setAttribute('tabindex', '-1'); seventh.focus({ preventScroll: true }); }
     });
 
     /* Rebooking reminder */
@@ -1281,7 +1421,10 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
       var next = new Date(due.getTime() + 86400000);
       var locale = lang === 'es' ? 'es-US' : 'en-US';
       var nice = due.toLocaleDateString(locale, { weekday: 'long', month: 'long', day: 'numeric' });
-      document.getElementById('due').innerHTML = (lang === 'es' ? 'Tu pr\u00F3ximo corte: alrededor del <b>' : 'Next cut due around <b>') + nice + '</b>';
+      var dueEl = document.getElementById('due'), dueB = document.createElement('b');
+      dueB.textContent = nice;
+      dueEl.textContent = lang === 'es' ? 'Tu pr\u00F3ximo corte: alrededor del ' : 'Next cut due around ';
+      dueEl.appendChild(dueB);
       var title = lang === 'es' ? 'Reservar mi corte en Nateblendz' : 'Book my next cut at Nateblendz';
       document.getElementById('cal-link').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(title) + '&dates=' + ymd(due) + '/' + ymd(next) + '&details=' + encodeURIComponent(BOOKSY);
       var body = (lang === 'es' ? 'Recordatorio: reservar mi corte en Nateblendz alrededor del ' : 'Reminder: book my next cut at Nateblendz around ') + nice + ' ' + BOOKSY;
@@ -1294,6 +1437,68 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
     /* Language toggle */
     var translatable = document.querySelectorAll('[data-es]');
     translatable.forEach(function (el) { if (!el.dataset.en) el.dataset.en = el.innerHTML; });
+    /* Hours: open-now badge (Tustin time), today's row, and the one-off closure */
+    function hoursState() {
+      var now = new Date(), parts = {};
+      try {
+        new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', weekday: 'short', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+          .formatToParts(now).forEach(function (p) { parts[p.type] = p.value; });
+      } catch (err) { return; }
+      var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+      var mins = parseInt(parts.hour, 10) * 60 + parseInt(parts.minute, 10);
+      var ymd = parts.year + '-' + parts.month + '-' + parts.day;
+      var closedSpan = ymd >= '2026-11-05' && ymd <= '2026-11-08';
+      var closeAt = day >= 1 && day <= 5 ? 19 * 60 : day === 6 ? 17 * 60 : 0;
+      var open = !closedSpan && closeAt && mins >= 9 * 60 && mins < closeAt;
+      document.querySelectorAll('#hours tr').forEach(function (tr) { tr.classList.toggle('today', tr.getAttribute('data-days').split(' ').indexOf(String(day)) !== -1); });
+      var closure = document.getElementById('closure');
+      if (closure) closure.hidden = ymd > '2026-11-08';
+      var badge = document.getElementById('open-badge');
+      badge.hidden = false;
+      badge.classList.toggle('is-open', !!open);
+      badge.textContent = lang === 'es' ? (open ? 'Abierto ahora' : 'Cerrado ahora') : (open ? 'Open now' : 'Closed now');
+    }
+    /* Motion: reveal sections as they scroll into view, and tighten the header once the page scrolls */
+    (function () {
+      var headerEl = document.querySelector('header.top');
+      function onScroll() { headerEl.classList.toggle('scrolled', window.scrollY > 24); }
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+      var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (calm || !('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('js-motion');
+      var sel = '.chapter-head, .filters, .cut-card, .item, .ticket, .finder > *, .fade, .care > *, .nudge-copy, .reminder, .watch .reel, .lists > div, .card, .visit > div, .hours-block > div, .map, .gbp-copy, .review-slot, .rating, .faq details, .closer .wrap > *, .more-cuts';
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+      document.querySelectorAll(sel).forEach(function (el) {
+        var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(sel); });
+        el.style.setProperty('--d', (sibs.indexOf(el) % 5) * 110 + 'ms');
+        el.classList.add('reveal'); io.observe(el);
+      });
+      var grid = document.getElementById('cut-grid');
+      document.querySelectorAll('.filter, #more-cuts').forEach(function (b) {
+        b.addEventListener('click', function () {
+          grid.querySelectorAll('.cut-card').forEach(function (c) { c.classList.add('in'); });
+          grid.classList.remove('filtering'); void grid.offsetWidth; grid.classList.add('filtering');
+        });
+      });
+    })();
+    /* Conversion tracking: counts Booksy, Maps, Instagram, calendar and text-reminder clicks once analytics is installed (does nothing until then) */
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var h = a.getAttribute('href'), name = null;
+      if (h.indexOf('booksy.com') !== -1) name = 'book_click';
+      else if (h.indexOf('google.com/maps') !== -1) name = 'directions_click';
+      else if (h.indexOf('instagram.com') !== -1) name = 'instagram_click';
+      else if (h.indexOf('calendar.google.com') !== -1) name = 'reminder_calendar';
+      else if (h.indexOf('sms:') === 0) name = 'reminder_text';
+      if (!name) return;
+      try {
+        if (window.plausible) window.plausible(name, { props: { lang: lang } });
+        if (window.gtag) window.gtag('event', name, { language: lang });
+      } catch (err) {}
+    });
     function setLang(next) {
       lang = next;
       translatable.forEach(function (el) { el.innerHTML = el.dataset[next]; });
@@ -1304,8 +1509,14 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
       updateFinder();
       drawCard();
       updateReminder();
+      hoursState();
       try { localStorage.setItem('nateblendz-lang', next); } catch (err) {}
     }
+    var header = document.querySelector('header.top'), menuBtn = document.getElementById('menu-btn');
+    function setMenu(open) { header.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', String(open)); }
+    menuBtn.addEventListener('click', function () { setMenu(!header.classList.contains('open')); });
+    document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && header.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
     document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
     document.getElementById('lang-es').addEventListener('click', function () { setLang('es'); });
 
@@ -1321,8 +1532,8 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
     updateFinder();
     drawCard();
     updateReminder();
+    hoursState();
   })();
 </script>
-<script defer="" src="../scrollfx.js"></script>
 </body>
 </html>
