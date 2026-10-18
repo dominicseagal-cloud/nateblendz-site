@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found | Nateblendz</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Same palette and fonts as index.html */
+:root {
+  --ink: #0f0e0d; --rule: #2e2a25; --bone: #e8e1d3; --dust: #9a9184;
+  --brass: #b89a63; --clay: #d9577f; --marigold: #e0913a;
+  --serif: "DM Serif Display", Didot, "Bodoni 72", Georgia, serif;
+  --sans: "Jost", "Futura", "Century Gothic", "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; background: var(--ink); color: var(--bone); font-family: var(--sans); font-weight: 300; font-size: 1.0625rem; line-height: 1.65; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 4px; }
+header, footer { border-color: var(--rule); border-style: solid; border-width: 0 0 1px; text-align: center; padding: .9rem 16px; }
+footer { border-width: 1px 0 0; color: var(--dust); font-size: .8rem; padding-block: 1.5rem; }
+.wordmark { font-family: var(--serif); font-size: 1.5rem; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+main { display: grid; place-content: center; justify-items: center; text-align: center; gap: 1.2rem; padding: 4rem 16px; }
+.label { font-weight: 500; font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass); margin: 0; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 1.05; margin: 0; }
+h1 em { color: var(--marigold); }
+p { margin: 0; color: var(--dust); max-width: 32rem; }
+.es { font-family: var(--serif); font-style: italic; color: var(--clay); font-size: 1.3rem; }
+.ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: .6rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; font-weight: 500; font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; padding: 1.05em 1.9em; border: 1px solid var(--brass); color: var(--bone); transition: background .2s ease, color .2s ease; }
+.btn:hover, .btn.solid { background: var(--brass); color: var(--ink); }
+.btn.solid:hover { background: var(--bone); border-color: var(--bone); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+</head>
+<body>
+<header><a class="wordmark" href="/">Nateblendz</a></header>
+<main>
+  <p class="label">404 &middot; <span lang="es">P&aacute;gina no encontrada</span></p>
+  <h1>This page <em>isn&rsquo;t here.</em></h1>
+  <p class="es" lang="es">Esta p&aacute;gina no existe.</p>
+  <p>The link may be old or mistyped. Head back to the menu and find your cut. <span lang="es">El enlace puede ser viejo o tener un error. Regresa al inicio para encontrar tu corte.</span></p>
+  <div class="ctas">
+    <a class="btn solid" href="/">Back to the home page</a>
+    <a class="btn" href="/es/" lang="es" hreflang="es">Ir a la p&aacute;gina en espa&ntilde;ol</a>
+  </div>
+</main>
+<footer>Sample concept page. Not the official Nateblendz site. <span lang="es">P&aacute;gina de muestra; no es el sitio oficial.</span></footer>
+</body>
+</html>

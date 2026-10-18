@@ -10,7 +10,10 @@ While it's a sample, search engines are blocked (`noindex, nofollow` in the page
 | --- | --- |
 | `index.html` | The English page. All styles and scripts are inside it. |
 | `es/index.html` | The Spanish page. Generated from `index.html`, so don't edit it by hand. |
-| `tools/build_es.py` | Rebuilds the Spanish page. Run `py tools/build_es.py` from this folder after any change to `index.html`. Needs beautifulsoup4 (one-time install: `py -m pip install beautifulsoup4`). |
+| `tools/build_es.py` | Rebuilds the Spanish page. Run `py tools/build_es.py` from this folder after any change to `index.html`. Needs beautifulsoup4 (one-time install: `py -m pip install -r tools/requirements.txt`). |
+| `tools/requirements.txt` | The pinned Python package the Spanish builder needs. |
+| `scrollfx.js` | Scroll reveal and the header's scrolled state, shared by both pages. Motion is off for anyone with reduced motion set. |
+| `404.html` | The "page not found" page (English and Spanish on one page). Hosts like Netlify use it automatically. |
 | `favicon.svg` | The "NB" browser-tab icon. |
 | `og-image.png` | The 1200x630 picture shown when the link is shared in texts or social posts. |
 | `robots.txt`, `sitemap.xml`, `llms.txt` | Files for search engines and AI tools. |

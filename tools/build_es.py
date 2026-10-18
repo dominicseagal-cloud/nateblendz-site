@@ -39,6 +39,28 @@ for img in soup.select('img[src^="photos/"]'):
     img['src'] = '../' + img['src']
 for el in soup.select('[data-photo]'):
     el['data-photo'] = '../' + el['data-photo']
+for script in soup.select('script[src="scrollfx.js"]'):
+    script['src'] = '../scrollfx.js'
+
+# Screen-reader labels and photo alt text can't use data-es, so translate them here.
+ARIA_ES = {
+    'Sample notice': 'Aviso de muestra',
+    'Main': 'Principal',
+    'Language': 'Idioma',
+    'Filter by style': 'Filtrar por estilo',
+    'Visit stamps': 'Sellos de visitas',
+}
+for el in soup.select('[aria-label]'):
+    el['aria-label'] = ARIA_ES.get(el['aria-label'], el['aria-label'])
+ALT_ES = {
+    'Fade haircut by Nateblendz, a barber in Tustin, CA': 'Corte fade de Nateblendz, barbero en Tustin, CA',
+    'Fade and beard by Nateblendz, a barber in Tustin, CA': 'Fade y barba de Nateblendz, barbero en Tustin, CA',
+    'Taper and beard by Nateblendz, a barber in Tustin, CA': 'Taper y barba de Nateblendz, barbero en Tustin, CA',
+    'Taper haircut by Nateblendz, a barber in Tustin, CA': 'Corte taper de Nateblendz, barbero en Tustin, CA',
+    'Design and taper by Nateblendz, a barber in Tustin, CA': 'Diseño y taper de Nateblendz, barbero en Tustin, CA',
+}
+for img in soup.select('img[alt]'):
+    img['alt'] = ALT_ES.get(img['alt'], img['alt'])
 
 for script in soup.find_all('script', type='application/ld+json'):
     data = json.loads(script.string)

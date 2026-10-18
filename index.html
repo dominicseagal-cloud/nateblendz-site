@@ -23,6 +23,10 @@
 <meta property="og:locale:alternate" content="es_US">
 <meta name="geo.region" content="US-CA">
 <meta name="geo.placename" content="Tustin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap">
+<script>document.documentElement.classList.add('js');</script>
 <!-- areaServed below is a guess, not from Booksy: confirm with Nathan -->
 <script type="application/ld+json">
 {
@@ -151,9 +155,6 @@
  ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap">
 <style>
 /* Layout: an upscale neighbourhood barbershop after dark. Centered monogram hero, a printed-menu service list with dotted leaders, hairline brass rules, generous space between chapters. */
 :root {
@@ -169,11 +170,22 @@
   --skin: #3a332c;         /* faded skin tone in the fade diagrams */
   --serif: "DM Serif Display", Didot, "Bodoni 72", Georgia, serif;
   --sans: "Jost", "Futura", "Century Gothic", "Segoe UI", sans-serif;
+  /* Type scale: small labels, fine print, small body */
+  --fs-label: .72rem;
+  --fs-fine: .8rem;
+  --fs-small: .86rem;
+  --fs-body-s: .95rem;
+  /* Uppercase controls (buttons, nav, toggles) share one size and spacing */
+  --fs-control: .76rem;
+  --ls-control: .2em;
+  --head-h: 5.5rem;        /* sticky header height, for anchor offsets and sticky panels */
   color-scheme: dark;
 }
+@media (max-width: 1060px) { :root { --head-h: 7.5rem; } }
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { overflow-x: clip; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body {
   margin: 0; background: var(--ink); color: var(--bone);
   font-family: var(--sans); font-weight: 300; font-size: 1.0625rem; line-height: 1.65;
@@ -190,47 +202,59 @@ a { color: inherit; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.05; text-wrap: balance; }
 p { margin: 0; }
 em { font-style: italic; }
-.label { font-family: var(--sans); font-weight: 500; font-size: .74rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brass); }
-.ornament { display: flex; align-items: center; gap: 1rem; color: var(--brass); font-size: .8rem; }
+.label { font-family: var(--sans); font-weight: 500; font-size: var(--fs-label); letter-spacing: .32em; text-transform: uppercase; color: var(--brass); }
+.ornament { display: flex; align-items: center; gap: 1rem; color: var(--brass); font-size: var(--fs-fine); }
 .ornament::before, .ornament::after { content: ""; height: 1px; flex: 1; background: var(--rule); }
-.ornament.short::before, .ornament.short::after { flex: 0 0 3.5rem; background: var(--brass); opacity: .6; }
+.ornament.short::before, .ornament.short::after { flex: 0 0 3.5rem; background: var(--marigold); opacity: .55; }
 .es { font-family: var(--serif); font-style: italic; color: var(--clay); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .7em;
-  font-family: var(--sans); font-weight: 500; font-size: .8rem; letter-spacing: .24em; text-transform: uppercase;
+  font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase;
   text-decoration: none; padding: 1.05em 1.9em; border: 1px solid var(--brass); background: transparent; color: var(--bone);
-  cursor: pointer; transition: background .2s ease, color .2s ease;
+  cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 .btn:hover { background: var(--brass); color: var(--ink); }
 .btn.solid { background: var(--brass); color: var(--ink); }
 .btn.solid:hover { background: var(--bone); border-color: var(--bone); }
 
-.sample-bar { border-bottom: 1px solid var(--rule); color: var(--dust); font-size: .78rem; text-align: center; letter-spacing: .04em; }
+.sample-bar { border-bottom: 1px solid var(--rule); color: var(--dust); font-size: var(--fs-fine); text-align: center; letter-spacing: .04em; }
 .sample-bar .wrap { padding-block: .5rem; }
 
-header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--ink) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--ink) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); transition: background .25s ease, border-color .25s ease; }
+header.top[data-scrolled] { background: var(--ink); border-bottom-color: color-mix(in srgb, var(--brass) 60%, transparent); }
 header.top .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding-block: .9rem; }
 header nav { display: flex; gap: 1.3rem; flex-wrap: nowrap; }
-header nav a { text-decoration: none; font-size: .68rem; font-weight: 500; letter-spacing: .18em; white-space: nowrap; text-transform: uppercase; color: var(--dust); }
+header nav a { text-decoration: none; font-size: var(--fs-control); font-weight: 500; letter-spacing: var(--ls-control); white-space: nowrap; text-transform: uppercase; color: var(--dust); }
 header nav a:hover { color: var(--bone); }
 .wordmark { font-family: var(--serif); font-size: 1.5rem; text-decoration: none; letter-spacing: .02em; }
 .head-right { justify-self: end; display: flex; align-items: center; gap: .9rem; }
 header .book { padding: .8em 1.3em; }
 .lang { display: inline-flex; border: 1px solid var(--rule); }
-.lang button { background: transparent; border: 0; color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: .7rem; letter-spacing: .18em; padding: .55em .7em; cursor: pointer; }
-.lang button[aria-pressed="true"] { background: var(--bone); color: var(--ink); }
+.lang button { background: transparent; border: 0; color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); padding: .55em .7em; cursor: pointer; }
+/* One pressed style for both toggle groups (EN/ES and gallery filters) */
+.lang button[aria-pressed="true"], .filter[aria-pressed="true"] { background: var(--bone); border-color: var(--bone); color: var(--ink); }
 @media (max-width: 1060px) {
-  header.top .wrap { grid-template-columns: 1fr auto; }
-  header nav { display: none; }
+  header.top .wrap { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0; padding-block: .5rem 0; }
+  header .wordmark { grid-column: 1; grid-row: 1; justify-self: start; }
+  header .head-right { grid-column: 2; grid-row: 1; }
+  /* Slim, swipeable nav row under the header */
+  header nav { grid-column: 1 / -1; grid-row: 2; gap: 1.4rem; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--rule); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
+  header nav::-webkit-scrollbar { display: none; }
 }
-@media (max-width: 420px) { header .book { display: none; } }
+@media (max-width: 420px) {
+  header .head-right { gap: .5rem; }
+  header .wordmark { font-size: 1.3rem; }
+  header .book { padding: .6em .8em; letter-spacing: .12em; }
+  .lang button { padding-inline: .45em; }
+}
 
 /* Hero */
 .hero .wrap { padding-block: clamp(4rem, 10vw, 7.5rem); display: grid; justify-items: center; text-align: center; gap: 1.6rem; }
-.monogram { width: 104px; height: 104px; border: 1px solid var(--brass); border-radius: 50%; display: grid; place-items: center; position: relative; }
-.monogram::after { content: ""; position: absolute; inset: 5px; border: 1px solid var(--rule); border-radius: 50%; }
-.monogram span { font-family: var(--serif); font-size: 2.3rem; color: var(--brass); letter-spacing: .02em; }
+.monogram { width: 140px; height: 140px; border: 0; border-radius: 50%; display: grid; place-items: center; position: relative; }
+.monogram::after { content: ""; position: absolute; inset: 22px; border: 1px solid var(--brass); border-radius: 50%; }
+.monogram .petals { position: absolute; inset: 0; width: 100%; height: 100%; }
+.monogram span { position: relative; z-index: 1; font-family: var(--serif); font-size: 2.3rem; color: var(--brass); letter-spacing: .02em; }
 .hero h1 { font-size: clamp(3rem, 9vw, 6.6rem); max-width: 14ch; }
 .hero h1 em { color: var(--marigold); }
 .hero h1 .kicker { display: block; line-height: 1.6; margin-bottom: 1.4rem; }
@@ -240,8 +264,8 @@ header .book { padding: .8em 1.3em; }
 .hero .ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: .4rem; }
 .hero .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 2.4rem; margin: 1rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--rule); width: min(100%, 40rem); }
 .hero .facts div { display: grid; gap: .1rem; }
-.hero .facts dt { font-size: .7rem; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); font-weight: 500; }
-.hero .facts dd { margin: 0; font-size: .95rem; }
+.hero .facts dt { font-size: var(--fs-label); letter-spacing: .28em; text-transform: uppercase; color: var(--brass); font-weight: 500; }
+.hero .facts dd { margin: 0; font-size: var(--fs-body-s); }
 
 /* Chapters */
 .chapter .wrap { padding-block: clamp(4.5rem, 10vw, 7rem); }
@@ -255,7 +279,7 @@ header .book { padding: .8em 1.3em; }
 .flow { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 @media (max-width: 860px) { .flow { grid-template-columns: minmax(0, 1fr); } }
 .menu { border: 0; margin: 0; padding: 0; display: grid; min-width: 0; }
-.sr { position: absolute; left: -9999px; }
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .item { position: relative; border-top: 1px solid var(--rule); }
 .item:last-of-type { border-bottom: 1px solid var(--rule); }
 .item input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; width: 100%; height: 100%; }
@@ -268,25 +292,26 @@ header .book { padding: .8em 1.3em; }
 .line { display: flex; align-items: baseline; gap: .8rem; }
 .line h3 { font-size: clamp(1.45rem, 3vw, 1.8rem); white-space: nowrap; }
 .line .lead { flex: 1; border-bottom: 1px dotted var(--dust); opacity: .5; transform: translateY(-.35rem); min-width: 1rem; }
-.line .where { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
-.item .desc { color: var(--dust); font-size: .98rem; }
+.line .where { font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
+.line .gloss { display: block; margin-top: .2rem; font-family: var(--serif); font-style: italic; font-size: var(--fs-body-s); color: var(--clay); white-space: normal; }
+.item .desc { color: var(--dust); font-size: var(--fs-body-s); }
 .item input:checked + label h3 { color: var(--clay); }
-.menu-note { margin-top: 1.4rem; font-size: .86rem; color: var(--dust); }
+.menu-note { margin-top: 1.4rem; font-size: var(--fs-small); color: var(--dust); }
 @media (max-width: 480px) { .line .lead { display: none; } .line { flex-wrap: wrap; gap: .2rem .8rem; } .line h3 { white-space: normal; } }
 
 .ticket {
-  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem);
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h));
   border: 1px solid var(--brass); padding: 2rem 1.75rem; display: grid; gap: 1.3rem; text-align: center;
   background: var(--ink); outline: 1px solid var(--rule); outline-offset: -8px;
 }
 @media (max-width: 860px) { .ticket { position: static; } }
 .ticket .picked { font-family: var(--serif); font-size: 2.1rem; line-height: 1.1; }
-.ticket ol { list-style: none; margin: 0; padding: 1.3rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: .9rem; text-align: left; counter-reset: s 1; }
-.ticket li { counter-increment: s; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .6rem; font-size: .95rem; color: var(--dust); }
+.ticket ol { list-style: none; margin: 0; padding: 1.3rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: .9rem; text-align: left; counter-reset: s; }
+.ticket li { counter-increment: s; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .6rem; font-size: var(--fs-body-s); color: var(--dust); }
 .ticket li b { color: var(--bone); font-weight: 500; }
 .ticket li::before { content: counter(s); font-family: var(--serif); font-size: 1.3rem; line-height: 1.2; color: var(--brass); }
 .ticket li:last-child::before { content: "\2713"; font-family: var(--sans); font-size: 1rem; }
-.ticket .fine { font-size: .8rem; color: var(--dust); }
+.ticket .fine { font-size: var(--fs-fine); color: var(--dust); }
 
 /* Style finder */
 .finder { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -299,16 +324,16 @@ header .book { padding: .8em 1.3em; }
 .chips { display: flex; flex-wrap: wrap; gap: .6rem; }
 .chip { position: relative; }
 .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
-.chip label { display: block; padding: .65rem 1.1rem; border: 1px solid var(--rule); font-size: .95rem; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+.chip label { display: block; padding: .65rem 1.1rem; border: 1px solid var(--rule); font-size: var(--fs-body-s); cursor: pointer; transition: border-color .15s ease, background .15s ease; }
 .chip label:hover { border-color: var(--dust); }
 .chip input:checked + label { border-color: var(--clay); background: color-mix(in srgb, var(--clay) 14%, transparent); color: var(--bone); }
 .chip input:focus-visible + label { outline: 2px solid var(--brass); outline-offset: 2px; }
-.result { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; padding: 2rem 1.75rem; display: grid; gap: 1rem; background: var(--ink); text-align: center; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem); }
+.result { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; padding: 2rem 1.75rem; display: grid; gap: 1rem; background: var(--ink); text-align: center; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
 @media (max-width: 860px) { .result { position: static; } }
 .result .rec { font-family: var(--serif); font-size: 2rem; line-height: 1.1; color: var(--clay); }
 .result .say { border-top: 1px solid var(--rule); padding-top: 1rem; display: grid; gap: .3rem; }
 .result .say p:last-child { font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.4; }
-.result .why { color: var(--dust); font-size: .93rem; }
+.result .why { color: var(--dust); font-size: var(--fs-body-s); }
 .result .actions { display: grid; gap: .6rem; }
 
 /* Fade guide */
@@ -318,9 +343,9 @@ header .book { padding: .8em 1.3em; }
 .fade { border: 1px solid var(--rule); background: var(--ink); padding: 1.25rem 1.1rem 1.4rem; display: grid; gap: .6rem; align-content: start; }
 .fade svg { width: 100%; max-width: 150px; height: auto; justify-self: center; display: block; }
 .fade h3 { font-size: 1.35rem; }
-.fade p { color: var(--dust); font-size: .9rem; line-height: 1.5; }
-.fade .ask { color: var(--brass); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
-.guide-note { text-align: center; color: var(--dust); font-size: .86rem; margin-top: 1.6rem; }
+.fade p { color: var(--dust); font-size: var(--fs-body-s); line-height: 1.5; }
+.fade .ask { color: var(--brass); font-size: var(--fs-label); letter-spacing: .18em; text-transform: uppercase; font-weight: 500; }
+.guide-note { text-align: center; color: var(--dust); font-size: var(--fs-small); margin-top: 1.6rem; }
 
 /* Aftercare */
 .care { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -329,14 +354,14 @@ header .book { padding: .8em 1.3em; }
 .tips li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 1rem; padding: 1.3rem 0; border-bottom: 1px solid var(--rule); }
 .tips .ic { font-family: var(--serif); color: var(--brass); font-size: 1.4rem; line-height: 1.2; }
 .tips h3 { font-size: 1.3rem; margin-bottom: .25rem; }
-.tips p { color: var(--dust); font-size: .96rem; }
+.tips p { color: var(--dust); font-size: var(--fs-body-s); }
 .rebook { border: 1px solid var(--rule); padding: 1.75rem; display: grid; gap: 1rem; background: var(--ink); }
 .rebook h3 { font-size: 1.6rem; }
-.rebook table { width: 100%; border-collapse: collapse; font-size: .96rem; }
+.rebook table { width: 100%; border-collapse: collapse; font-size: var(--fs-body-s); }
 .rebook td { padding: .8rem 0; border-top: 1px solid var(--rule); vertical-align: baseline; }
 .rebook td:last-child { text-align: right; font-family: var(--serif); font-size: 1.15rem; color: var(--bone); white-space: nowrap; padding-left: 1rem; }
 .rebook td:first-child { color: var(--dust); }
-.rebook .fine { font-size: .8rem; color: var(--dust); }
+.rebook .fine { font-size: var(--fs-fine); color: var(--dust); }
 
 /* Visit */
 .visit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
@@ -347,20 +372,19 @@ header .book { padding: .8em 1.3em; }
 .visit h3 { font-size: 1.6rem; }
 .visit .big { font-size: 1.1rem; color: var(--bone); line-height: 1.5; font-weight: 400; }
 .visit p { color: var(--dust); }
-.textlink { color: var(--brass); font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; font-weight: 500; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; justify-self: start; }
+.textlink { color: var(--brass); font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase; font-weight: 500; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; justify-self: start; }
 .textlink:hover { color: var(--bone); }
-.note { font-size: .86rem; border-left: 1px solid var(--clay); padding-left: .9rem; }
+.note { font-size: var(--fs-small); border-left: 1px solid var(--clay); padding-left: .9rem; }
 
 /* Gallery */
 .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.frame { aspect-ratio: 4 / 5; max-width: 100%; border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: -10px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; background: var(--ink); }
+.frame { position: relative; overflow: hidden; aspect-ratio: 4 / 5; max-width: 100%; border: 1px solid var(--rule); outline: 1px solid var(--rule); outline-offset: -10px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; background: var(--ink); }
 .frame span { font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 3vw, 1.9rem); }
-.frame small { font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
+.frame small { font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
 
 
 /* Photos: drop files into photos/ with the names in README.md and they replace the placeholders */
-.frame { position: relative; overflow: hidden; }
 .frame.has-photo img, .fade.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .frame.has-photo img { position: absolute; inset: 0; }
 .frame.has-photo span, .frame.has-photo small { position: relative; z-index: 1; text-shadow: 0 1px 8px rgba(0,0,0,.8); }
@@ -372,40 +396,41 @@ header .book { padding: .8em 1.3em; }
 
 /* Dia de los Muertos accents */
 .mari { width: 26px; height: 26px; }
-.ornament.short::before, .ornament.short::after { background: var(--marigold); opacity: .55; }
 .picado { display: flex; gap: 6px; overflow: hidden; height: 50px; border-top: 1px solid color-mix(in srgb, var(--bone) 35%, transparent); padding-inline: 6px; }
 .picado svg { flex: 0 0 52px; height: 46px; margin-top: -1px; opacity: .9; }
 .picado svg:nth-child(odd) { transform: rotate(-2deg); transform-origin: top center; }
 .picado svg:nth-child(even) { transform: rotate(2deg); transform-origin: top center; }
 .p-marigold { color: var(--marigold); } .p-rosa { color: var(--clay); } .p-turq { color: var(--turq); } .p-brass { color: var(--brass); }
-.monogram { width: 140px; height: 140px; border: 0; }
-.monogram::after { inset: 22px; border-color: var(--brass); }
-.monogram .petals { position: absolute; inset: 0; width: 100%; height: 100%; }
-.monogram span { position: relative; z-index: 1; }
 .calavera { width: 110px; height: auto; }
-.closer .wrap { padding-block-start: clamp(3rem, 7vw, 5rem); }
 
 
 /* Cut gallery */
 .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-bottom: 2rem; }
-.filter { background: transparent; border: 1px solid var(--rule); color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; padding: .7em 1.1em; cursor: pointer; }
+.filter { background: transparent; border: 1px solid var(--rule); color: var(--dust); font-family: var(--sans); font-weight: 500; font-size: var(--fs-control); letter-spacing: var(--ls-control); text-transform: uppercase; padding: .7em 1.1em; cursor: pointer; }
 .filter:hover { color: var(--bone); border-color: var(--dust); }
-.filter[aria-pressed="true"] { background: var(--marigold); border-color: var(--marigold); color: var(--ink); }
 .cut-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 @media (max-width: 900px) { .cut-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .cut-grid { grid-template-columns: minmax(0, 1fr); } }
-.cut-card { margin: 0; background: var(--ink); border: 1px solid var(--rule); display: grid; grid-template-rows: auto 1fr; }
+.cut-card { margin: 0; background: var(--ink); border: 1px solid var(--rule); display: grid; grid-template-rows: auto 1fr; overflow: hidden; }
 .cut-card img { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; height: auto; }
-.cut-card figcaption { padding: 1.1rem 1.15rem 1.3rem; display: grid; gap: .35rem; align-content: start; }
-.cut-tags { font-size: .68rem; letter-spacing: .22em; text-transform: uppercase; color: var(--marigold); font-weight: 500; }
+.cut-card figcaption { position: relative; background: var(--ink); padding: 1.1rem 1.15rem 1.3rem; display: grid; gap: .35rem; align-content: start; }
+.cut-tags { font-size: var(--fs-label); letter-spacing: .22em; text-transform: uppercase; color: var(--marigold); font-weight: 500; }
 .cut-card h3 { font-size: 1.45rem; }
-.cut-card p { color: var(--dust); font-size: .93rem; line-height: 1.5; }
+.cut-card p { color: var(--dust); font-size: var(--fs-body-s); line-height: 1.5; }
 .cut-card .who { color: var(--bone); font-style: italic; font-family: var(--serif); font-size: 1rem; }
+/* Phones: two columns so the gallery stays browsable */
+@media (max-width: 520px) {
+  .cut-grid { gap: .75rem; }
+  .cut-card figcaption { padding: .8rem .75rem 1rem; gap: .25rem; }
+  .cut-tags { letter-spacing: .14em; }
+  .cut-card h3 { font-size: 1.15rem; }
+  .cut-card p { font-size: var(--fs-small); }
+  .cut-card .who { font-size: var(--fs-small); }
+}
 .ba-slot { aspect-ratio: 4 / 5; max-width: 100%; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--rule); background: repeating-linear-gradient(135deg, transparent 0 12px, color-mix(in srgb, var(--bone) 4%, transparent) 12px 13px), var(--panel); }
-.ba-slot span { display: grid; place-items: end center; padding-bottom: 1rem; font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
+.ba-slot span { display: grid; place-items: end center; padding-bottom: 1rem; font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--dust); }
 .ba-slot span + span { border-left: 1px dashed var(--rule); }
 .ba-slot.has-pair span { background-size: cover; background-position: center; color: var(--bone); text-shadow: 0 1px 6px rgba(0,0,0,.8); }
-.gallery-note { text-align: center; color: var(--dust); font-size: .84rem; margin-top: 1.6rem; }
+.gallery-note { text-align: center; color: var(--dust); font-size: var(--fs-small); margin-top: 1.6rem; }
 
 /* Rebooking nudge */
 .nudge { border-block: 1px solid var(--marigold); background: linear-gradient(90deg, color-mix(in srgb, var(--marigold) 9%, var(--ink)), var(--ink) 70%); }
@@ -416,12 +441,12 @@ header .book { padding: .8em 1.3em; }
 .nudge h2 em { color: var(--marigold); }
 .reminder { border: 1px solid var(--rule); background: var(--ink); padding: 1.4rem; display: grid; gap: .85rem; }
 .rem-row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); align-items: center; gap: .75rem; }
-.rem-row label { font-size: .9rem; color: var(--dust); }
-.rem-row input, .rem-row select { font: inherit; font-size: .95rem; color: var(--bone); background: var(--panel); border: 1px solid var(--rule); padding: .5rem .6rem; min-width: 0; width: 100%; }
+.rem-row label { font-size: var(--fs-small); color: var(--dust); }
+.rem-row input, .rem-row select { font: inherit; font-size: var(--fs-body-s); color: var(--bone); background: var(--panel); border: 1px solid var(--rule); padding: .5rem .6rem; min-width: 0; width: 100%; }
 .due { font-family: var(--serif); font-size: 1.25rem; line-height: 1.3; }
 .due b { color: var(--marigold); font-weight: 400; }
 .rem-links { display: flex; flex-wrap: wrap; gap: .9rem 1.4rem; }
-.reminder .fine { font-size: .8rem; color: var(--dust); }
+.reminder .fine { font-size: var(--fs-fine); color: var(--dust); }
 
 /* Google Business Profile */
 .gbp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -431,10 +456,10 @@ header .book { padding: .8em 1.3em; }
 .reviews { display: grid; gap: 1rem; }
 .reviews-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .review-slot { border: 1px dashed var(--rule); padding: 1.1rem 1.25rem; display: grid; gap: .35rem; }
-.review-slot .stars { color: var(--rule); letter-spacing: .2em; font-size: .9rem; }
+.review-slot .stars { color: var(--rule); letter-spacing: .2em; font-size: var(--fs-small); }
 .review-slot .quote { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--dust); }
-.review-slot .who { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
-.reviews .fine { font-size: .8rem; color: var(--dust); }
+.review-slot .who { font-size: var(--fs-fine); letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
+.reviews .fine { font-size: var(--fs-fine); color: var(--dust); }
 
 /* FAQ */
 .faq { max-width: 46rem; margin: 0 auto; border-top: 1px solid var(--rule); }
@@ -452,9 +477,10 @@ header .book { padding: .8em 1.3em; }
 .closer .es { font-size: 1.5rem; }
 
 footer { border-top: 1px solid var(--rule); }
-footer .wrap { padding-block: 2.5rem 3rem; display: grid; justify-items: center; text-align: center; gap: .8rem; color: var(--dust); font-size: .84rem; }
+footer .wrap { padding-block: 2.5rem 3rem; display: grid; justify-items: center; text-align: center; gap: .8rem; color: var(--dust); font-size: var(--fs-small); }
 footer .wordmark { font-size: 1.3rem; color: var(--bone); }
 footer p { max-width: 40rem; }
+footer .privacy { font-size: var(--fs-fine); border-top: 1px solid var(--rule); padding-top: .9rem; }
 .langlinks a { color: var(--brass); }
 
 
@@ -464,28 +490,28 @@ footer p { max-width: 40rem; }
 .earn, .spend { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-bottom: 2.2rem; }
 .earn > div, .spend > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 .earn h3, .spend h3 { font-size: 1.25rem; }
-.earn p, .spend p { color: var(--dust); font-size: .92rem; }
+.earn p, .spend p { color: var(--dust); font-size: var(--fs-body-s); }
 .pts { font-family: var(--serif); color: var(--brass); font-size: 1.35rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .sub { margin-bottom: .9rem; }
-.card { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; background: var(--panel); padding: 2rem 1.75rem; display: grid; gap: 1.3rem; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 6rem); }
+.card { border: 1px solid var(--brass); outline: 1px solid var(--rule); outline-offset: -8px; background: var(--panel); padding: 2rem 1.75rem; display: grid; gap: 1.3rem; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--head-h)); }
 @media (max-width: 860px) { .card { position: static; } }
 .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .card-top .wordmark { font-size: 1.4rem; }
-.demo-tag { font-size: .66rem; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); border: 1px solid color-mix(in srgb, var(--brass) 50%, transparent); padding: .2rem .5rem; }
+.demo-tag { font-size: var(--fs-label); letter-spacing: .22em; text-transform: uppercase; color: var(--brass); border: 1px solid color-mix(in srgb, var(--brass) 50%, transparent); padding: .2rem .5rem; }
 .balance { display: grid; gap: .1rem; }
 .balance .num { font-family: var(--serif); font-size: 3.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
 .stamps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; }
-.stamp { aspect-ratio: 1; max-width: 100%; border: 1px dashed var(--rule); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: .95rem; color: var(--dust); }
+.stamp { aspect-ratio: 1; max-width: 100%; border: 1px dashed var(--rule); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: var(--fs-body-s); color: var(--dust); }
 .stamp.on { border: 1px solid var(--brass); background: color-mix(in srgb, var(--brass) 16%, transparent); color: var(--brass); }
 .stamp.on::before { content: "NB"; }
-.meter { height: 4px; background: var(--rule); position: relative; }
-.meter span { position: absolute; inset: 0 auto 0 0; background: var(--brass); transition: width .3s ease; }
-.next { color: var(--dust); font-size: .93rem; }
+.meter { height: 4px; background: var(--rule); position: relative; overflow: hidden; }
+.meter span { position: absolute; inset: 0; background: var(--brass); transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform .3s ease; }
+.next { color: var(--dust); font-size: var(--fs-body-s); }
 .next b { color: var(--bone); font-weight: 500; }
 .card-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
 .card-actions .btn { flex: 1 1 10rem; padding-inline: 1rem; }
 .unlocked { font-family: var(--serif); font-style: italic; color: var(--clay); font-size: 1.15rem; min-height: 1.6em; }
-.card .fine { font-size: .8rem; color: var(--dust); }
+.card .fine { font-size: var(--fs-fine); color: var(--dust); }
 @media (prefers-reduced-motion: reduce) { .meter span { transition: none; } }
 
 /* Tap targets: every button and link at least 44px tall */
@@ -495,7 +521,38 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 .lang button, .filter, header .book, .rem-row input, .rem-row select { min-height: 44px; }
 .faq .answer a { padding-block: 10px; }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .item label, .chip label { transition: none; } }
+/* Focus ring and press state on every control */
+.btn:focus-visible, .filter:focus-visible, .lang button:focus-visible, header nav a:focus-visible, .textlink:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+/* Motion: everything below only runs when the visitor hasn't asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  /* Scroll reveal (scrollfx.js sets data-in). html.js means content is never hidden without JS. */
+  html.js [data-reveal] {
+    opacity: 0; transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1), translate .2s ease, border-color .2s ease;
+    transition-delay: calc(var(--d, 0) * 90ms), calc(var(--d, 0) * 90ms), 0s, 0s;
+  }
+  html.js [data-reveal][data-in] { opacity: 1; transform: none; }
+  /* Stagger rows of cards (--d steps of 90ms) */
+  .cut-grid > :nth-child(3n+2), .fades > :nth-child(2), .menu .item:nth-of-type(2) { --d: 1; }
+  .cut-grid > :nth-child(3n), .fades > :nth-child(3), .menu .item:nth-of-type(3) { --d: 2; }
+  .fades > :nth-child(4), .menu .item:nth-of-type(4) { --d: 3; }
+  .fades > :nth-child(5) { --d: 4; }
+
+  /* Cards lift on hover/focus; photos zoom inside the card frame */
+  .cut-card, .fade, .review-slot { transition: translate .2s ease, border-color .2s ease; }
+  .cut-card:hover, .cut-card:focus-within, .fade:hover, .fade:focus-within, .review-slot:hover { translate: 0 -2px; border-color: var(--brass); }
+  .cut-card img { transition: scale .2s ease; }
+  .cut-card:hover img, .cut-card:focus-within img { scale: 1.03; }
+
+  /* Tactile press */
+  .btn, .filter, .lang button, .chip label { transition: background .2s ease, color .2s ease, border-color .2s ease, scale .12s ease; }
+  .btn:active, .filter:active, .lang button:active, .chip label:active { scale: .98; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .item label, .chip label, header.top { transition: none; }
+  .cut-card:hover, .cut-card:focus-within, .fade:hover, .fade:focus-within, .review-slot:hover { border-color: var(--brass); }
+}
 </style>
 </head>
 <body>
@@ -544,7 +601,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter alt" id="gallery">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="El trabajo">The work</p>
         <h2 data-es="Cortes de la <em>silla.</em>">Fresh from <em>the chair.</em></h2>
@@ -552,7 +609,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
       </div>
       <div class="filters" role="group" aria-label="Filter by style"><button type="button" class="filter" data-filter="all" aria-pressed="true" data-es="Todos">All</button><button type="button" class="filter" data-filter="fade" aria-pressed="false" data-es="Fades">Fades</button><button type="button" class="filter" data-filter="taper" aria-pressed="false" data-es="Tapers">Tapers</button><button type="button" class="filter" data-filter="beard" aria-pressed="false" data-es="Barba">Beard</button><button type="button" class="filter" data-filter="design" aria-pressed="false" data-es="Dise&ntilde;os">Designs</button><button type="button" class="filter" data-filter="ba" aria-pressed="false" hidden data-es="Antes y despu&eacute;s">Before &amp; after</button></div>
       <div class="cut-grid" id="cut-grid">
-        <figure class="cut-card" data-tags="fade">
+        <figure class="cut-card" data-reveal data-tags="fade">
           <img src="photos/mid-fade.jpg" alt="Fade haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Fade">Fade</p>
@@ -561,7 +618,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para un look fresco y cl&aacute;sico.">For a fresh, classic look.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="fade">
+        <figure class="cut-card" data-reveal data-tags="fade">
           <img src="photos/high-fade.jpg" alt="Fade haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Fade">Fade</p>
@@ -570,7 +627,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para un look limpio y marcado.">For a sharp, clean look.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="fade">
+        <figure class="cut-card" data-reveal data-tags="fade">
           <img src="photos/low-fade.jpg" alt="Fade haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Fade">Fade</p>
@@ -579,7 +636,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para quien quiere dejar largo arriba.">For keeping some length up top.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="fade beard">
+        <figure class="cut-card" data-reveal data-tags="fade beard">
           <img src="photos/line-up.jpg" alt="Fade and beard by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Fade &middot; Barba">Fade &middot; Beard</p>
@@ -588,7 +645,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para arreglar corte y barba en una visita.">For the cut and beard in one visit.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="taper beard">
+        <figure class="cut-card" data-reveal data-tags="taper beard">
           <img src="photos/gallery-fade.jpg" alt="Taper and beard by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Taper &middot; Barba">Taper &middot; Beard</p>
@@ -597,7 +654,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para quien quiere barba con los lados limpios.">For keeping the beard with clean sides.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="taper beard">
+        <figure class="cut-card" data-reveal data-tags="taper beard">
           <img src="photos/gallery-beard.jpg" alt="Taper and beard by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Taper &middot; Barba">Taper &middot; Beard</p>
@@ -606,7 +663,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para verse limpio sin cortarse mucho.">For a clean look without going short.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="taper">
+        <figure class="cut-card" data-reveal data-tags="taper">
           <img src="photos/gallery-taper.jpg" alt="Taper haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Taper">Taper</p>
@@ -615,7 +672,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para un estilo largo que se mantiene ordenado.">For a grown-out style that stays neat.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="taper">
+        <figure class="cut-card" data-reveal data-tags="taper">
           <img src="photos/taper.jpg" alt="Taper haircut by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Taper">Taper</p>
@@ -624,7 +681,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <p class="who" data-es="Para un look suave y f&aacute;cil de mantener.">For a soft, low-maintenance look.</p>
           </figcaption>
         </figure>
-        <figure class="cut-card" data-tags="design taper">
+        <figure class="cut-card" data-reveal data-tags="design taper">
           <img src="photos/gallery-design.jpg" alt="Design and taper by Nateblendz, a barber in Tustin, CA" loading="lazy" width="800" height="1000">
           <figcaption>
             <p class="cut-tags" data-es="Dise&ntilde;o &middot; Taper">Design &middot; Taper</p>
@@ -658,7 +715,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter" id="services">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="El men&uacute;">The menu</p>
         <h2 data-es="Cada l&iacute;nea, <em>con intenci&oacute;n.</em>">Every line, <em>on purpose.</em></h2>
@@ -669,35 +726,35 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
         <div>
           <fieldset class="menu">
             <legend class="sr" data-es="Elige un servicio">Choose a service</legend>
-            <div class="item">
+            <div class="item" data-reveal>
               <input type="radio" name="cut" id="cut-haircut" checked>
               <label for="cut-haircut">
                 <span class="dot" aria-hidden="true"></span>
-                <span class="line"><h3>Haircut</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
+                <span class="line"><h3 data-es="Haircut <small class=&quot;gloss&quot; lang=&quot;es&quot;>Corte</small>">Haircut</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
                 <span class="desc" data-es="Un taper o fade, a la medida de tu cabeza y tu estilo.">A taper or fade, shaped to your head and your style.</span>
               </label>
             </div>
-            <div class="item">
+            <div class="item" data-reveal>
               <input type="radio" name="cut" id="cut-design">
               <label for="cut-design">
                 <span class="dot" aria-hidden="true"></span>
-                <span class="line"><h3>Haircut &amp; Design</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
+                <span class="line"><h3 data-es="Haircut &amp;amp; Design <small class=&quot;gloss&quot; lang=&quot;es&quot;>Corte y dise&ntilde;o</small>">Haircut &amp; Design</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
                 <span class="desc" data-es="Tu corte con un dise&ntilde;o rasurado. Trae una foto del look que quieres.">Your haircut with a shaved design. Bring a photo of the look you want.</span>
               </label>
             </div>
-            <div class="item">
+            <div class="item" data-reveal>
               <input type="radio" name="cut" id="cut-brows">
               <label for="cut-brows">
                 <span class="dot" aria-hidden="true"></span>
-                <span class="line"><h3>Haircut &amp; Eyebrows</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
+                <span class="line"><h3 data-es="Haircut &amp;amp; Eyebrows <small class=&quot;gloss&quot; lang=&quot;es&quot;>Corte y cejas</small>">Haircut &amp; Eyebrows</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
                 <span class="desc" data-es="Tu corte con arreglo de cejas.">Your haircut with an eyebrow cleanup.</span>
               </label>
             </div>
-            <div class="item">
+            <div class="item" data-reveal>
               <input type="radio" name="cut" id="cut-beard">
               <label for="cut-beard">
                 <span class="dot" aria-hidden="true"></span>
-                <span class="line"><h3>Haircut &amp; Beard</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
+                <span class="line"><h3 data-es="Haircut &amp;amp; Beard <small class=&quot;gloss&quot; lang=&quot;es&quot;>Corte y barba</small>">Haircut &amp; Beard</h3><span class="lead" aria-hidden="true"></span><span class="where" data-es="En Booksy">On Booksy</span></span>
                 <span class="desc" data-es="Tu corte con perfilado de barba a navaja.">Your haircut with beard shaping by straight razor.</span>
               </label>
             </div>
@@ -705,7 +762,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
           <p class="menu-note" data-es="Los nombres y descripciones vienen del perfil p&uacute;blico de Booksy al 15 de octubre de 2026.">Service names and descriptions come from the public Booksy listing as of October 15, 2026.</p>
         </div>
 
-        <div class="ticket" aria-live="polite">
+        <div class="ticket" aria-live="polite" data-reveal style="--d:1">
           <p class="label" data-es="Tu selecci&oacute;n">Your selection</p>
           <p class="picked" id="picked">Haircut</p>
           <ol>
@@ -722,7 +779,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter alt" id="finder">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Encuentra tu estilo">Style finder</p>
         <h2 data-es="Tres preguntas. <em>Tu corte.</em>">Three questions. <em>Your cut.</em></h2>
@@ -757,7 +814,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             </div>
           </fieldset>
         </div>
-        <div class="result" aria-live="polite">
+        <div class="result" aria-live="polite" data-reveal style="--d:1">
           <p class="label" data-es="Te recomendamos">We recommend</p>
           <p class="rec" id="rec">Haircut</p>
           <p class="why" id="why"></p>
@@ -776,38 +833,38 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter" id="fades">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Gu&iacute;a de fades">Fade guide</p>
         <h2 data-es="Habla el <em>idioma.</em>">Know the <em>language.</em></h2>
         <p data-es="Los cortes m&aacute;s pedidos y d&oacute;nde empieza cada uno. La l&iacute;nea dorada marca la altura del fade.">The most requested cuts and where each one starts. The brass line marks how high the fade goes.</p>
       </div>
       <div class="fades">
-        <article class="fade">
+        <article class="fade" data-reveal>
           <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#head"/><rect x="0" y="0" width="120" height="78" fill="url(#hair)" clip-path="url(#skull)"/><line x1="22" x2="98" y1="78" y2="78" stroke="var(--brass)" stroke-width="1.5" stroke-dasharray="3 3"/><use href="#ear"/></svg>
           <h3 data-es="Fade bajo">Low fade</h3>
           <p data-es="Empieza justo arriba de la oreja. Limpio pero discreto, bueno para el trabajo.">Starts just above the ear. Clean but quiet, easy for work.</p>
           <p class="ask" data-es="Pide: &ldquo;fade bajo&rdquo;">Ask for: &ldquo;low fade&rdquo;</p>
         </article>
-        <article class="fade">
+        <article class="fade" data-reveal>
           <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#head"/><rect x="0" y="0" width="120" height="62" fill="url(#hair)" clip-path="url(#skull)"/><line x1="16" x2="104" y1="62" y2="62" stroke="var(--brass)" stroke-width="1.5" stroke-dasharray="3 3"/><use href="#ear"/></svg>
           <h3 data-es="Fade medio">Mid fade</h3>
           <p data-es="Sube hasta la sien. El punto medio m&aacute;s popular.">Rises to about the temple. The most popular middle ground.</p>
           <p class="ask" data-es="Pide: &ldquo;fade medio&rdquo;">Ask for: &ldquo;mid fade&rdquo;</p>
         </article>
-        <article class="fade">
+        <article class="fade" data-reveal>
           <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#head"/><rect x="0" y="0" width="120" height="44" fill="url(#hair)" clip-path="url(#skull)"/><line x1="18" x2="102" y1="44" y2="44" stroke="var(--brass)" stroke-width="1.5" stroke-dasharray="3 3"/><use href="#ear"/></svg>
           <h3 data-es="Fade alto">High fade</h3>
           <p data-es="Llega casi a la parte de arriba. Contraste fuerte y look marcado.">Goes up near the top of the head. Strong contrast, bold look.</p>
           <p class="ask" data-es="Pide: &ldquo;fade alto&rdquo;">Ask for: &ldquo;high fade&rdquo;</p>
         </article>
-        <article class="fade">
+        <article class="fade" data-reveal>
           <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#head"/><rect x="0" y="0" width="120" height="96" fill="url(#hair)" clip-path="url(#skull)"/><line x1="70" x2="96" y1="96" y2="96" stroke="var(--brass)" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="26" x2="40" y1="78" y2="78" stroke="var(--brass)" stroke-width="1.5" stroke-dasharray="3 3"/><use href="#ear"/></svg>
           <h3>Taper</h3>
           <p data-es="Solo se rebaja en las patillas y la nuca. El resto se queda m&aacute;s largo.">Only shortens at the sideburns and the neckline. The rest stays fuller.</p>
           <p class="ask" data-es="Pide: &ldquo;taper&rdquo;">Ask for: &ldquo;taper&rdquo;</p>
         </article>
-        <article class="fade">
+        <article class="fade" data-reveal>
           <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#head"/><rect x="0" y="0" width="120" height="96" fill="url(#hairfull)" clip-path="url(#skull)"/><path d="M28 50 L28 34 Q60 6 92 34" fill="none" stroke="var(--brass)" stroke-width="1.8"/><use href="#ear"/></svg>
           <h3 data-es="Perfilado">Line-up</h3>
           <p data-es="Marca la l&iacute;nea de la frente, las sienes y la barba con navaja o m&aacute;quina.">Sharpens the hairline at the forehead, temples, and beard edges.</p>
@@ -829,7 +886,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter alt" id="care">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Cuidado">Aftercare</p>
         <h2 data-es="Mant&eacute;nlo <em>fresco.</em>">Keep it <em>fresh.</em></h2>
@@ -864,13 +921,13 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="nudge" id="book-again" aria-labelledby="nudge-title">
     <div class="wrap">
-      <div class="nudge-copy">
+      <div class="nudge-copy" data-reveal>
         <p class="label" data-es="&iquest;Ya viniste antes?">Been in before?</p>
         <h2 id="nudge-title" data-es="Aparta tu pr&oacute;ximo corte <em>antes de que se llene la semana.</em>">Lock in your next cut <em>before the week fills up.</em></h2>
         <a class="btn solid" href="https://booksy.com/en-us/1163169_nateblendz_barber-shop_103795_tustin" target="_blank" rel="noopener" data-es="Reserva otra vez en Booksy">Book again on Booksy</a>
         <p class="note" data-es="&ldquo;Antes de que se llene la semana&rdquo;: confirmar con Nathan.">&ldquo;Before the week fills up&rdquo;: confirm with Nathan.</p>
       </div>
-      <div class="reminder">
+      <div class="reminder" data-reveal style="--d:1">
         <p class="label" data-es="Recordatorio">Reminder</p>
         <div class="rem-row">
           <label for="last-visit" data-es="Tu &uacute;ltimo corte">Your last cut</label>
@@ -897,7 +954,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter" id="rewards">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Idea de puntos (ejemplo)">Rewards idea (example)</p>
         <h2 data-es="Cada corte <em>suma.</em>">Every cut <em>counts.</em></h2>
@@ -918,7 +975,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
             <div><div><h3 data-es="Corte gratis">Free haircut</h3><p data-es="El premio mayor.">The big one.</p></div><span class="pts">100</span></div>
           </div>
         </div>
-        <div class="card" aria-live="polite">
+        <div class="card" aria-live="polite" data-reveal style="--d:1">
           <div class="card-top"><span class="wordmark">Nateblendz</span><span class="demo-tag" data-es="Demo">Demo card</span></div>
           <div class="balance"><p class="label" data-es="Tus puntos">Your points</p><p class="num" id="pts">30</p></div>
           <div class="stamps" id="stamps" role="img" aria-label="Visit stamps"></div>
@@ -938,7 +995,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter alt" id="visit">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Tu primera visita">Your first visit</p>
         <h2 data-es="C&oacute;mo llegar <em>a la silla.</em>">Finding <em>the chair.</em></h2>
@@ -967,7 +1024,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter" id="google">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Encu&eacute;ntranos en Google">Find us on Google</p>
         <h2 data-es="Tu barbero en Tustin, <em>en el mapa.</em>">Your Tustin barber, <em>on the map.</em></h2>
@@ -1007,7 +1064,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter alt" id="faq">
     <div class="wrap">
-      <div class="chapter-head">
+      <div class="chapter-head" data-reveal>
         <p class="ornament short"><svg class="mari" aria-hidden="true"><use href="#marigold"/></svg></p>
         <p class="label" data-es="Barbero en Tustin">Tustin barber FAQ</p>
         <h2 data-es="Preguntas <em>frecuentes.</em>">Questions, <em>answered.</em></h2>
@@ -1054,7 +1111,7 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
 
   <section class="chapter closer">
     <div class="picado" aria-hidden="true"><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg><svg class="p-turq"><use href="#flag"/></svg><svg class="p-brass"><use href="#flag"/></svg><svg class="p-marigold"><use href="#flag"/></svg><svg class="p-rosa"><use href="#flag"/></svg></div>
-    <div class="wrap">
+    <div class="wrap" data-reveal>
       <svg class="calavera" viewBox="0 0 120 140" aria-hidden="true">
   <path d="M60 8C28 8 12 32 12 60c0 20 10 32 20 38l2 18c0 6 6 10 12 10h28c6 0 12-4 12-10l2-18c10-6 20-18 20-38C108 32 92 8 60 8Z" fill="none" stroke="var(--bone)" stroke-width="1.6"/>
   <g fill="none" stroke="var(--marigold)" stroke-width="1.4"><circle cx="52.0" cy="66.0" r="4.2"/><circle cx="48.5" cy="74.5" r="4.2"/><circle cx="40.0" cy="78.0" r="4.2"/><circle cx="31.5" cy="74.5" r="4.2"/><circle cx="28.0" cy="66.0" r="4.2"/><circle cx="31.5" cy="57.5" r="4.2"/><circle cx="40.0" cy="54.0" r="4.2"/><circle cx="48.5" cy="57.5" r="4.2"/><circle cx="92.0" cy="66.0" r="4.2"/><circle cx="88.5" cy="74.5" r="4.2"/><circle cx="80.0" cy="78.0" r="4.2"/><circle cx="71.5" cy="74.5" r="4.2"/><circle cx="68.0" cy="66.0" r="4.2"/><circle cx="71.5" cy="57.5" r="4.2"/><circle cx="80.0" cy="54.0" r="4.2"/><circle cx="88.5" cy="57.5" r="4.2"/></g>
@@ -1078,6 +1135,8 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
     <p class="langlinks"><a href="index.html" hreflang="en" lang="en">English</a> &middot; <a href="es/index.html" hreflang="es" lang="es">Espa&ntilde;ol</a></p>
     <p data-es="Concepto de muestra hecho como proyecto de aprendizaje. No es el sitio oficial de Nateblendz y no est&aacute; respaldado por Nateblendz ni por Booksy.">Sample concept built as a learning project. It isn&rsquo;t the official Nateblendz website and isn&rsquo;t endorsed by Nateblendz or Booksy.</p>
     <p data-es="Los datos vienen del perfil p&uacute;blico de Booksy, revisado el 15 de octubre de 2026. Las citas, precios, horarios y confirmaciones se manejan en Booksy.">Business details come from the public Booksy listing, reviewed October 15, 2026. Booking, prices, hours, and confirmation all happen on Booksy.</p>
+    <!-- Privacy note: wording needs Nathan's OK before launch -->
+    <p class="privacy" data-es="<b>Privacidad:</b> esta p&aacute;gina no tiene formularios y no recoge datos personales. Tu servicio elegido, la tarjeta de puntos de muestra y tu idioma se guardan solo en este navegador (localStorage). Las fuentes se cargan desde Google Fonts. Las citas se hacen en Booksy, bajo la pol&iacute;tica de privacidad de Booksy. Los enlaces a Google Maps y Google Calendar abren esos sitios, bajo sus propias pol&iacute;ticas."><b>Privacy:</b> this page has no forms and collects no personal info. Your service pick, the sample rewards card and your language choice stay in this browser only (localStorage). Fonts load from Google Fonts. Booking happens on Booksy, under Booksy&rsquo;s privacy policy. The Google Maps and Google Calendar links open those sites, under their own policies.</p>
   </div>
 </footer>
 
@@ -1182,10 +1241,10 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
       var prev = nextIdx <= 0 ? 0 : tiers[nextIdx - 1];
       if (nextIdx === -1) {
         document.getElementById('next').textContent = r.maxed;
-        document.getElementById('meter').style.width = '100%';
+        document.getElementById('meter').style.setProperty('--p', '1');
       } else {
         document.getElementById('next').innerHTML = r.next(tiers[nextIdx] - points, r.tiers[nextIdx]);
-        document.getElementById('meter').style.width = Math.round((points - prev) / (tiers[nextIdx] - prev) * 100) + '%';
+        document.getElementById('meter').style.setProperty('--p', ((points - prev) / (tiers[nextIdx] - prev)).toFixed(3));
       }
       if (justEarned !== undefined) {
         var crossed = tiers.filter(function (t) { return justEarned < t && points >= t; });
@@ -1281,5 +1340,6 @@ header nav a, a.wordmark, .textlink, .langlinks a { display: inline-flex; align-
     updateReminder();
   })();
 </script>
+<script src="scrollfx.js" defer></script>
 </body>
 </html>
